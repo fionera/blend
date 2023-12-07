@@ -9,7 +9,8 @@
 // "testdata/block.blend".
 //
 // The tool which was used to generate these two files is available through:
-//    go get github.com/mewspring/blend/cmd/blendef
+//
+//	go get github.com/mewspring/blend/cmd/blendef
 //
 // More complex blend files may contain structures which are not yet defined in
 // this package. If so, use blendef to regenerate "struct.go" and "parse.go" for
@@ -18,6 +19,7 @@ package block
 
 import (
 	"encoding/binary"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -67,20 +69,21 @@ type Header struct {
 // ParseHeader parses and returns a file block header.
 //
 // Example file block header:
-//    44 41 54 41  E0 00 00 00  88 5E 9D 04  00 00 00 00    DATA.....^......
-//    F8 00 00 00  0E 00 00 00                              ........
 //
-//    //   0-3   block code   ("DATA")
-//    //   4-7   size         (0x000000E0 = 224)
-//    //  8-15   old addr     (0x00000000049D5E88) // size depends on PtrSize.
-//    // 16-19   sdna index   (0x000000F8 = 248)
-//    // 20-23   count        (0x0000000E = 14)
+//	44 41 54 41  E0 00 00 00  88 5E 9D 04  00 00 00 00    DATA.....^......
+//	F8 00 00 00  0E 00 00 00                              ........
+//
+//	//   0-3   block code   ("DATA")
+//	//   4-7   size         (0x000000E0 = 224)
+//	//  8-15   old addr     (0x00000000049D5E88) // size depends on PtrSize.
+//	// 16-19   sdna index   (0x000000F8 = 248)
+//	// 20-23   count        (0x0000000E = 14)
 func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header, err error) {
 	// Block code.
 	buf := make([]byte, 4)
 	_, err = io.ReadFull(r, buf)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("86: %v", err)
 	}
 	hdr = new(Header)
 	code := string(buf)
@@ -129,6 +132,18 @@ func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header,
 		hdr.Code = CodeWM
 	case "WO\x00\x00":
 		hdr.Code = CodeWO
+	case "AC\x00\x00":
+		hdr.Code = CodeAC
+	case "NT\x00\x00":
+		hdr.Code = CodeNT
+	case "SO\x00\x00":
+		hdr.Code = CodeSO
+	case "GR\x00\x00":
+		hdr.Code = CodeGR
+	case "PL\x00\x00":
+		hdr.Code = CodePL
+	case "WS\x00\x00":
+		hdr.Code = CodeWS
 	default:
 		log.Printf("Header.ParseHeader: block code %q not yet implemented.\n", code)
 		hdr.Code = CodeUnknown
@@ -138,7 +153,7 @@ func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header,
 	var x int32
 	err = binary.Read(r, order, &x)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("156: %v", err)
 	}
 	hdr.Size = int64(x)
 
@@ -148,14 +163,14 @@ func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header,
 		var x uint32
 		err = binary.Read(r, order, &x)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("166: %v", err)
 		}
 		hdr.OldAddr = uint64(x)
 	case 8:
 		var x uint64
 		err = binary.Read(r, order, &x)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("173: %v", err)
 		}
 		hdr.OldAddr = x
 	}
@@ -163,14 +178,14 @@ func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header,
 	// SDNA index.
 	err = binary.Read(r, order, &x)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("181: %v", err)
 	}
 	hdr.SDNAIndex = int(x)
 
 	// Structure count.
 	err = binary.Read(r, order, &x)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("188: %v", err)
 	}
 	hdr.Count = int(x)
 
@@ -236,6 +251,12 @@ const (
 	CodeTX
 	CodeWM
 	CodeWO
+	CodeAC
+	CodeNT
+	CodeSO
+	CodeGR
+	CodePL
+	CodeWS
 
 	CodeUnknown BlockCode = -1
 )
