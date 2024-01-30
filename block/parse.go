@@ -9,7 +9,6 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"os"
 )
 
 // ParseBody parses the block body and stores it in blk.Body. It is safe to call
@@ -81,7 +80,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ARegion_Runtime":
@@ -116,7 +115,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AnimData":
@@ -151,7 +150,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AnimOverride":
@@ -186,7 +185,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ArmatureGpencilModifierData":
@@ -221,7 +220,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ArmatureModifierData":
@@ -256,7 +255,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ArrayGpencilModifierData":
@@ -291,7 +290,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ArrayModifierData":
@@ -326,7 +325,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AssetLibraryReference":
@@ -361,7 +360,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AssetMetaData":
@@ -396,7 +395,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AssetTag":
@@ -431,7 +430,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AudioData":
@@ -466,7 +465,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "AviCodecData":
@@ -501,7 +500,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BPoint":
@@ -536,7 +535,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BakeData":
@@ -571,7 +570,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Base":
@@ -606,7 +605,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BevelModifierData":
@@ -641,7 +640,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BezTriple":
@@ -676,7 +675,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BlurShaderFxData":
@@ -711,7 +710,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidData":
@@ -746,7 +745,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidParticle":
@@ -781,7 +780,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRule":
@@ -816,7 +815,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRuleAverageSpeed":
@@ -851,7 +850,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRuleAvoidCollision":
@@ -886,7 +885,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRuleFight":
@@ -921,7 +920,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRuleFollowLeader":
@@ -956,7 +955,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidRuleGoalAvoid":
@@ -991,7 +990,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidSettings":
@@ -1026,7 +1025,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoidState":
@@ -1061,7 +1060,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Bone":
@@ -1096,7 +1095,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BooleanModifierData":
@@ -1131,7 +1130,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BoundBox":
@@ -1166,7 +1165,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BrightContrastModifierData":
@@ -1201,7 +1200,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Brush":
@@ -1236,7 +1235,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BrushClone":
@@ -1271,7 +1270,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BrushCurvesSculptSettings":
@@ -1306,7 +1305,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BrushGpencilSettings":
@@ -1341,7 +1340,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BuildEff":
@@ -1376,7 +1375,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BuildGpencilModifierData":
@@ -1411,7 +1410,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "BuildModifierData":
@@ -1446,7 +1445,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CBData":
@@ -1481,7 +1480,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CacheFile":
@@ -1516,7 +1515,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CacheFileLayer":
@@ -1551,7 +1550,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CacheObjectPath":
@@ -1586,7 +1585,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Camera":
@@ -1621,7 +1620,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CameraBGImage":
@@ -1656,7 +1655,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CameraDOFSettings":
@@ -1691,7 +1690,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CameraStereoSettings":
@@ -1726,7 +1725,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Camera_Runtime":
@@ -1761,7 +1760,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CastModifierData":
@@ -1796,7 +1795,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ChannelDriver":
@@ -1831,7 +1830,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CharInfo":
@@ -1866,7 +1865,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ChildParticle":
@@ -1901,7 +1900,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ClothCollSettings":
@@ -1936,7 +1935,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ClothModifierData":
@@ -1971,7 +1970,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ClothSimSettings":
@@ -2006,7 +2005,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Collection":
@@ -2041,7 +2040,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CollectionChild":
@@ -2076,7 +2075,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CollectionObject":
@@ -2111,7 +2110,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Collection_Runtime":
@@ -2146,7 +2145,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CollisionModifierData":
@@ -2181,7 +2180,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorBalanceModifierData":
@@ -2216,7 +2215,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorBand":
@@ -2251,7 +2250,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorCorrectionData":
@@ -2286,7 +2285,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorGpencilModifierData":
@@ -2321,7 +2320,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorManagedColorspaceSettings":
@@ -2356,7 +2355,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorManagedDisplaySettings":
@@ -2391,7 +2390,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorManagedViewSettings":
@@ -2426,7 +2425,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorMapping":
@@ -2461,7 +2460,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorMixVars":
@@ -2496,7 +2495,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ColorizeShaderFxData":
@@ -2531,7 +2530,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ConsoleLine":
@@ -2566,7 +2565,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CorrectiveSmoothDeltaCache":
@@ -2601,7 +2600,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CorrectiveSmoothModifierData":
@@ -2636,7 +2635,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CryptomatteEntry":
@@ -2671,7 +2670,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CryptomatteLayer":
@@ -2706,7 +2705,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Curve":
@@ -2741,7 +2740,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveMap":
@@ -2776,7 +2775,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveMapPoint":
@@ -2811,7 +2810,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveMapping":
@@ -2846,7 +2845,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveModifierData":
@@ -2881,7 +2880,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurvePaintSettings":
@@ -2916,7 +2915,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveProfile":
@@ -2951,7 +2950,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurveProfilePoint":
@@ -2986,7 +2985,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Curves":
@@ -3021,7 +3020,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurvesGeometry":
@@ -3056,7 +3055,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurvesModifierData":
@@ -3091,7 +3090,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CurvesSculpt":
@@ -3126,7 +3125,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CustomData":
@@ -3161,7 +3160,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CustomDataExternal":
@@ -3196,7 +3195,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CustomDataLayer":
@@ -3231,7 +3230,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "CustomData_MeshMasks":
@@ -3266,7 +3265,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DashGpencilModifierData":
@@ -3301,7 +3300,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DashGpencilModifierSegment":
@@ -3336,7 +3335,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DataTransferModifierData":
@@ -3371,7 +3370,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DecimateModifierData":
@@ -3406,7 +3405,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DisplaceModifierData":
@@ -3441,7 +3440,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DisplaySafeAreas":
@@ -3476,7 +3475,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DrawDataList":
@@ -3511,7 +3510,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DriverTarget":
@@ -3546,7 +3545,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DriverVar":
@@ -3581,7 +3580,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DualQuat":
@@ -3616,7 +3615,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DynamicPaintBrushSettings":
@@ -3651,7 +3650,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DynamicPaintCanvasSettings":
@@ -3686,7 +3685,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DynamicPaintModifierData":
@@ -3721,7 +3720,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "DynamicPaintSurface":
@@ -3756,7 +3755,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "EdgeSplitModifierData":
@@ -3791,7 +3790,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Editing":
@@ -3826,7 +3825,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "EditingRuntime":
@@ -3861,7 +3860,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Effect":
@@ -3896,7 +3895,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "EffectorWeights":
@@ -3931,7 +3930,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "EnvelopeGpencilModifierData":
@@ -3966,7 +3965,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ExplodeModifierData":
@@ -4001,7 +4000,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FCM_EnvelopeData":
@@ -4036,7 +4035,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FCurve":
@@ -4071,7 +4070,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FFMpegCodecData":
@@ -4106,7 +4105,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Cycles":
@@ -4141,7 +4140,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Envelope":
@@ -4176,7 +4175,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_FunctionGenerator":
@@ -4211,7 +4210,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Generator":
@@ -4246,7 +4245,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Limits":
@@ -4281,7 +4280,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Noise":
@@ -4316,7 +4315,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Python":
@@ -4351,7 +4350,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FMod_Stepped":
@@ -4386,7 +4385,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FModifier":
@@ -4421,7 +4420,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FPoint":
@@ -4456,7 +4455,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FileAssetSelectParams":
@@ -4491,7 +4490,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FileFolderHistory":
@@ -4526,7 +4525,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FileGlobal":
@@ -4561,7 +4560,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FileSelectParams":
@@ -4596,7 +4595,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FlipShaderFxData":
@@ -4631,7 +4630,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidDomainSettings":
@@ -4666,7 +4665,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidEffectorSettings":
@@ -4701,7 +4700,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidFlowSettings":
@@ -4736,7 +4735,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidModifierData":
@@ -4771,7 +4770,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidVertexVelocity":
@@ -4806,7 +4805,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidsimModifierData":
@@ -4841,7 +4840,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FluidsimSettings":
@@ -4876,7 +4875,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleConfig":
@@ -4911,7 +4910,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleEdge":
@@ -4946,7 +4945,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleFace":
@@ -4981,7 +4980,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleLineSet":
@@ -5016,7 +5015,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleLineStyle":
@@ -5051,7 +5050,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "FreestyleModuleConfig":
@@ -5086,7 +5085,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GPUDOFSettings":
@@ -5121,7 +5120,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GP_Interpolate_Settings":
@@ -5156,7 +5155,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GP_Sculpt_Guide":
@@ -5191,7 +5190,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GP_Sculpt_Settings":
@@ -5226,7 +5225,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GaussianBlurVars":
@@ -5261,7 +5260,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GlowShaderFxData":
@@ -5296,7 +5295,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GlowVars":
@@ -5331,7 +5330,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GpPaint":
@@ -5366,7 +5365,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GpSculptPaint":
@@ -5401,7 +5400,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GpVertexPaint":
@@ -5436,7 +5435,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GpWeightPaint":
@@ -5471,7 +5470,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GpencilModifierData":
@@ -5506,7 +5505,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "GridPaintMask":
@@ -5541,7 +5540,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "HairKey":
@@ -5576,7 +5575,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Histogram":
@@ -5611,7 +5610,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "HookGpencilModifierData":
@@ -5646,7 +5645,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "HookModifierData":
@@ -5681,7 +5680,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "HueCorrectModifierData":
@@ -5716,7 +5715,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ID":
@@ -5751,7 +5750,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDOverrideLibrary":
@@ -5786,7 +5785,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDOverrideLibraryProperty":
@@ -5821,7 +5820,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDOverrideLibraryPropertyOperation":
@@ -5856,7 +5855,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDProperty":
@@ -5891,7 +5890,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyData":
@@ -5926,7 +5925,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIData":
@@ -5961,7 +5960,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIDataBool":
@@ -5996,7 +5995,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIDataFloat":
@@ -6031,7 +6030,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIDataID":
@@ -6066,7 +6065,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIDataInt":
@@ -6101,7 +6100,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDPropertyUIDataString":
@@ -6136,7 +6135,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IDViewerPathElem":
@@ -6171,7 +6170,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ID_Runtime":
@@ -6206,7 +6205,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ID_Runtime_Remap":
@@ -6241,7 +6240,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IdAdtTemplate":
@@ -6276,7 +6275,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Image":
@@ -6311,7 +6310,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageAnim":
@@ -6346,7 +6345,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageFormatData":
@@ -6381,7 +6380,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImagePackedFile":
@@ -6416,7 +6415,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImagePaintSettings":
@@ -6451,7 +6450,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageTile":
@@ -6486,7 +6485,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageTile_Runtime":
@@ -6521,7 +6520,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageUser":
@@ -6556,7 +6555,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ImageView":
@@ -6591,7 +6590,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Image_Runtime":
@@ -6626,7 +6625,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Ipo":
@@ -6661,7 +6660,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IpoCurve":
@@ -6696,7 +6695,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "IpoDriver":
@@ -6731,7 +6730,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "KS_Path":
@@ -6766,7 +6765,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Key":
@@ -6801,7 +6800,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "KeyBlock":
@@ -6836,7 +6835,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "KeyingSet":
@@ -6871,7 +6870,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Lamp":
@@ -6906,7 +6905,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LaplacianDeformModifierData":
@@ -6941,7 +6940,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LaplacianSmoothModifierData":
@@ -6976,7 +6975,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Lattice":
@@ -7011,7 +7010,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LatticeGpencilModifierData":
@@ -7046,7 +7045,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LatticeModifierData":
@@ -7081,7 +7080,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LayerCollection":
@@ -7116,7 +7115,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LengthGpencilModifierData":
@@ -7151,7 +7150,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Library":
@@ -7186,7 +7185,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LibraryWeakReference":
@@ -7221,7 +7220,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Library_Runtime":
@@ -7256,7 +7255,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightCache":
@@ -7291,7 +7290,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightCacheTexture":
@@ -7326,7 +7325,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightGridCache":
@@ -7361,7 +7360,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightProbe":
@@ -7396,7 +7395,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightProbeCache":
@@ -7431,7 +7430,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LightgroupMembership":
@@ -7466,7 +7465,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_AlongStroke":
@@ -7501,7 +7500,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_CreaseAngle":
@@ -7536,7 +7535,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_Curvature_3D":
@@ -7571,7 +7570,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_DistanceFromCamera":
@@ -7606,7 +7605,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_DistanceFromObject":
@@ -7641,7 +7640,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_Material":
@@ -7676,7 +7675,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_Noise":
@@ -7711,7 +7710,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleAlphaModifier_Tangent":
@@ -7746,7 +7745,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_AlongStroke":
@@ -7781,7 +7780,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_CreaseAngle":
@@ -7816,7 +7815,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_Curvature_3D":
@@ -7851,7 +7850,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_DistanceFromCamera":
@@ -7886,7 +7885,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_DistanceFromObject":
@@ -7921,7 +7920,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_Material":
@@ -7956,7 +7955,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_Noise":
@@ -7991,7 +7990,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleColorModifier_Tangent":
@@ -8026,7 +8025,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_2DOffset":
@@ -8061,7 +8060,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_2DTransform":
@@ -8096,7 +8095,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_BackboneStretcher":
@@ -8131,7 +8130,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_BezierCurve":
@@ -8166,7 +8165,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_Blueprint":
@@ -8201,7 +8200,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_GuidingLines":
@@ -8236,7 +8235,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_PerlinNoise1D":
@@ -8271,7 +8270,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_PerlinNoise2D":
@@ -8306,7 +8305,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_Polygonalization":
@@ -8341,7 +8340,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_Sampling":
@@ -8376,7 +8375,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_Simplification":
@@ -8411,7 +8410,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_SinusDisplacement":
@@ -8446,7 +8445,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_SpatialNoise":
@@ -8481,7 +8480,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleGeometryModifier_TipRemover":
@@ -8516,7 +8515,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleModifier":
@@ -8551,7 +8550,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_AlongStroke":
@@ -8586,7 +8585,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_Calligraphy":
@@ -8621,7 +8620,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_CreaseAngle":
@@ -8656,7 +8655,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_Curvature_3D":
@@ -8691,7 +8690,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_DistanceFromCamera":
@@ -8726,7 +8725,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_DistanceFromObject":
@@ -8761,7 +8760,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_Material":
@@ -8796,7 +8795,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_Noise":
@@ -8831,7 +8830,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineStyleThicknessModifier_Tangent":
@@ -8866,7 +8865,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LineartGpencilModifierData":
@@ -8901,7 +8900,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Link":
@@ -8936,7 +8935,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "LinkData":
@@ -8971,7 +8970,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ListBase":
@@ -9006,7 +9005,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MBoolProperty":
@@ -9041,7 +9040,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MCol":
@@ -9076,7 +9075,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MDefCell":
@@ -9111,7 +9110,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MDefInfluence":
@@ -9146,7 +9145,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MDeformVert":
@@ -9181,7 +9180,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MDeformWeight":
@@ -9216,7 +9215,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MDisps":
@@ -9251,7 +9250,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MEdge":
@@ -9286,7 +9285,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MFace":
@@ -9321,7 +9320,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MFloatProperty":
@@ -9356,7 +9355,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MInt8Property":
@@ -9391,7 +9390,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MIntProperty":
@@ -9426,7 +9425,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MLoop":
@@ -9461,7 +9460,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MLoopCol":
@@ -9496,7 +9495,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MLoopTri":
@@ -9531,7 +9530,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MLoopUV":
@@ -9566,7 +9565,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MPoly":
@@ -9601,7 +9600,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MPropCol":
@@ -9636,7 +9635,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MRecast":
@@ -9671,7 +9670,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MSelect":
@@ -9706,7 +9705,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MStringProperty":
@@ -9741,7 +9740,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MTFace":
@@ -9776,7 +9775,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MTex":
@@ -9811,7 +9810,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MVert":
@@ -9846,7 +9845,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MVertSkin":
@@ -9881,7 +9880,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MappingInfoModifierData":
@@ -9916,7 +9915,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Mask":
@@ -9951,7 +9950,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskLayer":
@@ -9986,7 +9985,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskLayerShape":
@@ -10021,7 +10020,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskModifierData":
@@ -10056,7 +10055,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskParent":
@@ -10091,7 +10090,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskSpaceInfo":
@@ -10126,7 +10125,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskSpline":
@@ -10161,7 +10160,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskSplinePoint":
@@ -10196,7 +10195,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaskSplinePointUW":
@@ -10231,7 +10230,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Material":
@@ -10266,7 +10265,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaterialGPencilStyle":
@@ -10301,7 +10300,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MaterialLineArt":
@@ -10336,7 +10335,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Mesh":
@@ -10371,7 +10370,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MeshCacheModifierData":
@@ -10406,7 +10405,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MeshDeformModifierData":
@@ -10441,7 +10440,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MeshSeqCacheModifierData":
@@ -10476,7 +10475,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MeshStatVis":
@@ -10511,7 +10510,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MeshToVolumeModifierData":
@@ -10546,7 +10545,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MetaBall":
@@ -10581,7 +10580,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MetaElem":
@@ -10616,7 +10615,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MetaStack":
@@ -10651,7 +10650,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MirrorGpencilModifierData":
@@ -10686,7 +10685,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MirrorModifierData":
@@ -10721,7 +10720,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ModifierData":
@@ -10756,7 +10755,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ModifierViewerPathElem":
@@ -10791,7 +10790,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClip":
@@ -10826,7 +10825,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClipProxy":
@@ -10861,7 +10860,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClipScopes":
@@ -10896,7 +10895,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClipUser":
@@ -10931,7 +10930,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClip_Runtime":
@@ -10966,7 +10965,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieClip_RuntimeGPUTexture":
@@ -11001,7 +11000,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieReconstructedCamera":
@@ -11036,7 +11035,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTracking":
@@ -11071,7 +11070,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingCamera":
@@ -11106,7 +11105,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingDopesheet":
@@ -11141,7 +11140,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingDopesheetChannel":
@@ -11176,7 +11175,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingDopesheetCoverageSegment":
@@ -11211,7 +11210,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingMarker":
@@ -11246,7 +11245,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingObject":
@@ -11281,7 +11280,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingPlaneMarker":
@@ -11316,7 +11315,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingPlaneTrack":
@@ -11351,7 +11350,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingReconstruction":
@@ -11386,7 +11385,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingSettings":
@@ -11421,7 +11420,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingStabilization":
@@ -11456,7 +11455,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingStats":
@@ -11491,7 +11490,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MovieTrackingTrack":
@@ -11526,7 +11525,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MultiplyGpencilModifierData":
@@ -11561,7 +11560,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "MultiresModifierData":
@@ -11596,7 +11595,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NlaStrip":
@@ -11631,7 +11630,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NlaTrack":
@@ -11666,7 +11665,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeAccumulateField":
@@ -11701,7 +11700,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeAntiAliasingData":
@@ -11736,7 +11735,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeBilateralBlurData":
@@ -11771,7 +11770,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeBlurData":
@@ -11806,7 +11805,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeBokehImage":
@@ -11841,7 +11840,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeBoxMask":
@@ -11876,7 +11875,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeCMPCombSepColor":
@@ -11911,7 +11910,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeChroma":
@@ -11946,7 +11945,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeColorBalance":
@@ -11981,7 +11980,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeColorCorrection":
@@ -12016,7 +12015,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeColorspill":
@@ -12051,7 +12050,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeCombSepColor":
@@ -12086,7 +12085,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeConvertColorSpace":
@@ -12121,7 +12120,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeCryptomatte":
@@ -12156,7 +12155,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeCryptomatte_Runtime":
@@ -12191,7 +12190,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeDBlurData":
@@ -12226,7 +12225,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeDefocus":
@@ -12261,7 +12260,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeDenoise":
@@ -12296,7 +12295,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeDilateErode":
@@ -12331,7 +12330,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeEllipseMask":
@@ -12366,7 +12365,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeFrame":
@@ -12401,7 +12400,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeFunctionCompare":
@@ -12436,7 +12435,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryAttributeCapture":
@@ -12471,7 +12470,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCollectionInfo":
@@ -12506,7 +12505,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveFill":
@@ -12541,7 +12540,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveFillet":
@@ -12576,7 +12575,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurvePrimitiveArc":
@@ -12611,7 +12610,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurvePrimitiveBezierSegment":
@@ -12646,7 +12645,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurvePrimitiveCircle":
@@ -12681,7 +12680,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurvePrimitiveLine":
@@ -12716,7 +12715,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurvePrimitiveQuad":
@@ -12751,7 +12750,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveResample":
@@ -12786,7 +12785,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveSample":
@@ -12821,7 +12820,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveSelectHandles":
@@ -12856,7 +12855,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveSetHandles":
@@ -12891,7 +12890,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveSplineType":
@@ -12926,7 +12925,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveToPoints":
@@ -12961,7 +12960,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryCurveTrim":
@@ -12996,7 +12995,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryDeleteGeometry":
@@ -13031,7 +13030,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryDistributePointsInVolume":
@@ -13066,7 +13065,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryDuplicateElements":
@@ -13101,7 +13100,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryExtrudeMesh":
@@ -13136,7 +13135,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryImageTexture":
@@ -13171,7 +13170,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryInputNamedAttribute":
@@ -13206,7 +13205,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMergeByDistance":
@@ -13241,7 +13240,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshCircle":
@@ -13276,7 +13275,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshCone":
@@ -13311,7 +13310,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshCylinder":
@@ -13346,7 +13345,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshLine":
@@ -13381,7 +13380,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshToPoints":
@@ -13416,7 +13415,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryMeshToVolume":
@@ -13451,7 +13450,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryObjectInfo":
@@ -13486,7 +13485,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryPointsToVolume":
@@ -13521,7 +13520,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryProximity":
@@ -13556,7 +13555,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryRaycast":
@@ -13591,7 +13590,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometrySampleIndex":
@@ -13626,7 +13625,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometrySeparateGeometry":
@@ -13661,7 +13660,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometrySetCurveHandlePositions":
@@ -13696,7 +13695,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryStoreNamedAttribute":
@@ -13731,7 +13730,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryStringToCurves":
@@ -13766,7 +13765,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometrySubdivisionSurface":
@@ -13801,7 +13800,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryTransferAttribute":
@@ -13836,7 +13835,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryUVUnwrap":
@@ -13871,7 +13870,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryViewer":
@@ -13906,7 +13905,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGeometryVolumeToMesh":
@@ -13941,7 +13940,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeGlare":
@@ -13976,7 +13975,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeHueSat":
@@ -14011,7 +14010,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeImageAnim":
@@ -14046,7 +14045,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeImageFile":
@@ -14081,7 +14080,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeImageLayer":
@@ -14116,7 +14115,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeImageMultiFile":
@@ -14151,7 +14150,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeImageMultiFileSocket":
@@ -14186,7 +14185,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeInputBool":
@@ -14221,7 +14220,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeInputColor":
@@ -14256,7 +14255,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeInputInt":
@@ -14291,7 +14290,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeInputString":
@@ -14326,7 +14325,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeInputVector":
@@ -14361,7 +14360,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeKeyingData":
@@ -14396,7 +14395,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeKeyingScreenData":
@@ -14431,7 +14430,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeLensDist":
@@ -14466,7 +14465,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeMapRange":
@@ -14501,7 +14500,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeMask":
@@ -14536,7 +14535,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodePlaneTrackDeformData":
@@ -14571,7 +14570,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeRandomValue":
@@ -14606,7 +14605,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeScriptDict":
@@ -14641,7 +14640,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeSetAlpha":
@@ -14676,7 +14675,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderAttribute":
@@ -14711,7 +14710,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderMix":
@@ -14746,7 +14745,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderNormalMap":
@@ -14781,7 +14780,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderOutputAOV":
@@ -14816,7 +14815,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderPrincipled":
@@ -14851,7 +14850,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderScript":
@@ -14886,7 +14885,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderTangent":
@@ -14921,7 +14920,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderTexIES":
@@ -14956,7 +14955,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderTexPointDensity":
@@ -14991,7 +14990,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderUVMap":
@@ -15026,7 +15025,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderVectTransform":
@@ -15061,7 +15060,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeShaderVertexColor":
@@ -15096,7 +15095,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeSunBeams":
@@ -15131,7 +15130,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeSwitch":
@@ -15166,7 +15165,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexBase":
@@ -15201,7 +15200,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexBrick":
@@ -15236,7 +15235,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexChecker":
@@ -15271,7 +15270,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexEnvironment":
@@ -15306,7 +15305,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexGradient":
@@ -15341,7 +15340,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexImage":
@@ -15376,7 +15375,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexMagic":
@@ -15411,7 +15410,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexMusgrave":
@@ -15446,7 +15445,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexNoise":
@@ -15481,7 +15480,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexSky":
@@ -15516,7 +15515,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexVoronoi":
@@ -15551,7 +15550,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTexWave":
@@ -15586,7 +15585,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTonemap":
@@ -15621,7 +15620,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTrackPosData":
@@ -15656,7 +15655,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTranslateData":
@@ -15691,7 +15690,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTwoFloats":
@@ -15726,7 +15725,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeTwoXYs":
@@ -15761,7 +15760,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeVertexCol":
@@ -15796,7 +15795,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodeViewerPathElem":
@@ -15831,7 +15830,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodesModifierData":
@@ -15866,7 +15865,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NodesModifierSettings":
@@ -15901,7 +15900,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NoiseGpencilModifierData":
@@ -15936,7 +15935,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "NormalEditModifierData":
@@ -15971,7 +15970,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Nurb":
@@ -16006,7 +16005,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ObHook":
@@ -16041,7 +16040,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Object":
@@ -16076,7 +16075,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ObjectLineArt":
@@ -16111,7 +16110,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Object_Runtime":
@@ -16146,7 +16145,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "OceanModifierData":
@@ -16181,7 +16180,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "OffsetGpencilModifierData":
@@ -16216,7 +16215,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "OpacityGpencilModifierData":
@@ -16251,7 +16250,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "OutlineGpencilModifierData":
@@ -16286,7 +16285,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PTCacheExtra":
@@ -16321,7 +16320,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PTCacheMem":
@@ -16356,7 +16355,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PackedFile":
@@ -16391,7 +16390,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Paint":
@@ -16426,7 +16425,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PaintCurve":
@@ -16461,7 +16460,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PaintCurvePoint":
@@ -16496,7 +16495,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PaintModeSettings":
@@ -16531,7 +16530,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PaintToolSlot":
@@ -16566,7 +16565,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Paint_Runtime":
@@ -16601,7 +16600,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Palette":
@@ -16636,7 +16635,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PaletteColor":
@@ -16671,7 +16670,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Panel":
@@ -16706,7 +16705,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PanelCategoryStack":
@@ -16741,7 +16740,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Panel_Runtime":
@@ -16776,7 +16775,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PartDeflect":
@@ -16811,7 +16810,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PartEff":
@@ -16846,7 +16845,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleBrushData":
@@ -16881,7 +16880,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleData":
@@ -16916,7 +16915,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleDupliWeight":
@@ -16951,7 +16950,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleEditSettings":
@@ -16986,7 +16985,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleInstanceModifierData":
@@ -17021,7 +17020,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleKey":
@@ -17056,7 +17055,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleSettings":
@@ -17091,7 +17090,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleSpring":
@@ -17126,7 +17125,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleSystem":
@@ -17161,7 +17160,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleSystemModifierData":
@@ -17196,7 +17195,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ParticleTarget":
@@ -17231,7 +17230,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PhysicsSettings":
@@ -17266,7 +17265,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PixelShaderFxData":
@@ -17301,7 +17300,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PointCache":
@@ -17336,7 +17335,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PointCloud":
@@ -17371,7 +17370,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PointDensity":
@@ -17406,7 +17405,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "PreviewImage":
@@ -17441,7 +17440,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RegionView3D":
@@ -17476,7 +17475,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RemeshModifierData":
@@ -17511,7 +17510,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RenderData":
@@ -17546,7 +17545,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RenderProfile":
@@ -17581,7 +17580,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RenderSlot":
@@ -17616,7 +17615,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ReportList":
@@ -17651,7 +17650,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RigidBodyCon":
@@ -17686,7 +17685,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RigidBodyOb":
@@ -17721,7 +17720,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RigidBodyWorld":
@@ -17756,7 +17755,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RigidBodyWorld_Shared":
@@ -17791,7 +17790,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "RimShaderFxData":
@@ -17826,7 +17825,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SBVertex":
@@ -17861,7 +17860,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SDefBind":
@@ -17896,7 +17895,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SDefVert":
@@ -17931,7 +17930,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SPHFluidSettings":
@@ -17966,7 +17965,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Scene":
@@ -18001,7 +18000,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneCollection":
@@ -18036,7 +18035,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneDisplay":
@@ -18071,7 +18070,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneEEVEE":
@@ -18106,7 +18105,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneGpencil":
@@ -18141,7 +18140,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneRenderLayer":
@@ -18176,7 +18175,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SceneRenderView":
@@ -18211,7 +18210,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Scopes":
@@ -18246,7 +18245,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrArea":
@@ -18281,7 +18280,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrAreaMap":
@@ -18316,7 +18315,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrArea_Runtime":
@@ -18351,7 +18350,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrEdge":
@@ -18386,7 +18385,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrGlobalAreaData":
@@ -18421,7 +18420,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrVert":
@@ -18456,7 +18455,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ScrewModifierData":
@@ -18491,7 +18490,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Script":
@@ -18526,7 +18525,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Sculpt":
@@ -18561,7 +18560,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SeqTimelineChannel":
@@ -18596,7 +18595,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Sequence":
@@ -18631,7 +18630,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequenceModifierData":
@@ -18666,7 +18665,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequenceRuntime":
@@ -18701,7 +18700,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerMaskModifierData":
@@ -18736,7 +18735,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerPreviewOverlay":
@@ -18771,7 +18770,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerScopes":
@@ -18806,7 +18805,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerTimelineOverlay":
@@ -18841,7 +18840,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerTonemapModifierData":
@@ -18876,7 +18875,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SequencerToolSettings":
@@ -18911,7 +18910,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SessionUUID":
@@ -18946,7 +18945,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShaderFxData":
@@ -18981,7 +18980,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShaderFxData_Runtime":
@@ -19016,7 +19015,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShadowShaderFxData":
@@ -19051,7 +19050,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShapeKeyModifierData":
@@ -19086,7 +19085,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShrinkwrapGpencilModifierData":
@@ -19121,7 +19120,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ShrinkwrapModifierData":
@@ -19156,7 +19155,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SimpleDeformModifierData":
@@ -19191,7 +19190,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SimplifyGpencilModifierData":
@@ -19226,7 +19225,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Simulation":
@@ -19261,7 +19260,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SkinModifierData":
@@ -19296,7 +19295,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SmokeModifierData":
@@ -19331,7 +19330,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SmoothGpencilModifierData":
@@ -19366,7 +19365,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SmoothModifierData":
@@ -19401,7 +19400,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SoftBody":
@@ -19436,7 +19435,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SoftBody_Shared":
@@ -19471,7 +19470,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SoftbodyModifierData":
@@ -19506,7 +19505,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SolidColorVars":
@@ -19541,7 +19540,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SolidLight":
@@ -19576,7 +19575,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SolidifyModifierData":
@@ -19611,7 +19610,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceAction":
@@ -19646,7 +19645,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceAction_Runtime":
@@ -19681,7 +19680,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceButs":
@@ -19716,7 +19715,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceClip":
@@ -19751,7 +19750,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceConsole":
@@ -19786,7 +19785,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceFile":
@@ -19821,7 +19820,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceGraph_Runtime":
@@ -19856,7 +19855,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceImage":
@@ -19891,7 +19890,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceImageOverlay":
@@ -19926,7 +19925,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceInfo":
@@ -19961,7 +19960,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceIpo":
@@ -19996,7 +19995,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceLink":
@@ -20031,7 +20030,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceNla":
@@ -20066,7 +20065,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceNode":
@@ -20101,7 +20100,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceNodeOverlay":
@@ -20136,7 +20135,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceOops":
@@ -20171,7 +20170,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceScript":
@@ -20206,7 +20205,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceSeq":
@@ -20241,7 +20240,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceSeqRuntime":
@@ -20276,7 +20275,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceSpreadsheet":
@@ -20311,7 +20310,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceStatusBar":
@@ -20346,7 +20345,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceText":
@@ -20381,7 +20380,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceText_Runtime":
@@ -20416,7 +20415,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceTopBar":
@@ -20451,7 +20450,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpaceUserPref":
@@ -20486,7 +20485,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Speaker":
@@ -20521,7 +20520,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpeedControlVars":
@@ -20556,7 +20555,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpreadsheetColumn":
@@ -20591,7 +20590,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpreadsheetColumnID":
@@ -20626,7 +20625,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SpreadsheetRowFilter":
@@ -20661,7 +20660,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Stereo3dFormat":
@@ -20696,7 +20695,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Strip":
@@ -20731,7 +20730,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripAnim":
@@ -20766,7 +20765,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripColorBalance":
@@ -20801,7 +20800,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripCrop":
@@ -20836,7 +20835,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripElem":
@@ -20871,7 +20870,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripProxy":
@@ -20906,7 +20905,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "StripTransform":
@@ -20941,7 +20940,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SubdivGpencilModifierData":
@@ -20976,7 +20975,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SubsurfModifierData":
@@ -21011,7 +21010,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SurfaceDeformModifierData":
@@ -21046,7 +21045,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SurfaceModifierData":
@@ -21081,7 +21080,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SurfaceModifierData_Runtime":
@@ -21116,7 +21115,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "SwirlShaderFxData":
@@ -21151,7 +21150,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TFace":
@@ -21186,7 +21185,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Tex":
@@ -21221,7 +21220,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TexMapping":
@@ -21256,7 +21255,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TexNodeOutput":
@@ -21291,7 +21290,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TexPaintSlot":
@@ -21326,7 +21325,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Text":
@@ -21361,7 +21360,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TextBox":
@@ -21396,7 +21395,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TextLine":
@@ -21431,7 +21430,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TextVars":
@@ -21466,7 +21465,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TextureGpencilModifierData":
@@ -21501,7 +21500,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThemeCollectionColor":
@@ -21536,7 +21535,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThemeSpace":
@@ -21571,7 +21570,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThemeStripColor":
@@ -21606,7 +21605,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThemeUI":
@@ -21641,7 +21640,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThemeWireColor":
@@ -21676,7 +21675,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ThickGpencilModifierData":
@@ -21711,7 +21710,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TimeGpencilModifierData":
@@ -21746,7 +21745,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TimeGpencilModifierSegment":
@@ -21781,7 +21780,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TimeMarker":
@@ -21816,7 +21815,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TintGpencilModifierData":
@@ -21851,7 +21850,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ToolSettings":
@@ -21886,7 +21885,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TransformOrientation":
@@ -21921,7 +21920,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TransformOrientationSlot":
@@ -21956,7 +21955,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TransformVars":
@@ -21991,7 +21990,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TreeStore":
@@ -22026,7 +22025,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TreeStoreElem":
@@ -22061,7 +22060,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "TriangulateModifierData":
@@ -22096,7 +22095,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UVProjectModifierData":
@@ -22131,7 +22130,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UVWarpModifierData":
@@ -22166,7 +22165,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UnifiedPaintSettings":
@@ -22201,7 +22200,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UnitSettings":
@@ -22236,7 +22235,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UserDef":
@@ -22271,7 +22270,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UserDef_Experimental":
@@ -22306,7 +22305,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UserDef_FileSpaceData":
@@ -22341,7 +22340,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UserDef_Runtime":
@@ -22376,7 +22375,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UserDef_SpaceData":
@@ -22411,7 +22410,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "UvSculpt":
@@ -22446,7 +22445,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VFont":
@@ -22481,7 +22480,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VPaint":
@@ -22516,7 +22515,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View2D":
@@ -22551,7 +22550,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View3D":
@@ -22586,7 +22585,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View3DCursor":
@@ -22621,7 +22620,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View3DOverlay":
@@ -22656,7 +22655,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View3DShading":
@@ -22691,7 +22690,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "View3D_Runtime":
@@ -22726,7 +22725,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewLayer":
@@ -22761,7 +22760,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewLayerAOV":
@@ -22796,7 +22795,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewLayerEEVEE":
@@ -22831,7 +22830,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewLayerEngineData":
@@ -22866,7 +22865,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewLayerLightgroup":
@@ -22901,7 +22900,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewerPath":
@@ -22936,7 +22935,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "ViewerPathElem":
@@ -22971,7 +22970,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Volume":
@@ -23006,7 +23005,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VolumeDisplaceModifierData":
@@ -23041,7 +23040,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VolumeDisplay":
@@ -23076,7 +23075,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VolumeRender":
@@ -23111,7 +23110,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "VolumeToMeshModifierData":
@@ -23146,7 +23145,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "Volume_Runtime":
@@ -23181,7 +23180,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WalkNavigation":
@@ -23216,7 +23215,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WarpModifierData":
@@ -23251,7 +23250,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WaveEff":
@@ -23286,7 +23285,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WaveModifierData":
@@ -23321,7 +23320,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WaveShaderFxData":
@@ -23356,7 +23355,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightAngleGpencilModifierData":
@@ -23391,7 +23390,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightProxGpencilModifierData":
@@ -23426,7 +23425,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightVGEditModifierData":
@@ -23461,7 +23460,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightVGMixModifierData":
@@ -23496,7 +23495,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightVGProximityModifierData":
@@ -23531,7 +23530,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeightedNormalModifierData":
@@ -23566,7 +23565,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WeldModifierData":
@@ -23601,7 +23600,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WhiteBalanceModifierData":
@@ -23636,7 +23635,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WipeVars":
@@ -23671,7 +23670,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WireframeModifierData":
@@ -23706,7 +23705,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WorkSpace":
@@ -23741,7 +23740,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WorkSpaceDataRelation":
@@ -23776,7 +23775,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WorkSpaceInstanceHook":
@@ -23811,7 +23810,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "WorkSpaceLayout":
@@ -23846,7 +23845,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "World":
@@ -23881,7 +23880,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrActionMap":
@@ -23916,7 +23915,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrActionMapBinding":
@@ -23951,7 +23950,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrActionMapItem":
@@ -23986,7 +23985,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrComponentPath":
@@ -24021,7 +24020,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrSessionSettings":
@@ -24056,7 +24055,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "XrUserPath":
@@ -24091,7 +24090,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bAction":
@@ -24126,7 +24125,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bActionChannel":
@@ -24161,7 +24160,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bActionConstraint":
@@ -24196,7 +24195,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bActionGroup":
@@ -24231,7 +24230,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bActionModifier":
@@ -24266,7 +24265,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bActionStrip":
@@ -24301,7 +24300,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bAddon":
@@ -24336,7 +24335,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bAnimVizSettings":
@@ -24371,7 +24370,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bArmature":
@@ -24406,7 +24405,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bArmatureConstraint":
@@ -24441,7 +24440,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bCameraSolverConstraint":
@@ -24476,7 +24475,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bChildOfConstraint":
@@ -24511,7 +24510,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bClampToConstraint":
@@ -24546,7 +24545,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bConstraint":
@@ -24581,7 +24580,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bConstraintChannel":
@@ -24616,7 +24615,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bConstraintTarget":
@@ -24651,7 +24650,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bDampTrackConstraint":
@@ -24686,7 +24685,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bDeformGroup":
@@ -24721,7 +24720,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bDistLimitConstraint":
@@ -24756,7 +24755,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bDopeSheet":
@@ -24791,7 +24790,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bFaceMap":
@@ -24826,7 +24825,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bFollowPathConstraint":
@@ -24861,7 +24860,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bFollowTrackConstraint":
@@ -24896,7 +24895,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDcontrolpoint":
@@ -24931,7 +24930,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDcurve":
@@ -24966,7 +24965,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDcurve_point":
@@ -25001,7 +25000,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDframe":
@@ -25036,7 +25035,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDframe_Runtime":
@@ -25071,7 +25070,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDlayer":
@@ -25106,7 +25105,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDlayer_Mask":
@@ -25141,7 +25140,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDlayer_Runtime":
@@ -25176,7 +25175,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDpalette":
@@ -25211,7 +25210,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDpalettecolor":
@@ -25246,7 +25245,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDspoint":
@@ -25281,7 +25280,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDspoint_Runtime":
@@ -25316,7 +25315,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDstroke":
@@ -25351,7 +25350,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDstroke_Runtime":
@@ -25386,7 +25385,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPDtriangle":
@@ -25421,7 +25420,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPdata":
@@ -25456,7 +25455,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPdata_Runtime":
@@ -25491,7 +25490,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bGPgrid":
@@ -25526,7 +25525,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bIKParam":
@@ -25561,7 +25560,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bItasc":
@@ -25596,7 +25595,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bKinematicConstraint":
@@ -25631,7 +25630,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bLocLimitConstraint":
@@ -25666,7 +25665,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bLocateLikeConstraint":
@@ -25701,7 +25700,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bLockTrackConstraint":
@@ -25736,7 +25735,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bMinMaxConstraint":
@@ -25771,7 +25770,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bMotionPath":
@@ -25806,7 +25805,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bMotionPathVert":
@@ -25841,7 +25840,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNode":
@@ -25876,7 +25875,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeInstanceKey":
@@ -25911,7 +25910,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeLink":
@@ -25946,7 +25945,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocket":
@@ -25981,7 +25980,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueBoolean":
@@ -26016,7 +26015,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueCollection":
@@ -26051,7 +26050,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueFloat":
@@ -26086,7 +26085,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueImage":
@@ -26121,7 +26120,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueInt":
@@ -26156,7 +26155,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueMaterial":
@@ -26191,7 +26190,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueObject":
@@ -26226,7 +26225,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueRGBA":
@@ -26261,7 +26260,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueString":
@@ -26296,7 +26295,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueTexture":
@@ -26331,7 +26330,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeSocketValueVector":
@@ -26366,7 +26365,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeStack":
@@ -26401,7 +26400,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeTree":
@@ -26436,7 +26435,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bNodeTreePath":
@@ -26471,7 +26470,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bObjectSolverConstraint":
@@ -26506,7 +26505,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPathCompare":
@@ -26541,7 +26540,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPivotConstraint":
@@ -26576,7 +26575,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPose":
@@ -26611,7 +26610,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPoseChannel":
@@ -26646,7 +26645,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPoseChannel_Runtime":
@@ -26681,7 +26680,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bPythonConstraint":
@@ -26716,7 +26715,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bRigidBodyJointConstraint":
@@ -26751,7 +26750,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bRotLimitConstraint":
@@ -26786,7 +26785,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bRotateLikeConstraint":
@@ -26821,7 +26820,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bSameVolumeConstraint":
@@ -26856,7 +26855,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bScreen":
@@ -26891,7 +26890,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bShrinkwrapConstraint":
@@ -26926,7 +26925,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bSizeLikeConstraint":
@@ -26961,7 +26960,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bSizeLimitConstraint":
@@ -26996,7 +26995,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bSound":
@@ -27031,7 +27030,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bSplineIKConstraint":
@@ -27066,7 +27065,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bStretchToConstraint":
@@ -27101,7 +27100,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bTheme":
@@ -27136,7 +27135,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bToolRef":
@@ -27171,7 +27170,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bTrackToConstraint":
@@ -27206,7 +27205,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bTransLikeConstraint":
@@ -27241,7 +27240,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bTransformCacheConstraint":
@@ -27276,7 +27275,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bTransformConstraint":
@@ -27311,7 +27310,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUUID":
@@ -27346,7 +27345,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserAssetLibrary":
@@ -27381,7 +27380,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserMenu":
@@ -27416,7 +27415,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserMenuItem":
@@ -27451,7 +27450,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserMenuItem_Menu":
@@ -27486,7 +27485,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserMenuItem_Op":
@@ -27521,7 +27520,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "bUserMenuItem_Prop":
@@ -27556,7 +27555,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "rctf":
@@ -27591,7 +27590,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "rcti":
@@ -27626,7 +27625,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "tPaletteColorHSV":
@@ -27661,7 +27660,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiFontStyle":
@@ -27696,7 +27695,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiList":
@@ -27731,7 +27730,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiPanelColors":
@@ -27766,7 +27765,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiPreview":
@@ -27801,7 +27800,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiStyle":
@@ -27836,7 +27835,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiWidgetColors":
@@ -27871,7 +27870,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "uiWidgetStateColors":
@@ -27906,7 +27905,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "vec2f":
@@ -27941,7 +27940,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "vec2s":
@@ -27976,7 +27975,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "vec3f":
@@ -28011,7 +28010,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmKeyConfig":
@@ -28046,7 +28045,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmKeyConfigPref":
@@ -28081,7 +28080,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmKeyMap":
@@ -28116,7 +28115,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmKeyMapDiffItem":
@@ -28151,7 +28150,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmKeyMapItem":
@@ -28186,7 +28185,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmOperator":
@@ -28221,7 +28220,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmOwnerID":
@@ -28256,7 +28255,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmWindow":
@@ -28291,7 +28290,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmWindowManager":
@@ -28326,7 +28325,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		case "wmXrData":
@@ -28361,7 +28360,7 @@ func (blk *Block) ParseBody(order binary.ByteOrder, dna *DNA) (err error) {
 				log.Printf("%d unread bytes in %q.", len(buf), typ)
 				log.Printf("blk.Hdr: %#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 		}

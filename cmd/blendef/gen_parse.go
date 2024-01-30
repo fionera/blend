@@ -134,7 +134,7 @@ const midStruct = `		case "%s":
 				log.Printf("%%d unread bytes in %%q.", len(buf), typ)
 				log.Printf("blk.Hdr: %%#v\n", blk.Hdr)
 				log.Println(hex.Dump(buf))
-				os.Exit(1)
+				//os.Exit(1)
 			}
 			/// ### [/ tmp ] ###
 `

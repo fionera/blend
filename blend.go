@@ -53,7 +53,7 @@ func Parse(filePath string) (b *Blend, err error) {
 		}
 		_, ok := block.Addr[blk.Hdr.OldAddr]
 		if ok {
-			return nil, fmt.Errorf("blend.Parse: multiple occurances of struct address %#x", blk.Hdr.OldAddr)
+			log.Println(fmt.Errorf("blend.Parse: multiple occurances of struct address %#x", blk.Hdr.OldAddr))
 		}
 		block.Addr[blk.Hdr.OldAddr] = blk
 
@@ -126,11 +126,12 @@ type Header struct {
 // ParseHeader parses and returns the header of a blend file.
 //
 // Example file header:
-//    "BLENDER_V100"
-//    //  0-6   magic ("BLENDER")
-//    //    7   pointer size ("_" or "-")
-//    //    8   endianness ("V" or "v")
-//    // 9-11   version ("100")
+//
+//	"BLENDER_V100"
+//	//  0-6   magic ("BLENDER")
+//	//    7   pointer size ("_" or "-")
+//	//    8   endianness ("V" or "v")
+//	// 9-11   version ("100")
 func ParseHeader(r io.Reader) (hdr *Header, err error) {
 	buf := make([]byte, 12)
 	_, err = io.ReadFull(r, buf)
