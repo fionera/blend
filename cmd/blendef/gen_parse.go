@@ -60,7 +60,6 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"os"
 )
 
 // ParseBody parses the block body and stores it in blk.Body. It is safe to call

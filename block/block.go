@@ -144,6 +144,14 @@ func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header,
 		hdr.Code = CodePL
 	case "WS\x00\x00":
 		hdr.Code = CodeWS
+	case "VF\x00\x00":
+		hdr.Code = CodeVF
+	case "LI\x00\x00":
+		hdr.Code = CodeLI
+	case "ID\x00\x00":
+		hdr.Code = CodeID
+	case "CU\x00\x00":
+		hdr.Code = CodeCU
 	default:
 		log.Printf("Header.ParseHeader: block code %q not yet implemented.\n", code)
 		hdr.Code = CodeUnknown
@@ -257,6 +265,10 @@ const (
 	CodeGR
 	CodePL
 	CodeWS
+	CodeVF
+	CodeLI
+	CodeID
+	CodeCU
 
 	CodeUnknown BlockCode = -1
 )
