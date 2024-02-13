@@ -5,7 +5,6 @@ import (
 	"encoding/binary"
 	"fmt"
 	"io"
-	"io/ioutil"
 )
 
 // DNA stores information about the various structures contained within a blend
@@ -220,7 +219,7 @@ func ParseDNA(r io.Reader, order binary.ByteOrder) (body *DNA, err error) {
 func align(r io.Reader, total int, n int) (err error) {
 	i := total % n
 	if i > 0 {
-		_, err = io.CopyN(ioutil.Discard, r, int64(n-i))
+		_, err = io.CopyN(io.Discard, r, int64(n-i))
 		if err != nil {
 			return err
 		}

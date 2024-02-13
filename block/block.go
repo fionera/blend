@@ -1,274 +1,104 @@
-// Package block implements parsing of blend file blocks.
-//
-// One unique feature of blend files is that they contain a full definition of
-// every structure used in its file blocks. The structure definitions are stored
-// in the DNA block.
-//
-// All block structure definitions ("struct.go") and the block parsing logic
-// ("parse.go") have been generating by parsing the DNA block of
-// "testdata/block.blend".
-//
-// The tool which was used to generate these two files is available through:
-//
-//	go get github.com/mewspring/blend/cmd/blendef
-//
-// More complex blend files may contain structures which are not yet defined in
-// this package. If so, use blendef to regenerate "struct.go" and "parse.go" for
-// the given blend file.
 package block
 
 import (
-	"encoding/binary"
 	"fmt"
 	"io"
 	"log"
-	"os"
+
+	"github.com/mewspring/blend/block/generic"
+	v400 "github.com/mewspring/blend/block/v400"
 )
 
 // A Block contains a header and a type dependent body.
 type Block struct {
-	Hdr *Header
-	// Body contains an *io.SectionReader which is later replaced with a concrete
-	// block type after it has been parsed.
-	Body interface{}
+	Hdr  Header
+	Body any
+
+	sr *io.SectionReader
+	r  *Reader
+	w  *Writer
 }
 
-// Parse parses and returns a file block.
-func Parse(f *os.File, order binary.ByteOrder, ptrSize int) (blk *Block, err error) {
-	// Parse block header.
-	blk = new(Block)
-	blk.Hdr, err = ParseHeader(f, order, ptrSize)
-	if err != nil {
-		return nil, err
+// ParseBody parses the block body and stores it in blk.Body. It is safe to call
+// ParseBody multiple times on the same block.
+func (blk *Block) ParseBody(dna *DNA) (err error) {
+	if blk.Body != nil {
+		// Body has already been parsed.
+		return nil
 	}
 
-	// Store section reader for block body.
-	off, err := f.Seek(blk.Hdr.Size, os.SEEK_CUR)
-	if err != nil {
-		return nil, err
-	}
-	blk.Body = io.NewSectionReader(f, off-blk.Hdr.Size, blk.Hdr.Size)
-
-	return blk, nil
-}
-
-// Header contains information about the block's type and size.
-type Header struct {
-	// Code provides a rough type description of the block.
-	Code BlockCode
-	// Total length of the data after the block header.
-	Size int64
-	// Memory address of the structure when it was written to disk.
-	OldAddr uint64
-	// Index in the Structure DNA.
-	SDNAIndex int
-	// Number of structures located in this block.
-	Count int
-}
-
-// ParseHeader parses and returns a file block header.
-//
-// Example file block header:
-//
-//	44 41 54 41  E0 00 00 00  88 5E 9D 04  00 00 00 00    DATA.....^......
-//	F8 00 00 00  0E 00 00 00                              ........
-//
-//	//   0-3   block code   ("DATA")
-//	//   4-7   size         (0x000000E0 = 224)
-//	//  8-15   old addr     (0x00000000049D5E88) // size depends on PtrSize.
-//	// 16-19   sdna index   (0x000000F8 = 248)
-//	// 20-23   count        (0x0000000E = 14)
-func ParseHeader(r io.Reader, order binary.ByteOrder, ptrSize int) (hdr *Header, err error) {
-	// Block code.
-	buf := make([]byte, 4)
-	_, err = io.ReadFull(r, buf)
-	if err != nil {
-		return nil, fmt.Errorf("86: %v", err)
-	}
-	hdr = new(Header)
-	code := string(buf)
-	switch code {
-	case "AR\x00\x00":
-		hdr.Code = CodeAR
-	case "BR\x00\x00":
-		hdr.Code = CodeBR
-	case "CA\x00\x00":
-		hdr.Code = CodeCA
-	case "DATA":
-		hdr.Code = CodeDATA
-	case "DNA1":
-		hdr.Code = CodeDNA1
-	case "ENDB":
-		hdr.Code = CodeENDB
-	case "GLOB":
-		hdr.Code = CodeGLOB
-	case "IM\x00\x00":
-		hdr.Code = CodeIM
-	case "LA\x00\x00":
-		hdr.Code = CodeLA
-	case "LS\x00\x00":
-		hdr.Code = CodeLS
-	case "MA\x00\x00":
-		hdr.Code = CodeMA
-	case "ME\x00\x00":
-		hdr.Code = CodeME
-	case "OB\x00\x00":
-		hdr.Code = CodeOB
-	case "REND":
-		hdr.Code = CodeREND
-	case "SC\x00\x00":
-		hdr.Code = CodeSC
-	case "SN\x00\x00":
-		hdr.Code = CodeSN
-	case "SR\x00\x00":
-		hdr.Code = CodeSR
-	case "TE\x00\x00":
-		hdr.Code = CodeTE
-	case "TEST":
-		hdr.Code = CodeTEST
-	case "TX\x00\x00":
-		hdr.Code = CodeTX
-	case "WM\x00\x00":
-		hdr.Code = CodeWM
-	case "WO\x00\x00":
-		hdr.Code = CodeWO
-	case "AC\x00\x00":
-		hdr.Code = CodeAC
-	case "NT\x00\x00":
-		hdr.Code = CodeNT
-	case "SO\x00\x00":
-		hdr.Code = CodeSO
-	case "GR\x00\x00":
-		hdr.Code = CodeGR
-	case "PL\x00\x00":
-		hdr.Code = CodePL
-	case "WS\x00\x00":
-		hdr.Code = CodeWS
-	case "VF\x00\x00":
-		hdr.Code = CodeVF
-	case "LI\x00\x00":
-		hdr.Code = CodeLI
-	case "ID\x00\x00":
-		hdr.Code = CodeID
-	case "CU\x00\x00":
-		hdr.Code = CodeCU
-	default:
-		log.Printf("Header.ParseHeader: block code %q not yet implemented.\n", code)
-		hdr.Code = CodeUnknown
-	}
-
-	// Block size.
-	var x int32
-	err = binary.Read(r, order, &x)
-	if err != nil {
-		return nil, fmt.Errorf("156: %v", err)
-	}
-	hdr.Size = int64(x)
-
-	// Old memory address.
-	switch ptrSize {
-	case 4:
-		var x uint32
-		err = binary.Read(r, order, &x)
-		if err != nil {
-			return nil, fmt.Errorf("166: %v", err)
+	index := blk.Hdr.SDNAIndex
+	if index == 0 {
+		// Parse based on block code.
+		switch blk.Hdr.Code {
+		case CodeDATA:
+			blk.Body, err = io.ReadAll(blk.sr)
+			if err != nil {
+				return err
+			}
+		case CodeDNA1:
+			blk.Body, err = ParseDNA(blk.sr, blk.r.Order)
+			if err != nil {
+				return err
+			}
+		case CodeREND, CodeTEST:
+			/// TODO: implement specific block body parsing for REND and TEST.
+			blk.Body, err = io.ReadAll(blk.sr)
+			if err != nil {
+				return err
+			}
+		default:
+			err = fmt.Errorf("Block.ParseBody: parsing of %q not yet implemented", blk.Hdr.Code)
 		}
-		hdr.OldAddr = uint64(x)
-	case 8:
-		var x uint64
-		err = binary.Read(r, order, &x)
-		if err != nil {
-			return nil, fmt.Errorf("173: %v", err)
+
+		return
+	}
+
+	// Parse based on SDNA index.
+	typ := dna.Structs[index].Type
+	blk.Body, err = blk.r.Parser.ParseStructure(blk.sr, blk.r.Order, blk.r.PtrSize, typ, blk.Hdr.Count)
+	return
+}
+
+func (blk *Block) WriteBody(dst io.Writer) error {
+	if blk.Body == nil {
+		return fmt.Errorf("nil body cant be written")
+	}
+
+	index := blk.Hdr.SDNAIndex
+	if index == 0 {
+		// Parse based on block code.
+		switch blk.Hdr.Code {
+		case CodeDATA:
+			_, err := dst.Write(blk.Body.([]byte))
+			if err != nil {
+				return err
+			}
+		case CodeDNA1:
+			// TODO: Re Encode DNA?
+			if _, err := blk.sr.Seek(0, io.SeekStart); err != nil {
+				return fmt.Errorf("failed seeking: %v", err)
+			}
+
+			_, err := io.Copy(dst, blk.sr)
+			if err != nil {
+				return err
+			}
+		case CodeREND, CodeTEST:
+			/// TODO: implement specific block body writing for REND and TEST.
+			_, err := dst.Write(blk.Body.([]byte))
+			if err != nil {
+				return err
+			}
+		default:
+			return fmt.Errorf("Block.ParseBody: writing of %q not yet implemented", blk.Hdr.Code)
 		}
-		hdr.OldAddr = x
+
+		return nil
 	}
 
-	// SDNA index.
-	err = binary.Read(r, order, &x)
-	if err != nil {
-		return nil, fmt.Errorf("181: %v", err)
+	if img, ok := blk.Body.(v400.Image); ok {
+		log.Println(img.Packedfile)
 	}
-	hdr.SDNAIndex = int(x)
-
-	// Structure count.
-	err = binary.Read(r, order, &x)
-	if err != nil {
-		return nil, fmt.Errorf("188: %v", err)
-	}
-	hdr.Count = int(x)
-
-	return hdr, nil
+	return generic.Write(dst, blk.w.Order, blk.w.PtrSize, blk.Body)
 }
-
-// BlockCode represents a rough type description of a block.
-type BlockCode int
-
-func (typ BlockCode) String() string {
-	var m = map[BlockCode]string{
-		CodeAR:   "AR",
-		CodeBR:   "BR",
-		CodeCA:   "CA",
-		CodeDATA: "DATA",
-		CodeDNA1: "DNA1",
-		CodeENDB: "ENDB",
-		CodeGLOB: "GLOB",
-		CodeIM:   "IM",
-		CodeLA:   "LA",
-		CodeLS:   "LS",
-		CodeMA:   "MA",
-		CodeME:   "ME",
-		CodeOB:   "OB",
-		CodeREND: "REND",
-		CodeSC:   "SC",
-		CodeSN:   "SN",
-		CodeSR:   "SR",
-		CodeTE:   "TE",
-		CodeTEST: "TEST",
-		CodeTX:   "TX",
-		CodeWM:   "WM",
-		CodeWO:   "WO",
-	}
-	s, ok := m[typ]
-	if !ok {
-		return "<unknown block code>"
-	}
-	return s
-}
-
-// Block codes.
-const (
-	CodeAR BlockCode = iota
-	CodeBR
-	CodeCA
-	CodeDATA
-	CodeDNA1
-	CodeENDB
-	CodeGLOB
-	CodeIM
-	CodeLA
-	CodeLS
-	CodeMA
-	CodeME
-	CodeOB
-	CodeREND
-	CodeSC
-	CodeSN
-	CodeSR
-	CodeTE
-	CodeTEST
-	CodeTX
-	CodeWM
-	CodeWO
-	CodeAC
-	CodeNT
-	CodeSO
-	CodeGR
-	CodePL
-	CodeWS
-	CodeVF
-	CodeLI
-	CodeID
-	CodeCU
-
-	CodeUnknown BlockCode = -1
-)

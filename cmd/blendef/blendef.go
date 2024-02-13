@@ -9,6 +9,7 @@ import (
 	"os"
 
 	"github.com/mewspring/blend"
+	"github.com/mewspring/blend/file"
 )
 
 func init() {
@@ -33,15 +34,25 @@ func main() {
 
 // blendef parses the provided blend file and generates the following Go files:
 //
-//    struct.go // structure definitions
-//    parse.go  // block parser logic
+//	struct.go // structure definitions
+//	parse.go  // block parser logic
 func blendef(filePath string) (err error) {
-	blend.WarnVersion = false
-	b, err := blend.Parse(filePath)
+	f, err := os.Open(filePath)
 	if err != nil {
 		return err
 	}
-	defer b.Close()
+	defer f.Close()
+
+	r, err := file.NewReader(f)
+	if err != nil {
+		return err
+	}
+	defer r.Close()
+
+	b, err := blend.Decode(r)
+	if err != nil {
+		return err
+	}
 
 	dna, err := b.GetDNA()
 	if err != nil {
