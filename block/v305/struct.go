@@ -18,9 +18,9 @@ type DrawDataList struct {
 
 // SDNA index: 1
 type IDPropertyUIData struct {
-	Description BlockPointer[*int8]
+	Description BlockPointer[*uint8]
 	Rna_subtype int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 2
@@ -28,7 +28,7 @@ type IDPropertyUIDataInt struct {
 	Base IDPropertyUIData
 	Default_array BlockPointer[*int32]
 	Default_array_len int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Min int32
 	Max int32
 	Soft_min int32
@@ -42,7 +42,7 @@ type IDPropertyUIDataBool struct {
 	Base IDPropertyUIData
 	Default_array BlockPointer[*Int8_t]
 	Default_array_len int32
-	X_pad [3]int8
+	X_pad [3]uint8
 	Default_value Int8_t
 }
 
@@ -51,7 +51,7 @@ type IDPropertyUIDataFloat struct {
 	Base IDPropertyUIData
 	Default_array BlockPointer[*float64]
 	Default_array_len int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Step float32
 	Precision int32
 	Min float64
@@ -64,14 +64,14 @@ type IDPropertyUIDataFloat struct {
 // SDNA index: 5
 type IDPropertyUIDataString struct {
 	Base IDPropertyUIData
-	Default_value BlockPointer[*int8]
+	Default_value BlockPointer[*uint8]
 }
 
 // SDNA index: 6
 type IDPropertyUIDataID struct {
 	Base IDPropertyUIData
 	Id_type int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 7
@@ -86,11 +86,11 @@ type IDPropertyData struct {
 type IDProperty struct {
 	Next BlockPointer[*IDProperty]
 	Prev BlockPointer[*IDProperty]
-	Type int8
-	Subtype int8
+	Type uint8
+	Subtype uint8
 	Flag int16
-	Name [64]int8
-	X_pad0 [4]int8
+	Name [64]uint8
+	X_pad0 [4]uint8
 	Data IDPropertyData
 	Len int32
 	Totallen int32
@@ -104,9 +104,9 @@ type IDOverrideLibraryPropertyOperation struct {
 	Operation int16
 	Flag int16
 	Tag int16
-	X_pad0 [2]int8
-	Subitem_reference_name BlockPointer[*int8]
-	Subitem_local_name BlockPointer[*int8]
+	X_pad0 [2]uint8
+	Subitem_reference_name BlockPointer[*uint8]
+	Subitem_local_name BlockPointer[*uint8]
 	Subitem_reference_index int32
 	Subitem_local_index int32
 }
@@ -115,10 +115,10 @@ type IDOverrideLibraryPropertyOperation struct {
 type IDOverrideLibraryProperty struct {
 	Next BlockPointer[*IDOverrideLibraryProperty]
 	Prev BlockPointer[*IDOverrideLibraryProperty]
-	Rna_path BlockPointer[*int8]
+	Rna_path BlockPointer[*uint8]
 	Operations ListBase
 	Tag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Rna_prop_type int32
 }
 
@@ -130,7 +130,7 @@ type IDOverrideLibrary struct {
 	Storage BlockPointer[*ID]
 	Runtime BlockPointer[*IDOverrideLibraryRuntime]
 	Flag int32
-	X_pad_1 [4]int8
+	X_pad_1 [4]uint8
 }
 
 // SDNA index: 12
@@ -153,7 +153,7 @@ type ID struct {
 	Newid BlockPointer[*ID]
 	Lib BlockPointer[*Library]
 	Asset_data BlockPointer[*AssetMetaData]
-	Name [66]int8
+	Name [66]uint8
 	Flag int16
 	Tag int32
 	Us int32
@@ -179,12 +179,12 @@ type Library_Runtime struct {
 type Library struct {
 	Id ID
 	Filedata BlockPointer[*FileData]
-	Name [1024]int8
-	Filepath_abs [1024]int8
+	Name [1024]uint8
+	Filepath_abs [1024]uint8
 	Parent BlockPointer[*Library]
 	Packedfile BlockPointer[*PackedFile]
 	Tag uint16
-	X_pad_0 [6]int8
+	X_pad_0 [6]uint8
 	Temp_index int32
 	Versionfile int16
 	Subversionfile int16
@@ -193,9 +193,9 @@ type Library struct {
 
 // SDNA index: 17
 type LibraryWeakReference struct {
-	Library_filepath [1024]int8
-	Library_id_name [66]int8
-	X_pad [2]int8
+	Library_filepath [1024]uint8
+	Library_id_name [66]uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 18
@@ -208,7 +208,7 @@ type PreviewImage struct {
 	Gputexture [2]BlockPointer[[2]*GPUTexture]
 	Icon_id int32
 	Tag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 19
@@ -240,7 +240,7 @@ type BAnimVizSettings struct {
 	Path_range int16
 	Path_viewflag int16
 	Path_bakeflag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Path_sf int32
 	Path_ef int32
 	Path_bc int32
@@ -264,16 +264,16 @@ type BPoseChannel struct {
 	Prev BlockPointer[*BPoseChannel]
 	Prop BlockPointer[*IDProperty]
 	Constraints ListBase
-	Name [64]int8
+	Name [64]uint8
 	Flag int16
 	Ikflag int16
 	Protectflag int16
 	Agrp_index int16
-	Constflag int8
-	Selectflag int8
-	Drawflag int8
-	Bboneflag int8
-	X_pad0 [4]int8
+	Constflag uint8
+	Selectflag uint8
+	Drawflag uint8
+	Bboneflag uint8
+	X_pad0 [4]uint8
 	Bone BlockPointer[*Bone]
 	Parent BlockPointer[*BPoseChannel]
 	Child BlockPointer[*BPoseChannel]
@@ -293,7 +293,7 @@ type BPoseChannel struct {
 	RotAxis [3]float32
 	RotAngle float32
 	Rotmode int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Chan_mat [4][4]float32
 	Pose_mat [4][4]float32
 	Disp_mat [4][4]float32
@@ -335,7 +335,7 @@ type BPose struct {
 	Chanhash BlockPointer[*GHash]
 	Chan_array BlockPointer[**BPoseChannel]
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Ctime float32
 	Stride_offset [3]float32
 	Cyclic_offset [3]float32
@@ -375,7 +375,7 @@ type BActionGroup struct {
 	Channels ListBase
 	Flag int32
 	CustomCol int32
-	Name [64]int8
+	Name [64]uint8
 	Cs ThemeWireColor
 }
 
@@ -389,7 +389,7 @@ type BAction struct {
 	Flag int32
 	Active_marker int32
 	Idroot int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Frame_start float32
 	Frame_end float32
 	Preview BlockPointer[*PreviewImage]
@@ -400,7 +400,7 @@ type BDopeSheet struct {
 	Source BlockPointer[*ID]
 	Chanbase ListBase
 	Filter_grp BlockPointer[*Collection]
-	Searchstr [64]int8
+	Searchstr [64]uint8
 	Filterflag int32
 	Filterflag2 int32
 	Flag int32
@@ -409,8 +409,8 @@ type BDopeSheet struct {
 
 // SDNA index: 30
 type SpaceAction_Runtime struct {
-	Flag int8
-	X_pad0 [7]int8
+	Flag uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 31
@@ -418,19 +418,19 @@ type SpaceAction struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Action BlockPointer[*BAction]
 	Ads BDopeSheet
 	Timeslide float32
 	Flag int16
-	Mode int8
-	Mode_prev int8
-	Autosnap int8
-	Cache_display int8
-	X_pad1 [6]int8
+	Mode uint8
+	Mode_prev uint8
+	Autosnap uint8
+	Cache_display uint8
+	X_pad1 [6]uint8
 	Runtime SpaceAction_Runtime
 }
 
@@ -442,7 +442,7 @@ type BActionChannel struct {
 	Ipo BlockPointer[*Ipo]
 	ConstraintChannels ListBase
 	Flag int32
-	Name [64]int8
+	Name [64]uint8
 	Temp int32
 }
 
@@ -452,11 +452,11 @@ type FModifier struct {
 	Prev BlockPointer[*FModifier]
 	Curve BlockPointer[*FCurve]
 	Data BlockPointer[*any]
-	Name [64]int8
+	Name [64]uint8
 	Type int16
 	Flag int16
 	Ui_expand_flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Influence float32
 	Sfra float32
 	Efra float32
@@ -519,7 +519,7 @@ type FMod_Python struct {
 type FMod_Limits struct {
 	Rect Rctf
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 41
@@ -544,11 +544,11 @@ type FMod_Stepped struct {
 // SDNA index: 43
 type DriverTarget struct {
 	Id BlockPointer[*ID]
-	Rna_path BlockPointer[*int8]
-	Pchan_name [64]int8
+	Rna_path BlockPointer[*uint8]
+	Pchan_name [64]uint8
 	TransChan int16
-	Rotation_mode int8
-	X_pad [7]int8
+	Rotation_mode uint8
+	X_pad [7]uint8
 	Flag int16
 	Idtype int32
 }
@@ -557,10 +557,10 @@ type DriverTarget struct {
 type DriverVar struct {
 	Next BlockPointer[*DriverVar]
 	Prev BlockPointer[*DriverVar]
-	Name [64]int8
+	Name [64]uint8
 	Targets [8]DriverTarget
-	Num_targets int8
-	Type int8
+	Num_targets uint8
+	Type uint8
 	Flag int16
 	Curval float32
 }
@@ -568,7 +568,7 @@ type DriverVar struct {
 // SDNA index: 45
 type ChannelDriver struct {
 	Variables ListBase
-	Expression [256]int8
+	Expression [256]uint8
 	Expr_comp BlockPointer[*any]
 	Expr_simple BlockPointer[*ExprPyLike_Parsed]
 	Curval float32
@@ -581,7 +581,7 @@ type ChannelDriver struct {
 type FPoint struct {
 	Vec [2]float32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 47
@@ -598,10 +598,10 @@ type FCurve struct {
 	Curval float32
 	Flag int16
 	Extend int16
-	Auto_smoothing int8
-	X_pad [3]int8
+	Auto_smoothing uint8
+	X_pad [3]uint8
 	Array_index int32
-	Rna_path BlockPointer[*int8]
+	Rna_path BlockPointer[*uint8]
 	Color_mode int32
 	Color [3]float32
 	Prev_norm_factor float32
@@ -616,7 +616,7 @@ type NlaStrip struct {
 	Act BlockPointer[*BAction]
 	Fcurves ListBase
 	Modifiers ListBase
-	Name [64]int8
+	Name [64]uint8
 	Influence float32
 	Strip_time float32
 	Start float32
@@ -629,11 +629,11 @@ type NlaStrip struct {
 	Blendout float32
 	Blendmode int16
 	Extendmode int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Type int16
 	Speaker_handle BlockPointer[*any]
 	Flag int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Orig_strip BlockPointer[*NlaStrip]
 	X_pad3 BlockPointer[*any]
 }
@@ -645,7 +645,7 @@ type NlaTrack struct {
 	Strips ListBase
 	Flag int32
 	Index int32
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 50
@@ -653,11 +653,11 @@ type KS_Path struct {
 	Next BlockPointer[*KS_Path]
 	Prev BlockPointer[*KS_Path]
 	Id BlockPointer[*ID]
-	Group [64]int8
+	Group [64]uint8
 	Idtype int32
 	Groupmode int16
 	Flag int16
-	Rna_path BlockPointer[*int8]
+	Rna_path BlockPointer[*uint8]
 	Array_index int32
 	Keyingflag int16
 	Keyingoverride int16
@@ -668,22 +668,22 @@ type KeyingSet struct {
 	Next BlockPointer[*KeyingSet]
 	Prev BlockPointer[*KeyingSet]
 	Paths ListBase
-	Idname [64]int8
-	Name [64]int8
-	Description [1024]int8
-	Typeinfo [64]int8
+	Idname [64]uint8
+	Name [64]uint8
+	Description [1024]uint8
+	Typeinfo [64]uint8
 	Active_path int32
 	Flag int16
 	Keyingflag int16
 	Keyingoverride int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 52
 type AnimOverride struct {
 	Next BlockPointer[*AnimOverride]
 	Prev BlockPointer[*AnimOverride]
-	Rna_path BlockPointer[*int8]
+	Rna_path BlockPointer[*uint8]
 	Array_index int32
 	Value float32
 }
@@ -699,7 +699,7 @@ type AnimData struct {
 	Overrides ListBase
 	Driver_array BlockPointer[**FCurve]
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Act_blendmode int16
 	Act_extendmode int16
 	Act_influence float32
@@ -718,14 +718,14 @@ type Bone struct {
 	Prop BlockPointer[*IDProperty]
 	Parent BlockPointer[*Bone]
 	Childbase ListBase
-	Name [64]int8
+	Name [64]uint8
 	Roll float32
 	Head [3]float32
 	Tail [3]float32
 	Bone_mat [3][3]float32
 	Flag int32
-	Inherit_scale_mode int8
-	X_pad [7]int8
+	Inherit_scale_mode uint8
+	X_pad [7]uint8
 	Arm_head [3]float32
 	Arm_tail [3]float32
 	Arm_mat [4][4]float32
@@ -754,8 +754,8 @@ type Bone struct {
 	Size [3]float32
 	Layer int32
 	Segments int16
-	Bbone_prev_type int8
-	Bbone_next_type int8
+	Bbone_prev_type uint8
+	Bbone_next_type uint8
 	Bbone_flag int32
 	Bbone_prev_flag int16
 	Bbone_next_flag int16
@@ -773,8 +773,8 @@ type BArmature struct {
 	Edbo BlockPointer[*ListBase]
 	Act_bone BlockPointer[*Bone]
 	Act_edbone BlockPointer[*EditBone]
-	Needs_flush_to_id int8
-	X_pad0 [3]int8
+	Needs_flush_to_id uint8
+	X_pad0 [3]uint8
 	Flag int32
 	Drawtype int32
 	Deformflag int16
@@ -789,7 +789,7 @@ type BArmature struct {
 type AssetTag struct {
 	Next BlockPointer[*AssetTag]
 	Prev BlockPointer[*AssetTag]
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 58
@@ -797,21 +797,21 @@ type AssetMetaData struct {
 	Local_type_info BlockPointer[*AssetTypeInfo]
 	Properties BlockPointer[*IDProperty]
 	Catalog_id BUUID
-	Catalog_simple_name [64]int8
-	Author BlockPointer[*int8]
-	Description BlockPointer[*int8]
-	Copyright BlockPointer[*int8]
-	License BlockPointer[*int8]
+	Catalog_simple_name [64]uint8
+	Author BlockPointer[*uint8]
+	Description BlockPointer[*uint8]
+	Copyright BlockPointer[*uint8]
+	License BlockPointer[*uint8]
 	Tags ListBase
 	Active_tag int16
 	Tot_tags int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 59
 type AssetLibraryReference struct {
 	Type int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Custom_library_index int32
 }
 
@@ -821,7 +821,7 @@ type BoidRule struct {
 	Prev BlockPointer[*BoidRule]
 	Type int32
 	Flag int32
-	Name [32]int8
+	Name [32]uint8
 }
 
 // SDNA index: 61
@@ -859,7 +859,7 @@ type BoidRuleAverageSpeed struct {
 	Wander float32
 	Level float32
 	Speed float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 65
@@ -884,7 +884,7 @@ type BoidState struct {
 	Rules ListBase
 	Conditions ListBase
 	Actions ListBase
-	Name [32]int8
+	Name [32]uint8
 	Id int32
 	Flag int32
 	Ruleset_type int32
@@ -927,7 +927,7 @@ type BrushClone struct {
 	Image BlockPointer[*Image]
 	Offset [2]float32
 	Alpha float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 70
@@ -945,9 +945,9 @@ type BrushGpencilSettings struct {
 	Fill_layer_mode int16
 	Fill_direction int16
 	Fill_threshold float32
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Caps_type Int8_t
-	X_pad [5]int8
+	X_pad [5]uint8
 	Flag2 int32
 	Fill_simplylvl int32
 	Fill_draw_mode int32
@@ -985,7 +985,7 @@ type BrushGpencilSettings struct {
 	Curve_rand_saturation BlockPointer[*CurveMapping]
 	Curve_rand_value BlockPointer[*CurveMapping]
 	Outline_fac float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Material BlockPointer[*Material]
 	Material_alt BlockPointer[*Material]
 }
@@ -1000,7 +1000,7 @@ type BrushCurvesSculptSettings struct {
 	Minimum_distance float32
 	Density_add_attempts int32
 	Density_mode uint8
-	X_pad [3]int8
+	X_pad [3]uint8
 	Curve_parameter_falloff BlockPointer[*CurveMapping]
 }
 
@@ -1016,7 +1016,7 @@ type Brush struct {
 	Preview BlockPointer[*PreviewImage]
 	Gradient BlockPointer[*ColorBand]
 	Paint_curve BlockPointer[*PaintCurve]
-	Icon_filepath [1024]int8
+	Icon_filepath [1024]uint8
 	Normal_weight float32
 	Rake_factor float32
 	Blend int16
@@ -1050,23 +1050,23 @@ type Brush struct {
 	Sculpt_plane int32
 	Plane_offset float32
 	Gradient_spacing int32
-	Gradient_stroke_mode int8
-	Gradient_fill_mode int8
-	X_pad0 [5]int8
-	Falloff_shape int8
+	Gradient_stroke_mode uint8
+	Gradient_fill_mode uint8
+	X_pad0 [5]uint8
+	Falloff_shape uint8
 	Falloff_angle float32
-	Sculpt_tool int8
-	Uv_sculpt_tool int8
-	Vertexpaint_tool int8
-	Weightpaint_tool int8
-	Imagepaint_tool int8
-	Mask_tool int8
-	Gpencil_tool int8
-	Gpencil_vertex_tool int8
-	Gpencil_sculpt_tool int8
-	Gpencil_weight_tool int8
-	Curves_sculpt_tool int8
-	X_pad1 [5]int8
+	Sculpt_tool uint8
+	Uv_sculpt_tool uint8
+	Vertexpaint_tool uint8
+	Weightpaint_tool uint8
+	Imagepaint_tool uint8
+	Mask_tool uint8
+	Gpencil_tool uint8
+	Gpencil_vertex_tool uint8
+	Gpencil_sculpt_tool uint8
+	Gpencil_weight_tool uint8
+	Curves_sculpt_tool uint8
+	X_pad1 [5]uint8
 	Autosmooth_factor float32
 	Tilt_strength_factor float32
 	Topology_rake_factor float32
@@ -1151,7 +1151,7 @@ type Palette struct {
 	Id ID
 	Colors ListBase
 	Active_color int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 76
@@ -1172,14 +1172,14 @@ type PaintCurve struct {
 type CacheObjectPath struct {
 	Next BlockPointer[*CacheObjectPath]
 	Prev BlockPointer[*CacheObjectPath]
-	Path [4096]int8
+	Path [4096]uint8
 }
 
 // SDNA index: 79
 type CacheFileLayer struct {
 	Next BlockPointer[*CacheFileLayer]
 	Prev BlockPointer[*CacheFileLayer]
-	Filepath [1024]int8
+	Filepath [1024]uint8
 	Flag int32
 	X_pad int32
 }
@@ -1190,27 +1190,27 @@ type CacheFile struct {
 	Adt BlockPointer[*AnimData]
 	Object_paths ListBase
 	Layers ListBase
-	Filepath [1024]int8
-	Is_sequence int8
-	Forward_axis int8
-	Up_axis int8
-	Override_frame int8
+	Filepath [1024]uint8
+	Is_sequence uint8
+	Forward_axis uint8
+	Up_axis uint8
+	Override_frame uint8
 	Scale float32
 	Frame float32
 	Frame_offset float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Flag int16
-	Type int8
-	Use_render_procedural int8
-	X_pad1 [3]int8
-	Use_prefetch int8
+	Type uint8
+	Use_render_procedural uint8
+	X_pad1 [3]uint8
+	Use_prefetch uint8
 	Prefetch_cache_size int32
 	Active_layer int32
-	X_pad2 [3]int8
-	Velocity_unit int8
-	Velocity_name [64]int8
+	X_pad2 [3]uint8
+	Velocity_unit uint8
+	Velocity_name [64]uint8
 	Handle BlockPointer[*CacheArchiveHandle]
-	Handle_filepath [1024]int8
+	Handle_filepath [1024]uint8
 	Handle_readers BlockPointer[*GSet]
 }
 
@@ -1221,7 +1221,7 @@ type CameraStereoSettings struct {
 	Convergence_mode int16
 	Pivot int16
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Pole_merge_angle_from float32
 	Pole_merge_angle_to float32
 }
@@ -1245,14 +1245,14 @@ type CameraBGImage struct {
 // SDNA index: 83
 type CameraDOFSettings struct {
 	Focus_object BlockPointer[*Object]
-	Focus_subtarget [64]int8
+	Focus_subtarget [64]uint8
 	Focus_distance float32
 	Aperture_fstop float32
 	Aperture_rotation float32
 	Aperture_ratio float32
 	Aperture_blades int32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 84
@@ -1268,8 +1268,8 @@ type Camera_Runtime struct {
 type Camera struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
-	Type int8
-	Dtx int8
+	Type uint8
+	Dtx uint8
 	Flag int16
 	Passepartalpha float32
 	Clipsta float32
@@ -1287,8 +1287,8 @@ type Camera struct {
 	Gpu_dof GPUDOFSettings
 	Dof CameraDOFSettings
 	Bg_images ListBase
-	Sensor_fit int8
-	X_pad [7]int8
+	Sensor_fit uint8
+	X_pad [7]uint8
 	Stereo CameraStereoSettings
 	Runtime Camera_Runtime
 }
@@ -1331,7 +1331,7 @@ type ClothSimSettings struct {
 	Pressure_factor float32
 	Fluid_density float32
 	Vgroup_pressure int16
-	X_pad7 [6]int8
+	X_pad7 [6]uint8
 	Bending_damping float32
 	Voxel_cell_size float32
 	StepsPerFrame int32
@@ -1359,12 +1359,12 @@ type ClothSimSettings struct {
 	Internal_spring_max_length float32
 	Internal_spring_max_diversion float32
 	Vgroup_intern int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Internal_tension float32
 	Internal_compression float32
 	Max_internal_tension float32
 	Max_internal_compression float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 87
@@ -1380,11 +1380,11 @@ type ClothCollSettings struct {
 	Flags int32
 	Self_loop_count int16
 	Loop_count int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Group BlockPointer[*Collection]
 	Vgroup_selfcol int16
 	Vgroup_objcol int16
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Clamp float32
 	Self_clamp float32
 }
@@ -1410,7 +1410,7 @@ type Collection_Runtime struct {
 	Object_cache_instanced ListBase
 	Parents ListBase
 	Tag uint8
-	X_pad0 [7]int8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 91
@@ -1423,7 +1423,7 @@ type Collection struct {
 	Dupli_ofs [3]float32
 	Flag uint8
 	Color_tag Int8_t
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Lineart_usage uint8
 	Lineart_flags uint8
 	Lineart_intersection_mask uint8
@@ -1471,7 +1471,7 @@ type CurveMapping struct {
 	Bwmul [3]float32
 	Sample [3]float32
 	Tone int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 95
@@ -1510,15 +1510,15 @@ type Scopes struct {
 	Waveform_3 BlockPointer[*float32]
 	Vecscope BlockPointer[*float32]
 	Waveform_tot int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 97
 type ColorManagedViewSettings struct {
 	Flag int32
-	X_pad [4]int8
-	Look [64]int8
-	View_transform [64]int8
+	X_pad [4]uint8
+	Look [64]uint8
+	View_transform [64]uint8
 	Exposure float32
 	Gamma float32
 	Curve_mapping BlockPointer[*CurveMapping]
@@ -1527,12 +1527,12 @@ type ColorManagedViewSettings struct {
 
 // SDNA index: 98
 type ColorManagedDisplaySettings struct {
-	Display_device [64]int8
+	Display_device [64]uint8
 }
 
 // SDNA index: 99
 type ColorManagedColorspaceSettings struct {
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 100
@@ -1541,7 +1541,7 @@ type BConstraintChannel struct {
 	Prev BlockPointer[*BConstraintChannel]
 	Ipo BlockPointer[*Ipo]
 	Flag int16
-	Name [30]int8
+	Name [30]uint8
 }
 
 // SDNA index: 101
@@ -1551,12 +1551,12 @@ type BConstraint struct {
 	Data BlockPointer[*any]
 	Type int16
 	Flag int16
-	Ownspace int8
-	Tarspace int8
+	Ownspace uint8
+	Tarspace uint8
 	Ui_expand_flag int16
 	Space_object BlockPointer[*Object]
-	Space_subtarget [64]int8
-	Name [64]int8
+	Space_subtarget [64]uint8
+	Name [64]uint8
 	Enforce float32
 	Headtail float32
 	Ipo BlockPointer[*Ipo]
@@ -1569,14 +1569,14 @@ type BConstraintTarget struct {
 	Next BlockPointer[*BConstraintTarget]
 	Prev BlockPointer[*BConstraintTarget]
 	Tar BlockPointer[*Object]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	Matrix [4][4]float32
 	Space int16
 	Flag int16
 	Type int16
 	RotOrder int16
 	Weight float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 103
@@ -1587,7 +1587,7 @@ type BPythonConstraint struct {
 	Tarnum int32
 	Targets ListBase
 	Tar BlockPointer[*Object]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 104
@@ -1597,9 +1597,9 @@ type BKinematicConstraint struct {
 	Flag int16
 	Rootbone int16
 	Max_rootbone int16
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	Poletar BlockPointer[*Object]
-	Polesubtarget [64]int8
+	Polesubtarget [64]uint8
 	Poleangle float32
 	Weight float32
 	Orientweight float32
@@ -1628,7 +1628,7 @@ type BSplineIKConstraint struct {
 // SDNA index: 106
 type BArmatureConstraint struct {
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Targets ListBase
 }
 
@@ -1638,18 +1638,18 @@ type BTrackToConstraint struct {
 	Reserved1 int32
 	Reserved2 int32
 	Flags int32
-	X_pad [4]int8
-	Subtarget [64]int8
+	X_pad [4]uint8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 108
 type BRotateLikeConstraint struct {
 	Tar BlockPointer[*Object]
 	Flag int32
-	Euler_order int8
-	Mix_mode int8
-	X_pad [2]int8
-	Subtarget [64]int8
+	Euler_order uint8
+	Mix_mode uint8
+	X_pad [2]uint8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 109
@@ -1657,7 +1657,7 @@ type BLocateLikeConstraint struct {
 	Tar BlockPointer[*Object]
 	Flag int32
 	Reserved1 int32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 110
@@ -1665,14 +1665,14 @@ type BSizeLikeConstraint struct {
 	Tar BlockPointer[*Object]
 	Flag int32
 	Power float32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 111
 type BSameVolumeConstraint struct {
-	Flag int8
-	Mode int8
-	X_pad [2]int8
+	Flag uint8
+	Mode uint8
+	X_pad [2]uint8
 	Volume float32
 }
 
@@ -1680,9 +1680,9 @@ type BSameVolumeConstraint struct {
 type BTransLikeConstraint struct {
 	Tar BlockPointer[*Object]
 	Flag int32
-	Mix_mode int8
-	X_pad [3]int8
-	Subtarget [64]int8
+	Mix_mode uint8
+	X_pad [3]uint8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 113
@@ -1691,7 +1691,7 @@ type BMinMaxConstraint struct {
 	Minmaxflag int32
 	Offset float32
 	Flag int32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	X_pad int32
 }
 
@@ -1705,11 +1705,11 @@ type BActionConstraint struct {
 	Min float32
 	Max float32
 	Flag int32
-	Mix_mode int8
-	X_pad [3]int8
+	Mix_mode uint8
+	X_pad [3]uint8
 	Eval_time float32
 	Act BlockPointer[*BAction]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 115
@@ -1717,15 +1717,15 @@ type BLockTrackConstraint struct {
 	Tar BlockPointer[*Object]
 	Trackflag int32
 	Lockflag int32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 116
 type BDampTrackConstraint struct {
 	Tar BlockPointer[*Object]
 	Trackflag int32
-	X_pad [4]int8
-	Subtarget [64]int8
+	X_pad [4]uint8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 117
@@ -1749,7 +1749,7 @@ type BStretchToConstraint struct {
 	Bulge_min float32
 	Bulge_max float32
 	Bulge_smooth float32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 119
@@ -1767,7 +1767,7 @@ type BRigidBodyJointConstraint struct {
 	MaxLimit [6]float32
 	ExtraFz float32
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 120
@@ -1781,25 +1781,25 @@ type BClampToConstraint struct {
 type BChildOfConstraint struct {
 	Tar BlockPointer[*Object]
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Invmat [4][4]float32
-	Subtarget [64]int8
+	Subtarget [64]uint8
 }
 
 // SDNA index: 122
 type BTransformConstraint struct {
 	Tar BlockPointer[*Object]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	From int16
 	To int16
-	Map [3]int8
-	Expo int8
-	From_rotation_mode int8
-	To_euler_order int8
-	Mix_mode_loc int8
-	Mix_mode_rot int8
-	Mix_mode_scale int8
-	X_pad [3]int8
+	Map [3]uint8
+	Expo uint8
+	From_rotation_mode uint8
+	To_euler_order uint8
+	Mix_mode_loc uint8
+	Mix_mode_rot uint8
+	Mix_mode_scale uint8
+	X_pad [3]uint8
 	From_min [3]float32
 	From_max [3]float32
 	To_min [3]float32
@@ -1817,7 +1817,7 @@ type BTransformConstraint struct {
 // SDNA index: 123
 type BPivotConstraint struct {
 	Tar BlockPointer[*Object]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	Offset [3]float32
 	RotAxis int16
 	Flag int16
@@ -1845,8 +1845,8 @@ type BRotLimitConstraint struct {
 	Zmax float32
 	Flag int16
 	Flag2 int16
-	Euler_order int8
-	X_pad [3]int8
+	Euler_order uint8
+	X_pad [3]uint8
 }
 
 // SDNA index: 126
@@ -1864,12 +1864,12 @@ type BSizeLimitConstraint struct {
 // SDNA index: 127
 type BDistLimitConstraint struct {
 	Tar BlockPointer[*Object]
-	Subtarget [64]int8
+	Subtarget [64]uint8
 	Dist float32
 	Soft float32
 	Flag int16
 	Mode int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 128
@@ -1877,22 +1877,22 @@ type BShrinkwrapConstraint struct {
 	Target BlockPointer[*Object]
 	Dist float32
 	ShrinkType int16
-	ProjAxis int8
-	ProjAxisSpace int8
+	ProjAxis uint8
+	ProjAxisSpace uint8
 	ProjLimit float32
-	ShrinkMode int8
-	Flag int8
-	TrackAxis int8
-	X_pad int8
+	ShrinkMode uint8
+	Flag uint8
+	TrackAxis uint8
+	X_pad uint8
 }
 
 // SDNA index: 129
 type BFollowTrackConstraint struct {
 	Clip BlockPointer[*MovieClip]
-	Track [64]int8
+	Track [64]uint8
 	Flag int32
 	Frame_method int32
-	Object [64]int8
+	Object [64]uint8
 	Camera BlockPointer[*Object]
 	Depth_ob BlockPointer[*Object]
 }
@@ -1901,15 +1901,15 @@ type BFollowTrackConstraint struct {
 type BCameraSolverConstraint struct {
 	Clip BlockPointer[*MovieClip]
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 131
 type BObjectSolverConstraint struct {
 	Clip BlockPointer[*MovieClip]
 	Flag int32
-	X_pad [4]int8
-	Object [64]int8
+	X_pad [4]uint8
+	Object [64]uint8
 	Invmat [4][4]float32
 	Camera BlockPointer[*Object]
 }
@@ -1917,9 +1917,9 @@ type BObjectSolverConstraint struct {
 // SDNA index: 132
 type BTransformCacheConstraint struct {
 	Cache_file BlockPointer[*CacheFile]
-	Object_path [1024]int8
+	Object_path [1024]uint8
 	Reader BlockPointer[*CacheReader]
-	Reader_object_path [1024]int8
+	Reader_object_path [1024]uint8
 }
 
 // SDNA index: 133
@@ -1928,19 +1928,19 @@ type BezTriple struct {
 	Alfa float32
 	Weight float32
 	Radius float32
-	Ipo int8
+	Ipo uint8
 	H1 uint8
 	H2 uint8
 	F1 uint8
 	F2 uint8
 	F3 uint8
-	Hide int8
-	Easing int8
+	Hide uint8
+	Easing uint8
 	Back float32
 	Amplitude float32
 	Period float32
-	Auto_handle_type int8
-	X_pad [3]int8
+	Auto_handle_type uint8
+	X_pad [3]uint8
 }
 
 // SDNA index: 134
@@ -1949,10 +1949,10 @@ type BPoint struct {
 	Alfa float32
 	Weight float32
 	F1 uint8
-	X_pad1 [1]int8
+	X_pad1 [1]uint8
 	Hide int16
 	Radius float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 135
@@ -1965,7 +1965,7 @@ type Nurb struct {
 	Flag int16
 	Pntsu int32
 	Pntsv int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Resolu int16
 	Resolv int16
 	Orderu int16
@@ -1985,8 +1985,8 @@ type Nurb struct {
 type CharInfo struct {
 	Kern int16
 	Mat_nr int16
-	Flag int8
-	X_pad [3]int8
+	Flag uint8
+	X_pad [3]uint8
 }
 
 // SDNA index: 137
@@ -2013,8 +2013,8 @@ type Curve struct {
 	Loc [3]float32
 	Size [3]float32
 	Type int16
-	Texflag int8
-	X_pad0 [7]int8
+	Texflag uint8
+	X_pad0 [7]uint8
 	Twist_mode int16
 	Twist_smooth float32
 	Smallcaps_scale float32
@@ -2031,12 +2031,12 @@ type Curve struct {
 	Resolv_ren int16
 	Actnu int32
 	Actvert int32
-	Overflow int8
-	Spacemode int8
-	Align_y int8
-	Bevel_mode int8
-	Taper_radius_mode int8
-	X_pad int8
+	Overflow uint8
+	Spacemode uint8
+	Align_y uint8
+	Bevel_mode uint8
+	Taper_radius_mode uint8
+	X_pad uint8
 	Lines int16
 	Spacing float32
 	Linedist float32
@@ -2053,9 +2053,9 @@ type Curve struct {
 	Selend int32
 	Len_wchar int32
 	Len int32
-	Str BlockPointer[*int8]
+	Str BlockPointer[*uint8]
 	Editfont BlockPointer[*EditFont]
-	Family [64]int8
+	Family [64]uint8
 	Vfont BlockPointer[*VFont]
 	Vfontb BlockPointer[*VFont]
 	Vfonti BlockPointer[*VFont]
@@ -2068,13 +2068,13 @@ type Curve struct {
 	Ctime float32
 	Bevfac1 float32
 	Bevfac2 float32
-	Bevfac1_mapping int8
-	Bevfac2_mapping int8
-	X_pad2 [6]int8
+	Bevfac1_mapping uint8
+	Bevfac2_mapping uint8
+	X_pad2 [6]uint8
 	Fsize_realtime float32
 	Curve_eval BlockPointer[*Curves]
-	Edit_data_from_original int8
-	X_pad3 [7]int8
+	Edit_data_from_original uint8
+	X_pad3 [7]uint8
 	Batch_cache BlockPointer[*any]
 }
 
@@ -2083,11 +2083,11 @@ type CurveProfilePoint struct {
 	X float32
 	Y float32
 	Flag int16
-	H1 int8
-	H2 int8
+	H1 uint8
+	H2 uint8
 	H1_loc [2]float32
 	H2_loc [2]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Profile BlockPointer[*CurveProfile]
 }
 
@@ -2124,11 +2124,11 @@ type Curves struct {
 	Attributes_active_index int32
 	Mat BlockPointer[**Material]
 	Totcol int16
-	Symmetry int8
-	Selection_domain int8
-	X_pad [4]int8
+	Symmetry uint8
+	Selection_domain uint8
+	X_pad [4]uint8
 	Surface BlockPointer[*Object]
-	Surface_uv_map BlockPointer[*int8]
+	Surface_uv_map BlockPointer[*uint8]
 	Batch_cache BlockPointer[*any]
 }
 
@@ -2142,22 +2142,22 @@ type CustomDataLayer struct {
 	Active_clone int32
 	Active_mask int32
 	Uid int32
-	Name [68]int8
-	X_pad1 [4]int8
+	Name [68]uint8
+	X_pad1 [4]uint8
 	Data BlockPointer[*any]
 	Anonymous_id BlockPointer[*AnonymousAttributeIDHandle]
 }
 
 // SDNA index: 144
 type CustomDataExternal struct {
-	Filename [1024]int8
+	Filename [1024]uint8
 }
 
 // SDNA index: 145
 type CustomData struct {
 	Layers BlockPointer[*CustomDataLayer]
 	Typemap [52]int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Totlayer int32
 	Maxlayer int32
 	Totsize int32
@@ -2185,7 +2185,7 @@ type DynamicPaintSurface struct {
 	Pointcache BlockPointer[*PointCache]
 	Ptcaches ListBase
 	Current_frame int32
-	Name [64]int8
+	Name [64]uint8
 	Format int16
 	Type int16
 	Disp_type int16
@@ -2200,7 +2200,7 @@ type DynamicPaintSurface struct {
 	End_frame int32
 	Init_color [4]float32
 	Init_texture BlockPointer[*Tex]
-	Init_layername [68]int8
+	Init_layername [68]uint8
 	Dry_speed int32
 	Diss_speed int32
 	Color_dry_threshold float32
@@ -2218,11 +2218,11 @@ type DynamicPaintSurface struct {
 	Wave_timescale float32
 	Wave_spring float32
 	Wave_smoothness float32
-	X_pad2 [4]int8
-	Uvlayer_name [68]int8
-	Image_output_path [1024]int8
-	Output_name [68]int8
-	Output_name2 [68]int8
+	X_pad2 [4]uint8
+	Uvlayer_name [68]uint8
+	Image_output_path [1024]uint8
+	Output_name [68]uint8
+	Output_name2 [68]uint8
 }
 
 // SDNA index: 148
@@ -2231,8 +2231,8 @@ type DynamicPaintCanvasSettings struct {
 	Surfaces ListBase
 	Active_sur int16
 	Flags int16
-	X_pad [4]int8
-	Error [64]int8
+	X_pad [4]uint8
+	Error [64]uint8
 }
 
 // SDNA index: 149
@@ -2254,7 +2254,7 @@ type DynamicPaintBrushSettings struct {
 	Proximity_falloff int16
 	Wave_type int16
 	Ray_dir int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Wave_factor float32
 	Wave_clamp float32
 	Max_velocity float32
@@ -2268,7 +2268,7 @@ type Effect struct {
 	Type int16
 	Flag int16
 	Buttype int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 151
@@ -2278,7 +2278,7 @@ type BuildEff struct {
 	Type int16
 	Flag int16
 	Buttype int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Len float32
 	Sfra float32
 }
@@ -2310,7 +2310,7 @@ type PartEff struct {
 	Vectsize float32
 	Maxlen float32
 	Defvec [3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Mult [4]float32
 	Life [4]float32
 	Child [4]int16
@@ -2325,8 +2325,8 @@ type PartEff struct {
 	Flag2neg int16
 	Disp int16
 	Vertgroup_v int16
-	Vgroupname [64]int8
-	Vgroupname_v [64]int8
+	Vgroupname [64]uint8
+	Vgroupname_v [64]uint8
 	Imat [4][4]float32
 	Keys BlockPointer[*Particle]
 	Group BlockPointer[*Collection]
@@ -2354,11 +2354,11 @@ type WaveEff struct {
 
 // SDNA index: 154
 type FileGlobal struct {
-	Subvstr [4]int8
+	Subvstr [4]uint8
 	Subversion int16
 	Minversion int16
 	Minsubversion int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Curscreen BlockPointer[*BScreen]
 	Curscene BlockPointer[*Scene]
 	Cur_view_layer BlockPointer[*ViewLayer]
@@ -2366,8 +2366,8 @@ type FileGlobal struct {
 	Fileflags int32
 	Globalf int32
 	Build_commit_timestamp uint64
-	Build_hash [16]int8
-	Filename [1024]int8
+	Build_hash [16]uint8
+	Filename [1024]uint8
 }
 
 // SDNA index: 155
@@ -2426,7 +2426,7 @@ type FluidDomainSettings struct {
 	Gravity [3]float32
 	Active_fields int32
 	Type int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 	Alpha float32
 	Beta float32
 	Diss_speed int32
@@ -2444,7 +2444,7 @@ type FluidDomainSettings struct {
 	Noise_time_anim float32
 	Res_noise [3]int32
 	Noise_scale int32
-	X_pad3 [4]int8
+	X_pad3 [4]uint8
 	Particle_randomness float32
 	Particle_number int32
 	Particle_minimum int32
@@ -2456,9 +2456,9 @@ type FluidDomainSettings struct {
 	Flip_ratio float32
 	Sys_particle_maximum int32
 	Simulation_method int16
-	X_pad4 [6]int8
+	X_pad4 [6]uint8
 	Viscosity_value float32
-	X_pad5 [4]int8
+	X_pad5 [4]uint8
 	Surface_tension float32
 	Viscosity_base float32
 	Viscosity_exponent int32
@@ -2469,7 +2469,7 @@ type FluidDomainSettings struct {
 	Mesh_smoothen_neg int32
 	Mesh_scale int32
 	Mesh_generator int16
-	X_pad6 [2]int8
+	X_pad6 [2]uint8
 	Particle_type int32
 	Particle_scale int32
 	Sndparticle_tau_min_wc float32
@@ -2486,15 +2486,15 @@ type FluidDomainSettings struct {
 	Sndparticle_l_max float32
 	Sndparticle_potential_radius int32
 	Sndparticle_update_radius int32
-	Sndparticle_boundary int8
-	Sndparticle_combined_export int8
-	X_pad7 [6]int8
+	Sndparticle_boundary uint8
+	Sndparticle_combined_export uint8
+	X_pad7 [6]uint8
 	Guiding_alpha float32
 	Guiding_beta int32
 	Guiding_vel_factor float32
 	Guide_res [3]int32
 	Guiding_source int16
-	X_pad8 [2]int8
+	X_pad8 [2]uint8
 	Cache_frame_start int32
 	Cache_frame_end int32
 	Cache_frame_pause_data int32
@@ -2504,15 +2504,15 @@ type FluidDomainSettings struct {
 	Cache_frame_pause_guiding int32
 	Cache_frame_offset int32
 	Cache_flag int32
-	Cache_mesh_format int8
-	Cache_data_format int8
-	Cache_particle_format int8
-	Cache_noise_format int8
-	Cache_directory [1024]int8
-	Error [64]int8
+	Cache_mesh_format uint8
+	Cache_data_format uint8
+	Cache_particle_format uint8
+	Cache_noise_format uint8
+	Cache_directory [1024]uint8
+	Error [64]uint8
 	Cache_type int16
-	Cache_id [4]int8
-	X_pad9 [2]int8
+	Cache_id [4]uint8
+	X_pad9 [2]uint8
 	Dt float32
 	Time_total float32
 	Time_per_frame float32
@@ -2530,33 +2530,33 @@ type FluidDomainSettings struct {
 	Gridlines_lower_bound float32
 	Gridlines_upper_bound float32
 	Gridlines_range_color [4]float32
-	Axis_slice_method int8
-	Slice_axis int8
-	Show_gridlines int8
-	Draw_velocity int8
-	Vector_draw_type int8
-	Vector_field int8
-	Vector_scale_with_magnitude int8
-	Vector_draw_mac_components int8
-	Use_coba int8
-	Coba_field int8
-	Interp_method int8
-	Gridlines_color_field int8
-	Gridlines_cell_filter int8
-	X_pad10 [3]int8
+	Axis_slice_method uint8
+	Slice_axis uint8
+	Show_gridlines uint8
+	Draw_velocity uint8
+	Vector_draw_type uint8
+	Vector_field uint8
+	Vector_scale_with_magnitude uint8
+	Vector_draw_mac_components uint8
+	Use_coba uint8
+	Coba_field uint8
+	Interp_method uint8
+	Gridlines_color_field uint8
+	Gridlines_cell_filter uint8
+	X_pad10 [3]uint8
 	Velocity_scale float32
 	Openvdb_compression int32
 	Clipping float32
-	Openvdb_data_depth int8
-	X_pad11 [7]int8
+	Openvdb_data_depth uint8
+	X_pad11 [7]uint8
 	Viewsettings int32
-	X_pad12 [4]int8
+	X_pad12 [4]uint8
 	Point_cache [2]BlockPointer[[2]*PointCache]
 	Ptcaches [2]ListBase
 	Cache_comp int32
 	Cache_high_comp int32
-	Cache_file_format int8
-	X_pad13 [7]int8
+	Cache_file_format uint8
+	X_pad13 [7]uint8
 }
 
 // SDNA index: 156
@@ -2571,7 +2571,7 @@ type FluidFlowSettings struct {
 	Vel_normal float32
 	Vel_random float32
 	Vel_coord [3]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Density float32
 	Color [3]float32
 	Fuel_amount float32
@@ -2582,9 +2582,9 @@ type FluidFlowSettings struct {
 	Subframes int32
 	Texture_size float32
 	Texture_offset float32
-	X_pad2 [4]int8
-	Uvlayer_name [68]int8
-	X_pad3 [4]int8
+	X_pad2 [4]uint8
+	Uvlayer_name [68]uint8
+	X_pad3 [4]uint8
 	Vgroup_density int16
 	Type int16
 	Behavior int16
@@ -2604,26 +2604,26 @@ type FluidEffectorSettings struct {
 	Flags int32
 	Subframes int32
 	Type int16
-	X_pad1 [6]int8
+	X_pad1 [6]uint8
 	Vel_multi float32
 	Guiding_mode int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 }
 
 // SDNA index: 158
 type FreestyleLineSet struct {
 	Next BlockPointer[*FreestyleLineSet]
 	Prev BlockPointer[*FreestyleLineSet]
-	Name [64]int8
+	Name [64]uint8
 	Flags int32
 	Selection int32
 	Qi int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Qi_start int32
 	Qi_end int32
 	Edge_types int32
 	Exclude_edge_types int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Group BlockPointer[*Collection]
 	Linestyle BlockPointer[*FreestyleLineStyle]
 }
@@ -2634,7 +2634,7 @@ type FreestyleModuleConfig struct {
 	Prev BlockPointer[*FreestyleModuleConfig]
 	Script BlockPointer[*Text]
 	Is_displayed int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 160
@@ -2655,20 +2655,20 @@ type GpencilModifierData struct {
 	Prev BlockPointer[*GpencilModifierData]
 	Type int32
 	Mode int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Flag int16
 	Ui_expand_flag int16
-	Name [64]int8
-	Error BlockPointer[*int8]
+	Name [64]uint8
+	Error BlockPointer[*uint8]
 }
 
 // SDNA index: 162
 type NoiseGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Factor float32
@@ -2678,7 +2678,7 @@ type NoiseGpencilModifierData struct {
 	Noise_scale float32
 	Noise_offset float32
 	Noise_mode int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Step int32
 	Layer_pass int32
 	Seed int32
@@ -2689,35 +2689,35 @@ type NoiseGpencilModifierData struct {
 type SubdivGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Pass_index int32
 	Flag int32
 	Level int32
 	Layer_pass int32
 	Type int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 164
 type ThickGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Thickness_fac float32
 	Thickness int32
 	Layer_pass int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Curve_thickness BlockPointer[*CurveMapping]
 }
 
 // SDNA index: 165
 type TimeGpencilModifierSegment struct {
-	Name [64]int8
+	Name [64]uint8
 	Gpmd BlockPointer[*TimeGpencilModifierData]
 	Seg_start int32
 	Seg_end int32
@@ -2729,7 +2729,7 @@ type TimeGpencilModifierSegment struct {
 type TimeGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
+	Layername [64]uint8
 	Layer_pass int32
 	Flag int32
 	Offset int32
@@ -2737,7 +2737,7 @@ type TimeGpencilModifierData struct {
 	Mode int32
 	Sfra int32
 	Efra int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Segments BlockPointer[*TimeGpencilModifierSegment]
 	Segments_len int32
 	Segment_active_index int32
@@ -2747,15 +2747,15 @@ type TimeGpencilModifierData struct {
 type ColorGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Pass_index int32
 	Flag int32
 	Hsv [3]float32
-	Modify_color int8
-	X_pad [3]int8
+	Modify_color uint8
+	X_pad [3]uint8
 	Layer_pass int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Curve_intensity BlockPointer[*CurveMapping]
 }
 
@@ -2763,14 +2763,14 @@ type ColorGpencilModifierData struct {
 type OpacityGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Factor float32
-	Modify_color int8
-	X_pad [3]int8
+	Modify_color uint8
+	X_pad [3]uint8
 	Layer_pass int32
 	Hardeness float32
 	Curve_intensity BlockPointer[*CurveMapping]
@@ -2781,7 +2781,7 @@ type OutlineGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Object BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Layername [64]int8
+	Layername [64]uint8
 	Pass_index int32
 	Flag int32
 	Thickness int32
@@ -2803,11 +2803,11 @@ type ArrayGpencilModifierData struct {
 	Rnd_offset [3]float32
 	Rnd_rot [3]float32
 	Rnd_scale [3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Seed int32
 	Pass_index int32
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Mat_rpl int32
 	Layer_pass int32
 }
@@ -2816,9 +2816,9 @@ type ArrayGpencilModifierData struct {
 type BuildGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
+	Layername [64]uint8
 	Pass_index int32
-	Materialname [64]int8
+	Materialname [64]uint8
 	Layer_pass int32
 	Start_frame float32
 	End_frame float32
@@ -2831,11 +2831,11 @@ type BuildGpencilModifierData struct {
 	Speed_fac float32
 	Speed_maxgap float32
 	Time_mode int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Object BlockPointer[*Object]
 	Percentage_fac float32
 	Fade_fac float32
-	Target_vgname [64]int8
+	Target_vgname [64]uint8
 	Fade_opacity_strength float32
 	Fade_thickness_strength float32
 }
@@ -2845,9 +2845,9 @@ type LatticeGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Object BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Strength float32
@@ -2859,7 +2859,7 @@ type LatticeGpencilModifierData struct {
 type LengthGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
+	Layername [64]uint8
 	Pass_index int32
 	Flag int32
 	Layer_pass int32
@@ -2872,7 +2872,7 @@ type LengthGpencilModifierData struct {
 	Seed int32
 	Step int32
 	Mode int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Point_density float32
 	Segment_influence float32
 	Max_angle float32
@@ -2880,7 +2880,7 @@ type LengthGpencilModifierData struct {
 
 // SDNA index: 174
 type DashGpencilModifierSegment struct {
-	Name [64]int8
+	Name [64]uint8
 	Dmd BlockPointer[*DashGpencilModifierData]
 	Dash int32
 	Gap int32
@@ -2894,7 +2894,7 @@ type DashGpencilModifierSegment struct {
 type DashGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
+	Layername [64]uint8
 	Pass_index int32
 	Flag int32
 	Layer_pass int32
@@ -2909,12 +2909,12 @@ type MirrorGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Object BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Pass_index int32
 	Flag int32
 	Layer_pass int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 177
@@ -2922,16 +2922,16 @@ type HookGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Object BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Subtarget [64]int8
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Subtarget [64]uint8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Layer_pass int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Flag int32
-	Falloff_type int8
-	X_pad1 [3]int8
+	Falloff_type uint8
+	X_pad1 [3]uint8
 	Parentinv [4][4]float32
 	Cent [3]float32
 	Falloff float32
@@ -2943,8 +2943,8 @@ type HookGpencilModifierData struct {
 type SimplifyGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Pass_index int32
 	Flag int32
 	Factor float32
@@ -2960,9 +2960,9 @@ type SimplifyGpencilModifierData struct {
 type OffsetGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Loc [3]float32
@@ -2976,22 +2976,22 @@ type OffsetGpencilModifierData struct {
 	Stroke_step int32
 	Stroke_start_offset int32
 	Layer_pass int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 180
 type SmoothGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Factor float32
 	Step int32
 	Layer_pass int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Curve_intensity BlockPointer[*CurveMapping]
 }
 
@@ -3003,15 +3003,15 @@ type ArmatureGpencilModifierData struct {
 	X_pad int32
 	Object BlockPointer[*Object]
 	Vert_coords_prev func() float32
-	Vgname [64]int8
+	Vgname [64]uint8
 }
 
 // SDNA index: 182
 type MultiplyGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
 	Pass_index int32
 	Flag int32
 	Layer_pass int32
@@ -3029,9 +3029,9 @@ type TintGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Object BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Layer_pass int32
 	Flag int32
@@ -3048,9 +3048,9 @@ type TintGpencilModifierData struct {
 type TextureGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Materialname [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Materialname [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Uv_offset float32
@@ -3062,16 +3062,16 @@ type TextureGpencilModifierData struct {
 	Fit_method int16
 	Mode int16
 	Alignment_rotation float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 185
 type WeightProxGpencilModifierData struct {
 	Modifier GpencilModifierData
-	Target_vgname [64]int8
+	Target_vgname [64]uint8
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Min_weight float32
@@ -3084,10 +3084,10 @@ type WeightProxGpencilModifierData struct {
 // SDNA index: 186
 type WeightAngleGpencilModifierData struct {
 	Modifier GpencilModifierData
-	Target_vgname [64]int8
+	Target_vgname [64]uint8
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Min_weight float32
@@ -3101,8 +3101,8 @@ type WeightAngleGpencilModifierData struct {
 type LineartGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Line_types uint16
-	Source_type int8
-	Use_multiple_levels int8
+	Source_type uint8
+	Use_multiple_levels uint8
 	Level_start int16
 	Level_end int16
 	Source_camera BlockPointer[*Object]
@@ -3110,9 +3110,9 @@ type LineartGpencilModifierData struct {
 	Source_object BlockPointer[*Object]
 	Source_collection BlockPointer[*Collection]
 	Target_material BlockPointer[*Material]
-	Target_layer [64]int8
-	Source_vertex_group [64]int8
-	Vgname [64]int8
+	Target_layer [64]uint8
+	Source_vertex_group [64]uint8
+	Vgname [64]uint8
 	Overscan float32
 	Shadow_camera_fov float32
 	Shadow_camera_size float32
@@ -3120,12 +3120,12 @@ type LineartGpencilModifierData struct {
 	Shadow_camera_far float32
 	Opacity float32
 	Thickness int16
-	Transparency_flags int8
-	Transparency_mask int8
-	Intersection_mask int8
-	Shadow_selection int8
-	Silhouette_selection int8
-	X_pad [1]int8
+	Transparency_flags uint8
+	Transparency_mask uint8
+	Intersection_mask uint8
+	Shadow_selection uint8
+	Silhouette_selection uint8
+	X_pad [1]uint8
 	Crease_threshold float32
 	Angle_splitting_threshold float32
 	Chain_smooth_tolerance float32
@@ -3133,12 +3133,12 @@ type LineartGpencilModifierData struct {
 	Calculation_flags int32
 	Flags int32
 	Stroke_depth_offset float32
-	Level_start_override int8
-	Level_end_override int8
+	Level_start_override uint8
+	Level_end_override uint8
 	Edge_types_override int16
-	Shadow_selection_override int8
-	Shadow_use_silhouette_override int8
-	X_pad2 [6]int8
+	Shadow_selection_override uint8
+	Shadow_use_silhouette_override uint8
+	X_pad2 [6]uint8
 	Cache BlockPointer[*LineartCache]
 	La_data_ptr BlockPointer[*LineartData]
 }
@@ -3149,19 +3149,19 @@ type ShrinkwrapGpencilModifierData struct {
 	Target BlockPointer[*Object]
 	Aux_target BlockPointer[*Object]
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Layer_pass int32
 	Keep_dist float32
 	Shrink_type int16
-	Shrink_opts int8
-	Shrink_mode int8
+	Shrink_opts uint8
+	Shrink_mode uint8
 	Proj_limit float32
-	Proj_axis int8
-	Subsurf_levels int8
-	X_pad [6]int8
+	Proj_axis uint8
+	Subsurf_levels uint8
+	X_pad [6]uint8
 	Smooth_factor float32
 	Smooth_step int32
 	Cache_data BlockPointer[*ShrinkwrapTreeData]
@@ -3171,8 +3171,8 @@ type ShrinkwrapGpencilModifierData struct {
 type EnvelopeGpencilModifierData struct {
 	Modifier GpencilModifierData
 	Material BlockPointer[*Material]
-	Layername [64]int8
-	Vgname [64]int8
+	Layername [64]uint8
+	Vgname [64]uint8
 	Pass_index int32
 	Flag int32
 	Mode int32
@@ -3182,7 +3182,7 @@ type EnvelopeGpencilModifierData struct {
 	Skip int32
 	Layer_pass int32
 	Spread int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 190
@@ -3198,7 +3198,7 @@ type BGPDcontrolpoint struct {
 type BGPDspoint_Runtime struct {
 	Pt_orig BlockPointer[*BGPDspoint]
 	Idx_orig int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 192
@@ -3214,7 +3214,7 @@ type BGPDspoint struct {
 	Uv_rot float32
 	Uv_fill [2]float32
 	Vert_color [4]float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Runtime BGPDspoint_Runtime
 }
 
@@ -3227,11 +3227,11 @@ type BGPDtriangle struct {
 type BGPDpalettecolor struct {
 	Next BlockPointer[*BGPDpalettecolor]
 	Prev BlockPointer[*BGPDpalettecolor]
-	Info [64]int8
+	Info [64]uint8
 	Color [4]float32
 	Fill [4]float32
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 195
@@ -3239,9 +3239,9 @@ type BGPDpalette struct {
 	Next BlockPointer[*BGPDpalette]
 	Prev BlockPointer[*BGPDpalette]
 	Colors ListBase
-	Info [64]int8
+	Info [64]uint8
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 196
@@ -3255,7 +3255,7 @@ type BGPDcurve_point struct {
 	Uv_rot float32
 	Uv_fill [2]float32
 	Vert_color [4]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 197
@@ -3263,12 +3263,12 @@ type BGPDcurve struct {
 	Curve_points BlockPointer[*BGPDcurve_point]
 	Tot_curve_points int32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 198
 type BGPDstroke_Runtime struct {
-	Tmp_layerinfo [128]int8
+	Tmp_layerinfo [128]uint8
 	Multi_frame_falloff float32
 	Stroke_start int32
 	Fill_start int32
@@ -3291,7 +3291,7 @@ type BGPDstroke struct {
 	Flag int16
 	X_pad [2]int16
 	Inittime float64
-	Colorname [128]int8
+	Colorname [128]uint8
 	Mat_nr int32
 	Caps [2]int16
 	Gradient_f float32
@@ -3303,7 +3303,7 @@ type BGPDstroke struct {
 	Uv_translation [2]float32
 	Uv_scale float32
 	Select_index int32
-	X_pad4 [4]int8
+	X_pad4 [4]uint8
 	Dvert BlockPointer[*MDeformVert]
 	X_pad3 BlockPointer[*any]
 	Vert_color_fill [4]float32
@@ -3334,16 +3334,16 @@ type BGPDframe struct {
 type BGPDlayer_Mask struct {
 	Next BlockPointer[*BGPDlayer_Mask]
 	Prev BlockPointer[*BGPDlayer_Mask]
-	Name [128]int8
+	Name [128]uint8
 	Flag int16
 	Sort_index int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 203
 type BGPDlayer_Runtime struct {
 	Icon_id int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Gpl_orig BlockPointer[*BGPDlayer]
 }
 
@@ -3357,33 +3357,33 @@ type BGPDlayer struct {
 	Onion_flag int16
 	Color [4]float32
 	Fill [4]float32
-	Info [128]int8
+	Info [128]uint8
 	Thickness int16
 	Pass_index int16
 	Parent BlockPointer[*Object]
 	Inverse [4][4]float32
-	Parsubstr [64]int8
+	Parsubstr [64]uint8
 	Partype int16
 	Line_change int16
 	Tintcolor [4]float32
 	Opacity float32
-	Viewlayername [64]int8
+	Viewlayername [64]uint8
 	Blend_mode int32
 	Vertex_paint_opacity float32
 	Gstep int16
 	Gstep_next int16
 	Gcolor_prev [3]float32
 	Gcolor_next [3]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Mask_layers ListBase
 	Act_mask int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Location [3]float32
 	Rotation [3]float32
 	Scale [3]float32
 	Layer_mat [4][4]float32
 	Layer_invmat [4][4]float32
-	X_pad3 [4]int8
+	X_pad3 [4]uint8
 	Runtime BGPDlayer_Runtime
 }
 
@@ -3397,7 +3397,7 @@ type BGPdata_Runtime struct {
 	Playing int16
 	Matid int16
 	Sbuffer_sflag int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Sbuffer_used int32
 	Sbuffer_size int32
 	Vert_color_fill [4]float32
@@ -3406,7 +3406,7 @@ type BGPdata_Runtime struct {
 	Arrow_start_style int32
 	Arrow_end_style int32
 	Tot_cp_points int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Cp_points BlockPointer[*BGPDcontrolpoint]
 	Sbuffer_brush BlockPointer[*Brush]
 	Gpencil_cache BlockPointer[*GpencilBatchCache]
@@ -3419,9 +3419,9 @@ type BGPgrid struct {
 	Color [3]float32
 	Scale [2]float32
 	Offset [2]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Lines int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 207
@@ -3449,7 +3449,7 @@ type BGPdata struct {
 	Totcol int16
 	Totlayer int16
 	Totframe int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 	Totstroke int32
 	Totpoint int32
 	Draw_mode int16
@@ -3479,8 +3479,8 @@ type ImageUser struct {
 	Frames int32
 	Offset int32
 	Sfra int32
-	Cycl int8
-	Multiview_eye int8
+	Cycl uint8
+	Multiview_eye uint8
 	Pass int16
 	Tile int32
 	Multi_index int16
@@ -3500,8 +3500,8 @@ type ImageAnim struct {
 type ImageView struct {
 	Next BlockPointer[*ImageView]
 	Prev BlockPointer[*ImageView]
-	Name [64]int8
-	Filepath [1024]int8
+	Name [64]uint8
+	Filepath [1024]uint8
 }
 
 // SDNA index: 212
@@ -3511,14 +3511,14 @@ type ImagePackedFile struct {
 	Packedfile BlockPointer[*PackedFile]
 	View int32
 	Tile_number int32
-	Filepath [1024]int8
+	Filepath [1024]uint8
 }
 
 // SDNA index: 213
 type RenderSlot struct {
 	Next BlockPointer[*RenderSlot]
 	Prev BlockPointer[*RenderSlot]
-	Name [64]int8
+	Name [64]uint8
 	Render BlockPointer[*RenderResult]
 }
 
@@ -3538,11 +3538,11 @@ type ImageTile struct {
 	Tile_number int32
 	Gen_x int32
 	Gen_y int32
-	Gen_type int8
-	Gen_flag int8
+	Gen_type uint8
+	Gen_flag uint8
 	Gen_depth int16
 	Gen_color [4]float32
-	Label [64]int8
+	Label [64]uint8
 }
 
 // SDNA index: 216
@@ -3555,7 +3555,7 @@ type Image_Runtime struct {
 // SDNA index: 217
 type Image struct {
 	Id ID
-	Name [1024]int8
+	Name [1024]uint8
 	Cache BlockPointer[*MovieCache]
 	Gputexture [3][2]BlockPointer[[3][2]*GPUTexture]
 	Anims ListBase
@@ -3573,24 +3573,24 @@ type Image struct {
 	Gpu_layer int16
 	Gpu_view int16
 	Seam_margin int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Packedfile BlockPointer[*PackedFile]
 	Packedfiles ListBase
 	Preview BlockPointer[*PreviewImage]
 	Lastused int32
 	Gen_x int32
 	Gen_y int32
-	Gen_type int8
-	Gen_flag int8
+	Gen_type uint8
+	Gen_flag uint8
 	Gen_depth int16
 	Gen_color [4]float32
 	Aspx float32
 	Aspy float32
 	Colorspace_settings ColorManagedColorspaceSettings
-	Alpha_mode int8
-	X_pad int8
-	Eye int8
-	Views_format int8
+	Alpha_mode uint8
+	X_pad uint8
+	Eye uint8
+	Views_format uint8
 	Active_tile_index int32
 	Tiles ListBase
 	Views ListBase
@@ -3605,7 +3605,7 @@ type IpoDriver struct {
 	Adrcode int16
 	Type int16
 	Flag int16
-	Name [128]int8
+	Name [128]uint8
 }
 
 // SDNA index: 219
@@ -3623,7 +3623,7 @@ type IpoCurve struct {
 	Ipo int16
 	Extrap int16
 	Flag int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Ymin float32
 	Ymax float32
 	Bitmask int32
@@ -3641,7 +3641,7 @@ type Ipo struct {
 	Blocktype int16
 	Showkey int16
 	Muteipo int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 221
@@ -3651,14 +3651,14 @@ type KeyBlock struct {
 	Pos float32
 	Curval float32
 	Type int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Relative int16
 	Flag int16
 	Totelem int32
 	Uid int32
 	Data BlockPointer[*any]
-	Name [64]int8
-	Vgroup [64]int8
+	Name [64]uint8
+	Vgroup [64]uint8
 	Slidermin float32
 	Slidermax float32
 }
@@ -3668,16 +3668,16 @@ type Key struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
 	Refkey BlockPointer[*KeyBlock]
-	Elemstr [32]int8
+	Elemstr [32]uint8
 	Elemsize int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Block ListBase
 	Ipo BlockPointer[*Ipo]
 	From BlockPointer[*ID]
 	Totkey int32
 	Flag int16
-	Type int8
-	X_pad2 int8
+	Type uint8
+	X_pad2 uint8
 	Ctime float32
 	Uidgen int32
 }
@@ -3693,10 +3693,10 @@ type Lattice struct {
 	Opntsu int16
 	Opntsv int16
 	Opntsw int16
-	X_pad2 [3]int8
-	Typeu int8
-	Typev int8
-	Typew int8
+	X_pad2 [3]uint8
+	Typeu uint8
+	Typev uint8
+	Typew uint8
 	Actbp int32
 	Fu float32
 	Fv float32
@@ -3708,10 +3708,10 @@ type Lattice struct {
 	Ipo BlockPointer[*Ipo]
 	Key BlockPointer[*Key]
 	Dvert BlockPointer[*MDeformVert]
-	Vgroup [64]int8
+	Vgroup [64]uint8
 	Vertex_group_names ListBase
 	Vertex_group_active_index int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Editlatt BlockPointer[*EditLatt]
 	Batch_cache BlockPointer[*any]
 }
@@ -3728,7 +3728,7 @@ type Base struct {
 	Flag_legacy int16
 	Local_view_bits int16
 	Local_collections_bits int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 }
 
 // SDNA index: 225
@@ -3748,7 +3748,7 @@ type LayerCollection struct {
 	Scene_collection BlockPointer[*SceneCollection]
 	Flag int16
 	Runtime_flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Layer_collections ListBase
 	Local_collections_bits int16
 	X_pad2 [3]int16
@@ -3764,7 +3764,7 @@ type ViewLayerEEVEE struct {
 type ViewLayerAOV struct {
 	Next BlockPointer[*ViewLayerAOV]
 	Prev BlockPointer[*ViewLayerAOV]
-	Name [64]int8
+	Name [64]uint8
 	Flag int32
 	Type int32
 }
@@ -3773,21 +3773,21 @@ type ViewLayerAOV struct {
 type ViewLayerLightgroup struct {
 	Next BlockPointer[*ViewLayerLightgroup]
 	Prev BlockPointer[*ViewLayerLightgroup]
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 230
 type LightgroupMembership struct {
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 231
 type ViewLayer struct {
 	Next BlockPointer[*ViewLayer]
 	Prev BlockPointer[*ViewLayer]
-	Name [64]int8
+	Name [64]uint8
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Object_bases ListBase
 	Stats BlockPointer[*SceneStats]
 	Basact BlockPointer[*Base]
@@ -3798,7 +3798,7 @@ type ViewLayer struct {
 	Pass_alpha_threshold float32
 	Cryptomatte_flag int16
 	Cryptomatte_levels int16
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Samples int32
 	Mat_override BlockPointer[*Material]
 	Id_properties BlockPointer[*IDProperty]
@@ -3817,11 +3817,11 @@ type ViewLayer struct {
 type SceneCollection struct {
 	Next BlockPointer[*SceneCollection]
 	Prev BlockPointer[*SceneCollection]
-	Name [64]int8
+	Name [64]uint8
 	Active_object_index int32
 	Flag int16
-	Type int8
-	X_pad int8
+	Type uint8
+	X_pad uint8
 	Objects ListBase
 	Scene_collections ListBase
 }
@@ -3850,10 +3850,10 @@ type Lamp struct {
 	Coeff_const float32
 	Coeff_lin float32
 	Coeff_quad float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Curfalloff BlockPointer[*CurveMapping]
 	Falloff_type int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Clipsta float32
 	Clipend float32
 	Bias float32
@@ -3862,8 +3862,8 @@ type Lamp struct {
 	Samp int16
 	Buffers int16
 	Filtertype int16
-	Bufflag int8
-	Buftype int8
+	Bufflag uint8
+	Buftype uint8
 	Area_shape int16
 	Area_size float32
 	Area_sizey float32
@@ -3894,10 +3894,10 @@ type Lamp struct {
 type LightProbe struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
-	Type int8
-	Flag int8
-	Attenuation_type int8
-	Parallax_type int8
+	Type uint8
+	Flag uint8
+	Attenuation_type uint8
+	Parallax_type uint8
 	Distinf float32
 	Distpar float32
 	Falloff float32
@@ -3910,7 +3910,7 @@ type LightProbe struct {
 	Grid_resolution_x int32
 	Grid_resolution_y int32
 	Grid_resolution_z int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Parallax_ob BlockPointer[*Object]
 	Image BlockPointer[*Image]
 	Visibility_grp BlockPointer[*Collection]
@@ -3951,11 +3951,11 @@ type LightGridCache struct {
 // SDNA index: 237
 type LightCacheTexture struct {
 	Tex BlockPointer[*GPUTexture]
-	Data BlockPointer[*int8]
+	Data BlockPointer[*uint8]
 	Tex_size [3]int32
-	Data_type int8
-	Components int8
-	X_pad [2]int8
+	Data_type uint8
+	Components uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 238
@@ -3968,7 +3968,7 @@ type LightCache struct {
 	Mips_len int32
 	Vis_res int32
 	Ref_res int32
-	X_pad [4][2]int8
+	X_pad [4][2]uint8
 	Grid_tx LightCacheTexture
 	Cube_tx LightCacheTexture
 	Cube_mips BlockPointer[*LightCacheTexture]
@@ -3980,7 +3980,7 @@ type LightCache struct {
 type LineStyleModifier struct {
 	Next BlockPointer[*LineStyleModifier]
 	Prev BlockPointer[*LineStyleModifier]
-	Name [64]int8
+	Name [64]uint8
 	Type int32
 	Influence float32
 	Flags int32
@@ -3998,7 +3998,7 @@ type LineStyleAlphaModifier_AlongStroke struct {
 	Modifier LineStyleModifier
 	Curve BlockPointer[*CurveMapping]
 	Flags int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 242
@@ -4008,7 +4008,7 @@ type LineStyleThicknessModifier_AlongStroke struct {
 	Flags int32
 	Value_min float32
 	Value_max float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 243
@@ -4026,7 +4026,7 @@ type LineStyleAlphaModifier_DistanceFromCamera struct {
 	Flags int32
 	Range_min float32
 	Range_max float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 245
@@ -4038,7 +4038,7 @@ type LineStyleThicknessModifier_DistanceFromCamera struct {
 	Range_max float32
 	Value_min float32
 	Value_max float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 246
@@ -4058,7 +4058,7 @@ type LineStyleAlphaModifier_DistanceFromObject struct {
 	Flags int32
 	Range_min float32
 	Range_max float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 248
@@ -4071,7 +4071,7 @@ type LineStyleThicknessModifier_DistanceFromObject struct {
 	Range_max float32
 	Value_min float32
 	Value_max float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 249
@@ -4091,7 +4091,7 @@ type LineStyleAlphaModifier_Curvature_3D struct {
 	Flags int32
 	Min_curvature float32
 	Max_curvature float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 251
@@ -4099,7 +4099,7 @@ type LineStyleThicknessModifier_Curvature_3D struct {
 	Modifier LineStyleModifier
 	Curve BlockPointer[*CurveMapping]
 	Flags int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Min_curvature float32
 	Max_curvature float32
 	Min_thickness float32
@@ -4113,7 +4113,7 @@ type LineStyleColorModifier_Noise struct {
 	Period float32
 	Amplitude float32
 	Seed int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 253
@@ -4150,7 +4150,7 @@ type LineStyleAlphaModifier_CreaseAngle struct {
 	Flags int32
 	Min_angle float32
 	Max_angle float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 257
@@ -4158,7 +4158,7 @@ type LineStyleThicknessModifier_CreaseAngle struct {
 	Modifier LineStyleModifier
 	Curve BlockPointer[*CurveMapping]
 	Flags int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Min_angle float32
 	Max_angle float32
 	Min_thickness float32
@@ -4176,7 +4176,7 @@ type LineStyleAlphaModifier_Tangent struct {
 	Modifier LineStyleModifier
 	Curve BlockPointer[*CurveMapping]
 	Flags int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 260
@@ -4186,7 +4186,7 @@ type LineStyleThicknessModifier_Tangent struct {
 	Flags int32
 	Min_thickness float32
 	Max_thickness float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 261
@@ -4219,14 +4219,14 @@ type LineStyleThicknessModifier_Material struct {
 type LineStyleGeometryModifier_Sampling struct {
 	Modifier LineStyleModifier
 	Sampling float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 265
 type LineStyleGeometryModifier_BezierCurve struct {
 	Modifier LineStyleModifier
 	Error float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 266
@@ -4235,7 +4235,7 @@ type LineStyleGeometryModifier_SinusDisplacement struct {
 	Wavelength float32
 	Amplitude float32
 	Phase float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 267
@@ -4255,7 +4255,7 @@ type LineStyleGeometryModifier_PerlinNoise1D struct {
 	Angle float32
 	Octaves int32
 	Seed int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 }
 
 // SDNA index: 269
@@ -4266,35 +4266,35 @@ type LineStyleGeometryModifier_PerlinNoise2D struct {
 	Angle float32
 	Octaves int32
 	Seed int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 }
 
 // SDNA index: 270
 type LineStyleGeometryModifier_BackboneStretcher struct {
 	Modifier LineStyleModifier
 	Backbone_length float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 271
 type LineStyleGeometryModifier_TipRemover struct {
 	Modifier LineStyleModifier
 	Tip_length float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 272
 type LineStyleGeometryModifier_Polygonalization struct {
 	Modifier LineStyleModifier
 	Error float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 273
 type LineStyleGeometryModifier_GuidingLines struct {
 	Modifier LineStyleModifier
 	Offset float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 274
@@ -4327,14 +4327,14 @@ type LineStyleGeometryModifier_2DTransform struct {
 	Pivot_u float32
 	Pivot_x float32
 	Pivot_y float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 277
 type LineStyleGeometryModifier_Simplification struct {
 	Modifier LineStyleModifier
 	Tolerance float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 278
@@ -4343,7 +4343,7 @@ type LineStyleThicknessModifier_Calligraphy struct {
 	Min_thickness float32
 	Max_thickness float32
 	Orientation float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 279
@@ -4379,7 +4379,7 @@ type FreestyleLineStyle struct {
 	Texact int16
 	Pr_texture int16
 	Use_nodes int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Dash1 int16
 	Gap1 int16
 	Dash2 int16
@@ -4424,7 +4424,7 @@ type Mask struct {
 	Sfra int32
 	Efra int32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 284
@@ -4432,8 +4432,8 @@ type MaskParent struct {
 	Id_type int32
 	Type int32
 	Id BlockPointer[*ID]
-	Parent [64]int8
-	Sub_parent [64]int8
+	Parent [64]uint8
+	Sub_parent [64]uint8
 	Parent_orig [2]float32
 	Parent_corners_orig [4][2]float32
 }
@@ -4448,7 +4448,7 @@ type MaskSplinePointUW struct {
 // SDNA index: 286
 type MaskSplinePoint struct {
 	Bezt BezTriple
-	X_pad [4]int8
+	X_pad [4]uint8
 	Tot_uw int32
 	Uw BlockPointer[*MaskSplinePointUW]
 	Parent MaskParent
@@ -4459,8 +4459,8 @@ type MaskSpline struct {
 	Next BlockPointer[*MaskSpline]
 	Prev BlockPointer[*MaskSpline]
 	Flag int16
-	Offset_mode int8
-	Weight_interp int8
+	Offset_mode uint8
+	Weight_interp uint8
 	Tot_point int32
 	Points BlockPointer[*MaskSplinePoint]
 	Parent MaskParent
@@ -4474,34 +4474,34 @@ type MaskLayerShape struct {
 	Data BlockPointer[*float32]
 	Tot_vert int32
 	Frame int32
-	Flag int8
-	X_pad [7]int8
+	Flag uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 289
 type MaskLayer struct {
 	Next BlockPointer[*MaskLayer]
 	Prev BlockPointer[*MaskLayer]
-	Name [64]int8
+	Name [64]uint8
 	Splines ListBase
 	Splines_shapes ListBase
 	Act_spline BlockPointer[*MaskSpline]
 	Act_point BlockPointer[*MaskSplinePoint]
 	Alpha float32
-	Blend int8
-	Blend_flag int8
-	Falloff int8
-	X_pad [7]int8
-	Flag int8
-	Restrictflag int8
+	Blend uint8
+	Blend_flag uint8
+	Falloff uint8
+	X_pad [7]uint8
+	Flag uint8
+	Restrictflag uint8
 }
 
 // SDNA index: 290
 type TexPaintSlot struct {
 	Ima BlockPointer[*Image]
 	Image_user BlockPointer[*ImageUser]
-	Uvname BlockPointer[*int8]
-	Attribute_name BlockPointer[*int8]
+	Uvname BlockPointer[*uint8]
+	Attribute_name BlockPointer[*uint8]
 	Valid int32
 	Interp int32
 }
@@ -4520,7 +4520,7 @@ type MaterialGPencilStyle struct {
 	Mix_factor float32
 	Gradient_angle float32
 	Gradient_radius float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Gradient_scale [2]float32
 	Gradient_shift [2]float32
 	Texture_angle float32
@@ -4538,10 +4538,10 @@ type MaterialGPencilStyle struct {
 // SDNA index: 292
 type MaterialLineArt struct {
 	Flags int32
-	Transparency_mask int8
-	Mat_occlusion int8
-	Intersection_priority int8
-	X_pad int8
+	Transparency_mask uint8
+	Mat_occlusion uint8
+	Intersection_priority uint8
+	X_pad uint8
 }
 
 // SDNA index: 293
@@ -4549,7 +4549,7 @@ type Material struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
 	Flag int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	R float32
 	G float32
 	B float32
@@ -4563,8 +4563,8 @@ type Material struct {
 	Gloss_mir float32
 	Roughness float32
 	Metallic float32
-	Use_nodes int8
-	Pr_type int8
+	Use_nodes uint8
+	Pr_type uint8
 	Pr_texture int16
 	Pr_flag int16
 	Index int16
@@ -4577,13 +4577,13 @@ type Material struct {
 	Paint_active_slot int16
 	Paint_clone_slot int16
 	Tot_slots int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Alpha_threshold float32
 	Refract_depth float32
-	Blend_method int8
-	Blend_shadow int8
-	Blend_flag int8
-	X_pad3 [1]int8
+	Blend_method uint8
+	Blend_shadow uint8
+	Blend_flag uint8
+	X_pad3 [1]uint8
 	Texpaintslot BlockPointer[*TexPaintSlot]
 	Gpumaterial ListBase
 	Gp_style BlockPointer[*MaterialGPencilStyle]
@@ -4615,23 +4615,23 @@ type Mesh struct {
 	Texcomesh BlockPointer[*Mesh]
 	Loc [3]float32
 	Size [3]float32
-	Texflag int8
-	Editflag int8
+	Texflag uint8
+	Editflag uint8
 	Flag uint16
 	Smoothresh float32
 	Remesh_voxel_size float32
 	Remesh_voxel_adaptivity float32
 	Face_sets_color_seed int32
 	Face_sets_color_default int32
-	Active_color_attribute BlockPointer[*int8]
-	Default_color_attribute BlockPointer[*int8]
-	Symmetry int8
-	Remesh_mode int8
+	Active_color_attribute BlockPointer[*uint8]
+	Default_color_attribute BlockPointer[*uint8]
+	Symmetry uint8
+	Remesh_mode uint8
 	Totcol int16
-	Cd_flag int8
-	Subdiv int8
-	Subdivr int8
-	Subsurftype int8
+	Cd_flag uint8
+	Subdiv uint8
+	Subdivr uint8
+	Subsurftype uint8
 	Mpoly BlockPointer[*MPoly]
 	Mloop BlockPointer[*MLoop]
 	Mvert BlockPointer[*MVert]
@@ -4643,7 +4643,7 @@ type Mesh struct {
 	Mface BlockPointer[*MFace]
 	Fdata CustomData
 	Totface int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Runtime BlockPointer[*MeshRuntimeHandle]
 }
 
@@ -4652,8 +4652,8 @@ type TFace struct {
 	Tpage BlockPointer[*any]
 	Uv [4][2]float32
 	Col [4]int32
-	Flag int8
-	Transp int8
+	Flag uint8
+	Transp uint8
 	Mode int16
 	Tile int16
 	Unwrap int16
@@ -4663,8 +4663,8 @@ type TFace struct {
 type MEdge struct {
 	V1 int32
 	V2 int32
-	Crease int8
-	Bweight int8
+	Crease uint8
+	Bweight uint8
 	Flag int16
 }
 
@@ -4673,8 +4673,8 @@ type MPoly struct {
 	Loopstart int32
 	Totloop int32
 	Mat_nr int16
-	Flag int8
-	X_pad int8
+	Flag uint8
+	X_pad uint8
 }
 
 // SDNA index: 298
@@ -4707,8 +4707,8 @@ type MIntProperty struct {
 
 // SDNA index: 303
 type MStringProperty struct {
-	S [255]int8
-	S_len int8
+	S [255]uint8
+	S_len uint8
 }
 
 // SDNA index: 304
@@ -4742,10 +4742,10 @@ type MVertSkin struct {
 
 // SDNA index: 309
 type MLoopCol struct {
-	R int8
-	G int8
-	B int8
-	A int8
+	R uint8
+	G uint8
+	B uint8
+	A uint8
 }
 
 // SDNA index: 310
@@ -4765,17 +4765,17 @@ type MDisps struct {
 type GridPaintMask struct {
 	Data BlockPointer[*float32]
 	Level int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 313
 type FreestyleEdge struct {
-	Flag int8
+	Flag uint8
 }
 
 // SDNA index: 314
 type FreestyleFace struct {
-	Flag int8
+	Flag uint8
 }
 
 // SDNA index: 315
@@ -4787,9 +4787,9 @@ type MLoopUV struct {
 // SDNA index: 316
 type MVert struct {
 	Co [3]float32
-	Flag int8
-	Bweight int8
-	X_pad [2]int8
+	Flag uint8
+	Bweight uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 317
@@ -4799,8 +4799,8 @@ type MFace struct {
 	V3 int32
 	V4 int32
 	Mat_nr int16
-	Edcode int8
-	Flag int8
+	Edcode uint8
+	Flag uint8
 }
 
 // SDNA index: 318
@@ -4810,10 +4810,10 @@ type MTFace struct {
 
 // SDNA index: 319
 type MCol struct {
-	A int8
-	R int8
-	G int8
-	B int8
+	A uint8
+	R uint8
+	G uint8
+	B uint8
 }
 
 // SDNA index: 320
@@ -4828,7 +4828,7 @@ type MetaElem struct {
 	Bb BlockPointer[*BoundBox]
 	Type int16
 	Flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	X float32
 	Y float32
 	Z float32
@@ -4852,18 +4852,18 @@ type MetaBall struct {
 	Editelems BlockPointer[*ListBase]
 	Ipo BlockPointer[*Ipo]
 	Mat BlockPointer[**Material]
-	Flag int8
-	Flag2 int8
+	Flag uint8
+	Flag2 uint8
 	Totcol int16
-	Texflag int8
-	X_pad [2]int8
-	Needs_flush_to_id int8
+	Texflag uint8
+	X_pad [2]uint8
+	Needs_flush_to_id uint8
 	Loc [3]float32
 	Size [3]float32
 	Wiresize float32
 	Rendersize float32
 	Thresh float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Lastelem BlockPointer[*MetaElem]
 }
 
@@ -4876,8 +4876,8 @@ type ModifierData struct {
 	Execution_time float32
 	Flag int16
 	Ui_expand_flag int16
-	Name [64]int8
-	Error BlockPointer[*int8]
+	Name [64]uint8
+	Error BlockPointer[*uint8]
 	Session_uuid SessionUUID
 	Runtime BlockPointer[*any]
 }
@@ -4887,9 +4887,9 @@ type MappingInfoModifierData struct {
 	Modifier ModifierData
 	Texture BlockPointer[*Tex]
 	Map_object BlockPointer[*Object]
-	Map_bone [64]int8
-	Uvlayer_name [68]int8
-	X_pad1 [4]int8
+	Map_bone [64]uint8
+	Uvlayer_name [68]uint8
+	X_pad1 [4]uint8
 	Uvlayer_tmp int32
 	Texmapping int32
 }
@@ -4904,7 +4904,7 @@ type SubsurfModifierData struct {
 	Uv_smooth int16
 	Quality int16
 	Boundary_smooth int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	EmCache BlockPointer[*any]
 	MCache BlockPointer[*any]
 }
@@ -4913,10 +4913,10 @@ type SubsurfModifierData struct {
 type LatticeModifierData struct {
 	Modifier ModifierData
 	Object BlockPointer[*Object]
-	Name [64]int8
+	Name [64]uint8
 	Strength float32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -4924,10 +4924,10 @@ type LatticeModifierData struct {
 type CurveModifierData struct {
 	Modifier ModifierData
 	Object BlockPointer[*Object]
-	Name [64]int8
+	Name [64]uint8
 	Defaxis int16
 	Flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -4945,7 +4945,7 @@ type BuildModifierData struct {
 type MaskModifierData struct {
 	Modifier ModifierData
 	Ob_arm BlockPointer[*Object]
-	Vgroup [64]int8
+	Vgroup [64]uint8
 	Mode int16
 	Flag int16
 	Threshold float32
@@ -4978,7 +4978,7 @@ type MirrorModifierData struct {
 	Tolerance float32
 	Bisect_threshold float32
 	Use_correct_order_on_merge uint8
-	X_pad [3]int8
+	X_pad [3]uint8
 	Uv_offset [2]float32
 	Uv_offset_copy [2]float32
 	Mirror_ob BlockPointer[*Object]
@@ -5008,13 +5008,13 @@ type BevelModifierData struct {
 	Miter_inner int16
 	Miter_outer int16
 	Vmesh_method int16
-	Affect_type int8
-	X_pad int8
+	Affect_type uint8
+	X_pad uint8
 	Profile float32
 	Bevel_angle float32
 	Spread float32
-	Defgrp_name [64]int8
-	X_pad1 [4]int8
+	Defgrp_name [64]uint8
+	X_pad1 [4]uint8
 	Custom_profile BlockPointer[*CurveProfile]
 	X_pad2 BlockPointer[*any]
 }
@@ -5035,31 +5035,31 @@ type DisplaceModifierData struct {
 	Modifier ModifierData
 	Texture BlockPointer[*Tex]
 	Map_object BlockPointer[*Object]
-	Map_bone [64]int8
-	Uvlayer_name [68]int8
-	X_pad1 [4]int8
+	Map_bone [64]uint8
+	Uvlayer_name [68]uint8
+	X_pad1 [4]uint8
 	Uvlayer_tmp int32
 	Texmapping int32
 	Strength float32
 	Direction int32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Midlevel float32
 	Space int32
 	Flag int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 }
 
 // SDNA index: 336
 type UVProjectModifierData struct {
 	Modifier ModifierData
 	Projectors [10]BlockPointer[[10]*Object]
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Num_projectors int32
 	Aspectx float32
 	Aspecty float32
 	Scalex float32
 	Scaley float32
-	Uvlayer_name [68]int8
+	Uvlayer_name [68]uint8
 	Uvlayer_tmp int32
 }
 
@@ -5068,10 +5068,10 @@ type DecimateModifierData struct {
 	Modifier ModifierData
 	Percent float32
 	Iter int16
-	Delimit int8
-	Symmetry_axis int8
+	Delimit uint8
+	Symmetry_axis uint8
 	Angle float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Defgrp_factor float32
 	Flag int16
 	Mode int16
@@ -5082,7 +5082,7 @@ type DecimateModifierData struct {
 type SmoothModifierData struct {
 	Modifier ModifierData
 	Fac float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Flag int16
 	Repeat int16
 }
@@ -5094,7 +5094,7 @@ type CastModifierData struct {
 	Fac float32
 	Radius float32
 	Size float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Flag int16
 	Type int16
 	X_pad1 BlockPointer[*any]
@@ -5105,15 +5105,15 @@ type WaveModifierData struct {
 	Modifier ModifierData
 	Texture BlockPointer[*Tex]
 	Map_object BlockPointer[*Object]
-	Map_bone [64]int8
-	Uvlayer_name [68]int8
-	X_pad1 [4]int8
+	Map_bone [64]uint8
+	Uvlayer_name [68]uint8
+	X_pad1 [4]uint8
 	Uvlayer_tmp int32
 	Texmapping int32
 	Objectcenter BlockPointer[*Object]
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Flag int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Startx float32
 	Starty float32
 	Height float32
@@ -5124,7 +5124,7 @@ type WaveModifierData struct {
 	Falloff float32
 	Timeoffs float32
 	Lifetime float32
-	X_pad3 [4]int8
+	X_pad3 [4]uint8
 	X_pad4 BlockPointer[*any]
 }
 
@@ -5133,20 +5133,20 @@ type ArmatureModifierData struct {
 	Modifier ModifierData
 	Deformflag int16
 	Multi int16
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Object BlockPointer[*Object]
 	Vert_coords_prev func() float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 }
 
 // SDNA index: 342
 type HookModifierData struct {
 	Modifier ModifierData
 	Object BlockPointer[*Object]
-	Subtarget [64]int8
-	Flag int8
-	Falloff_type int8
-	X_pad [6]int8
+	Subtarget [64]uint8
+	Flag uint8
+	Falloff_type uint8
+	X_pad [6]uint8
 	Parentinv [4][4]float32
 	Cent [3]float32
 	Falloff float32
@@ -5154,7 +5154,7 @@ type HookModifierData struct {
 	Indexar BlockPointer[*int32]
 	Totindex int32
 	Force float32
-	Name [64]int8
+	Name [64]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5193,8 +5193,8 @@ type CollisionModifierData struct {
 	Tri_num int32
 	Time_x float32
 	Time_xnew float32
-	Is_static int8
-	X_pad [7]int8
+	Is_static uint8
+	X_pad [7]uint8
 	Bvhtree BlockPointer[*BVHTree]
 }
 
@@ -5220,12 +5220,12 @@ type BooleanModifierData struct {
 	Object BlockPointer[*Object]
 	Collection BlockPointer[*Collection]
 	Double_threshold float32
-	Operation int8
-	Solver int8
-	Material_mode int8
-	Flag int8
-	Bm_flag int8
-	X_pad [7]int8
+	Operation uint8
+	Solver uint8
+	Material_mode uint8
+	Flag uint8
+	Bm_flag uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 349
@@ -5244,10 +5244,10 @@ type MDefCell struct {
 type MeshDeformModifierData struct {
 	Modifier ModifierData
 	Object BlockPointer[*Object]
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Gridsize int16
 	Flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Bindinfluences BlockPointer[*MDefInfluence]
 	Bindoffsets BlockPointer[*int32]
 	Bindcagecos BlockPointer[*float32]
@@ -5276,7 +5276,7 @@ type ParticleSystemModifierData struct {
 	Totdmedge int32
 	Totdmface int32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5294,8 +5294,8 @@ type ParticleInstanceModifierData struct {
 	Random_rotation float32
 	Particle_amount float32
 	Particle_offset float32
-	Index_layer_name [68]int8
-	Value_layer_name [68]int8
+	Index_layer_name [68]uint8
+	Value_layer_name [68]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5306,25 +5306,25 @@ type ExplodeModifierData struct {
 	Flag int16
 	Vgroup int16
 	Protect float32
-	Uvname [68]int8
-	X_pad1 [4]int8
+	Uvname [68]uint8
+	X_pad1 [4]uint8
 	X_pad2 BlockPointer[*any]
 }
 
 // SDNA index: 355
 type MultiresModifierData struct {
 	Modifier ModifierData
-	Lvl int8
-	Sculptlvl int8
-	Renderlvl int8
-	Totlvl int8
-	Simple int8
-	Flags int8
-	X_pad [2]int8
+	Lvl uint8
+	Sculptlvl uint8
+	Renderlvl uint8
+	Totlvl uint8
+	Simple uint8
+	Flags uint8
+	X_pad [2]uint8
 	Quality int16
 	Uv_smooth int16
 	Boundary_smooth int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 }
 
 // SDNA index: 356
@@ -5346,28 +5346,28 @@ type ShrinkwrapModifierData struct {
 	Modifier ModifierData
 	Target BlockPointer[*Object]
 	AuxTarget BlockPointer[*Object]
-	Vgroup_name [64]int8
+	Vgroup_name [64]uint8
 	KeepDist float32
 	ShrinkType int16
-	ShrinkOpts int8
-	ShrinkMode int8
+	ShrinkOpts uint8
+	ShrinkMode uint8
 	ProjLimit float32
-	ProjAxis int8
-	SubsurfLevels int8
-	X_pad [2]int8
+	ProjAxis uint8
+	SubsurfLevels uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 359
 type SimpleDeformModifierData struct {
 	Modifier ModifierData
 	Origin BlockPointer[*Object]
-	Vgroup_name [64]int8
+	Vgroup_name [64]uint8
 	Factor float32
 	Limit [2]float32
-	Mode int8
-	Axis int8
-	Deform_axis int8
-	Flag int8
+	Mode uint8
+	Axis uint8
+	Deform_axis uint8
+	Flag uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5379,17 +5379,17 @@ type ShapeKeyModifierData struct {
 // SDNA index: 361
 type SolidifyModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
-	Shell_defgrp_name [64]int8
-	Rim_defgrp_name [64]int8
+	Defgrp_name [64]uint8
+	Shell_defgrp_name [64]uint8
+	Rim_defgrp_name [64]uint8
 	Offset float32
 	Offset_fac float32
 	Offset_fac_vg float32
 	Offset_clamp float32
-	Mode int8
-	Nonmanifold_offset_mode int8
-	Nonmanifold_boundary_mode int8
-	X_pad int8
+	Mode uint8
+	Nonmanifold_offset_mode uint8
+	Nonmanifold_boundary_mode uint8
+	X_pad uint8
 	Crease_inner float32
 	Crease_outer float32
 	Crease_rim float32
@@ -5411,8 +5411,8 @@ type ScrewModifierData struct {
 	Angle float32
 	Merge_dist float32
 	Flag int16
-	Axis int8
-	X_pad [5]int8
+	Axis uint8
+	X_pad [5]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5439,19 +5439,19 @@ type OceanModifierData struct {
 	Sharpen_peak_jonswap float32
 	Bakestart int32
 	Bakeend int32
-	Cachepath [1024]int8
-	Foamlayername [68]int8
-	Spraylayername [68]int8
-	Cached int8
-	Geometry_mode int8
-	Flag int8
-	X_pad2 int8
+	Cachepath [1024]uint8
+	Foamlayername [68]uint8
+	Spraylayername [68]uint8
+	Cached uint8
+	Geometry_mode uint8
+	Flag uint8
+	X_pad2 uint8
 	Repeat_x int16
 	Repeat_y int16
 	Seed int32
 	Size float32
 	Foam_fade float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 364
@@ -5459,29 +5459,29 @@ type WarpModifierData struct {
 	Modifier ModifierData
 	Texture BlockPointer[*Tex]
 	Map_object BlockPointer[*Object]
-	Map_bone [64]int8
-	Uvlayer_name [68]int8
-	X_pad1 [4]int8
+	Map_bone [64]uint8
+	Uvlayer_name [68]uint8
+	X_pad1 [4]uint8
 	Uvlayer_tmp int32
 	Texmapping int32
 	Object_from BlockPointer[*Object]
 	Object_to BlockPointer[*Object]
-	Bone_from [64]int8
-	Bone_to [64]int8
+	Bone_from [64]uint8
+	Bone_to [64]uint8
 	Curfalloff BlockPointer[*CurveMapping]
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Strength float32
 	Falloff_radius float32
-	Flag int8
-	Falloff_type int8
-	X_pad2 [6]int8
+	Flag uint8
+	Falloff_type uint8
+	X_pad2 [6]uint8
 	X_pad3 BlockPointer[*any]
 }
 
 // SDNA index: 365
 type WeightVGEditModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Edit_flags int16
 	Falloff_type int16
 	Default_weight float32
@@ -5489,60 +5489,60 @@ type WeightVGEditModifierData struct {
 	Add_threshold float32
 	Rem_threshold float32
 	Mask_constant float32
-	Mask_defgrp_name [64]int8
+	Mask_defgrp_name [64]uint8
 	Mask_tex_use_channel int32
 	Mask_texture BlockPointer[*Tex]
 	Mask_tex_map_obj BlockPointer[*Object]
-	Mask_tex_map_bone [64]int8
+	Mask_tex_map_bone [64]uint8
 	Mask_tex_mapping int32
-	Mask_tex_uvlayer_name [68]int8
+	Mask_tex_uvlayer_name [68]uint8
 	X_pad1 BlockPointer[*any]
 }
 
 // SDNA index: 366
 type WeightVGMixModifierData struct {
 	Modifier ModifierData
-	Defgrp_name_a [64]int8
-	Defgrp_name_b [64]int8
+	Defgrp_name_a [64]uint8
+	Defgrp_name_b [64]uint8
 	Default_weight_a float32
 	Default_weight_b float32
-	Mix_mode int8
-	Mix_set int8
-	X_pad0 [6]int8
+	Mix_mode uint8
+	Mix_set uint8
+	X_pad0 [6]uint8
 	Mask_constant float32
-	Mask_defgrp_name [64]int8
+	Mask_defgrp_name [64]uint8
 	Mask_tex_use_channel int32
 	Mask_texture BlockPointer[*Tex]
 	Mask_tex_map_obj BlockPointer[*Object]
-	Mask_tex_map_bone [64]int8
+	Mask_tex_map_bone [64]uint8
 	Mask_tex_mapping int32
-	Mask_tex_uvlayer_name [68]int8
-	X_pad1 [4]int8
-	Flag int8
-	X_pad2 [3]int8
+	Mask_tex_uvlayer_name [68]uint8
+	X_pad1 [4]uint8
+	Flag uint8
+	X_pad2 [3]uint8
 }
 
 // SDNA index: 367
 type WeightVGProximityModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Cmap_curve BlockPointer[*CurveMapping]
 	Proximity_mode int32
 	Proximity_flags int32
 	Proximity_ob_target BlockPointer[*Object]
 	Mask_constant float32
-	Mask_defgrp_name [64]int8
+	Mask_defgrp_name [64]uint8
 	Mask_tex_use_channel int32
 	Mask_texture BlockPointer[*Tex]
 	Mask_tex_map_obj BlockPointer[*Object]
-	Mask_tex_map_bone [64]int8
+	Mask_tex_map_bone [64]uint8
 	Mask_tex_mapping int32
-	Mask_tex_uvlayer_name [68]int8
-	X_pad1 [4]int8
+	Mask_tex_uvlayer_name [68]uint8
+	X_pad1 [4]uint8
 	Min_dist float32
 	Max_dist float32
 	Falloff_type int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 368
@@ -5551,7 +5551,7 @@ type DynamicPaintModifierData struct {
 	Canvas BlockPointer[*DynamicPaintCanvasSettings]
 	Brush BlockPointer[*DynamicPaintBrushSettings]
 	Type int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 369
@@ -5560,10 +5560,10 @@ type RemeshModifierData struct {
 	Threshold float32
 	Scale float32
 	Hermite_num float32
-	Depth int8
-	Flag int8
-	Mode int8
-	X_pad int8
+	Depth uint8
+	Flag uint8
+	Mode uint8
+	X_pad uint8
 	Voxel_size float32
 	Adaptivity float32
 }
@@ -5572,9 +5572,9 @@ type RemeshModifierData struct {
 type SkinModifierData struct {
 	Modifier ModifierData
 	Branch_smoothing float32
-	Flag int8
-	Symmetry_axes int8
-	X_pad [2]int8
+	Flag uint8
+	Symmetry_axes uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 371
@@ -5591,8 +5591,8 @@ type LaplacianSmoothModifierData struct {
 	Modifier ModifierData
 	Lambda float32
 	Lambda_border float32
-	X_pad1 [4]int8
-	Defgrp_name [64]int8
+	X_pad1 [4]uint8
+	Defgrp_name [64]uint8
 	Flag int16
 	Repeat int16
 }
@@ -5605,9 +5605,9 @@ type CorrectiveSmoothDeltaCache struct {
 	Scale float32
 	Repeat int16
 	Flag int16
-	Smooth_type int8
-	Rest_source int8
-	X_pad [6]int8
+	Smooth_type uint8
+	Rest_source uint8
+	X_pad [6]uint8
 }
 
 // SDNA index: 374
@@ -5619,88 +5619,88 @@ type CorrectiveSmoothModifierData struct {
 	Scale float32
 	Repeat int16
 	Flag int16
-	Smooth_type int8
-	Rest_source int8
-	X_pad [6]int8
-	Defgrp_name [64]int8
+	Smooth_type uint8
+	Rest_source uint8
+	X_pad [6]uint8
+	Defgrp_name [64]uint8
 	Delta_cache CorrectiveSmoothDeltaCache
 }
 
 // SDNA index: 375
 type UVWarpModifierData struct {
 	Modifier ModifierData
-	Axis_u int8
-	Axis_v int8
+	Axis_u uint8
+	Axis_v uint8
 	Flag int16
 	Center [2]float32
 	Offset [2]float32
 	Scale [2]float32
 	Rotation float32
 	Object_src BlockPointer[*Object]
-	Bone_src [64]int8
+	Bone_src [64]uint8
 	Object_dst BlockPointer[*Object]
-	Bone_dst [64]int8
-	Vgroup_name [64]int8
-	Uvlayer_name [68]int8
-	X_pad [4]int8
+	Bone_dst [64]uint8
+	Vgroup_name [64]uint8
+	Uvlayer_name [68]uint8
+	X_pad [4]uint8
 }
 
 // SDNA index: 376
 type MeshCacheModifierData struct {
 	Modifier ModifierData
-	Flag int8
-	Type int8
-	Time_mode int8
-	Play_mode int8
-	Forward_axis int8
-	Up_axis int8
-	Flip_axis int8
-	Interp int8
+	Flag uint8
+	Type uint8
+	Time_mode uint8
+	Play_mode uint8
+	Forward_axis uint8
+	Up_axis uint8
+	Flip_axis uint8
+	Interp uint8
 	Factor float32
-	Deform_mode int8
-	Defgrp_name [64]int8
-	X_pad [7]int8
+	Deform_mode uint8
+	Defgrp_name [64]uint8
+	X_pad [7]uint8
 	Frame_start float32
 	Frame_scale float32
 	Eval_frame float32
 	Eval_time float32
 	Eval_factor float32
-	Filepath [1024]int8
+	Filepath [1024]uint8
 }
 
 // SDNA index: 377
 type LaplacianDeformModifierData struct {
 	Modifier ModifierData
-	Anchor_grp_name [64]int8
+	Anchor_grp_name [64]uint8
 	Total_verts int32
 	Repeat int32
 	Vertexco BlockPointer[*float32]
 	Cache_system BlockPointer[*any]
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 378
 type WireframeModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Offset float32
 	Offset_fac float32
 	Offset_fac_vg float32
 	Crease_weight float32
 	Flag int16
 	Mat_ofs int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 379
 type WeldModifierData struct {
 	Modifier ModifierData
 	Merge_dist float32
-	Defgrp_name [64]int8
-	Mode int8
-	Flag int8
-	X_pad [2]int8
+	Defgrp_name [64]uint8
+	Mode uint8
+	Flag uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 380
@@ -5715,12 +5715,12 @@ type DataTransferModifierData struct {
 	Map_max_distance float32
 	Map_ray_radius float32
 	Islands_precision float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Layers_select_src [5]int32
 	Layers_select_dst [5]int32
 	Mix_mode int32
 	Mix_factor float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Flags int32
 	X_pad2 BlockPointer[*any]
 }
@@ -5728,16 +5728,16 @@ type DataTransferModifierData struct {
 // SDNA index: 381
 type NormalEditModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	Target BlockPointer[*Object]
 	Mode int16
 	Flag int16
 	Mix_mode int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Mix_factor float32
 	Mix_limit float32
 	Offset [3]float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5745,12 +5745,12 @@ type NormalEditModifierData struct {
 type MeshSeqCacheModifierData struct {
 	Modifier ModifierData
 	Cache_file BlockPointer[*CacheFile]
-	Object_path [1024]int8
-	Read_flag int8
-	X_pad [3]int8
+	Object_path [1024]uint8
+	Read_flag uint8
+	X_pad [3]uint8
 	Velocity_scale float32
 	Reader BlockPointer[*CacheReader]
-	Reader_object_path [1024]int8
+	Reader_object_path [1024]uint8
 }
 
 // SDNA index: 383
@@ -5785,16 +5785,16 @@ type SurfaceDeformModifierData struct {
 	Flags int32
 	Mat [4][4]float32
 	Strength float32
-	Defgrp_name [64]int8
+	Defgrp_name [64]uint8
 	X_pad2 int32
 }
 
 // SDNA index: 386
 type WeightedNormalModifierData struct {
 	Modifier ModifierData
-	Defgrp_name [64]int8
-	Mode int8
-	Flag int8
+	Defgrp_name [64]uint8
+	Mode uint8
+	Flag uint8
 	Weight int16
 	Thresh float32
 }
@@ -5820,12 +5820,12 @@ type MeshToVolumeModifierData struct {
 	Resolution_mode int32
 	Voxel_size float32
 	Voxel_amount int32
-	Fill_volume int8
-	X_pad1 [3]int8
+	Fill_volume uint8
+	X_pad1 [3]uint8
 	Interior_band_width float32
 	Exterior_band_width float32
 	Density float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	X_pad3 BlockPointer[*any]
 }
 
@@ -5850,7 +5850,7 @@ type VolumeToMeshModifierData struct {
 	Resolution_mode int32
 	Voxel_size float32
 	Voxel_amount int32
-	Grid_name [64]int8
+	Grid_name [64]uint8
 	X_pad1 BlockPointer[*any]
 }
 
@@ -5863,7 +5863,7 @@ type MovieClipUser struct {
 
 // SDNA index: 393
 type MovieClipProxy struct {
-	Dir [768]int8
+	Dir [768]uint8
 	Tc int16
 	Quality int16
 	Build_size_flag int16
@@ -5887,7 +5887,7 @@ type MovieClip_Runtime struct {
 type MovieClip struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
-	Name [1024]int8
+	Name [1024]uint8
 	Source int32
 	X_pad int32
 	Lastsize [2]int32
@@ -5932,7 +5932,7 @@ type BActionModifier struct {
 	Prev BlockPointer[*BActionModifier]
 	Type int16
 	Flag int16
-	Channel [32]int8
+	Channel [32]uint8
 	Noisesize float32
 	Turbul float32
 	Channels int16
@@ -5961,8 +5961,8 @@ type BActionStrip struct {
 	Scale float32
 	Blendin float32
 	Blendout float32
-	Stridechannel [32]int8
-	Offs_bone [32]int8
+	Stridechannel [32]uint8
+	Offs_bone [32]uint8
 	Modifiers ListBase
 }
 
@@ -5978,7 +5978,7 @@ type BNodeStack struct {
 	Sockettype int16
 	Is_copy int16
 	External int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 401
@@ -5986,23 +5986,23 @@ type BNodeSocket struct {
 	Next BlockPointer[*BNodeSocket]
 	Prev BlockPointer[*BNodeSocket]
 	Prop BlockPointer[*IDProperty]
-	Identifier [64]int8
-	Name [64]int8
+	Identifier [64]uint8
+	Name [64]uint8
 	Storage BlockPointer[*any]
 	Type int16
 	Flag int16
 	Limit int16
 	In_out int16
 	Typeinfo BlockPointer[*BNodeSocketType]
-	Idname [64]int8
+	Idname [64]uint8
 	Default_value BlockPointer[*any]
 	Stack_index int16
-	Display_shape int8
-	Attribute_domain int8
-	X_pad [4]int8
-	Label [64]int8
-	Description [64]int8
-	Default_attribute_name BlockPointer[*int8]
+	Display_shape uint8
+	Attribute_domain uint8
+	X_pad [4]uint8
+	Label [64]uint8
+	Description [64]uint8
+	Default_attribute_name BlockPointer[*uint8]
 	Own_index int32
 	To_index int32
 	Link BlockPointer[*BNodeLink]
@@ -6016,13 +6016,13 @@ type BNode struct {
 	Prev BlockPointer[*BNode]
 	Inputs ListBase
 	Outputs ListBase
-	Name [64]int8
+	Name [64]uint8
 	Identifier int32
 	Flag int32
-	Idname [64]int8
+	Idname [64]uint8
 	Typeinfo BlockPointer[*BNodeType]
 	Type int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Custom1 int16
 	Custom2 int16
 	Custom3 float32
@@ -6037,9 +6037,9 @@ type BNode struct {
 	Height float32
 	Offsetx float32
 	Offsety float32
-	Label [64]int8
+	Label [64]uint8
 	Color [3]float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Runtime BlockPointer[*BNodeRuntimeHandle]
 }
 
@@ -6066,7 +6066,7 @@ type BNodeTree struct {
 	Adt BlockPointer[*AnimData]
 	Owner_id BlockPointer[*ID]
 	Typeinfo BlockPointer[*BNodeTreeType]
-	Idname [64]int8
+	Idname [64]uint8
 	Gpd BlockPointer[*BGPdata]
 	View_center [2]float32
 	Nodes ListBase
@@ -6083,7 +6083,7 @@ type BNodeTree struct {
 	Outputs ListBase
 	Previews BlockPointer[*BNodeInstanceHash]
 	Active_viewer_key BNodeInstanceKey
-	X_pad [4]int8
+	X_pad [4]uint8
 	Preview BlockPointer[*PreviewImage]
 	Runtime BlockPointer[*BNodeTreeRuntimeHandle]
 }
@@ -6106,7 +6106,7 @@ type BNodeSocketValueFloat struct {
 
 // SDNA index: 408
 type BNodeSocketValueBoolean struct {
-	Value int8
+	Value uint8
 }
 
 // SDNA index: 409
@@ -6125,8 +6125,8 @@ type BNodeSocketValueRGBA struct {
 // SDNA index: 411
 type BNodeSocketValueString struct {
 	Subtype int32
-	X_pad [4]int8
-	Value [1024]int8
+	X_pad [4]uint8
+	Value [1024]uint8
 }
 
 // SDNA index: 412
@@ -6165,9 +6165,9 @@ type NodeImageAnim struct {
 	Frames int32
 	Sfra int32
 	Nr int32
-	Cyclic int8
-	Movie int8
-	X_pad [2]int8
+	Cyclic uint8
+	Movie uint8
+	X_pad [2]uint8
 }
 
 // SDNA index: 419
@@ -6177,7 +6177,7 @@ type ColorCorrectionData struct {
 	Gamma float32
 	Gain float32
 	Lift float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 420
@@ -6206,7 +6206,7 @@ type NodeBoxMask struct {
 	Rotation float32
 	Height float32
 	Width float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 423
@@ -6216,13 +6216,13 @@ type NodeEllipseMask struct {
 	Rotation float32
 	Height float32
 	Width float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 424
 type NodeImageLayer struct {
 	Pass_index int32
-	Pass_name [64]int8
+	Pass_name [64]uint8
 }
 
 // SDNA index: 425
@@ -6239,8 +6239,8 @@ type NodeBlurData struct {
 	Percentx float32
 	Percenty float32
 	Filtertype int16
-	Bokeh int8
-	Gamma int8
+	Bokeh uint8
+	Gamma uint8
 	Image_in_width int32
 	Image_in_height int32
 }
@@ -6254,7 +6254,7 @@ type NodeDBlurData struct {
 	Spin float32
 	Zoom float32
 	Iter int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 427
@@ -6262,7 +6262,7 @@ type NodeBilateralBlurData struct {
 	Sigma_color float32
 	Sigma_space float32
 	Iter int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 428
@@ -6281,7 +6281,7 @@ type NodeHueSat struct {
 
 // SDNA index: 430
 type NodeImageFile struct {
-	Name [1024]int8
+	Name [1024]uint8
 	Im_format ImageFormatData
 	Sfra int32
 	Efra int32
@@ -6289,24 +6289,24 @@ type NodeImageFile struct {
 
 // SDNA index: 431
 type NodeImageMultiFile struct {
-	Base_path [1024]int8
+	Base_path [1024]uint8
 	Format ImageFormatData
 	Sfra int32
 	Efra int32
 	Active_input int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 432
 type NodeImageMultiFileSocket struct {
 	Use_render_format int16
 	Use_node_format int16
-	Save_as_render int8
-	X_pad1 [3]int8
-	Path [1024]int8
+	Save_as_render uint8
+	X_pad1 [3]uint8
+	Path [1024]uint8
 	Format ImageFormatData
-	Layer [30]int8
-	X_pad2 [2]int8
+	Layer [30]uint8
+	X_pad2 [2]uint8
 }
 
 // SDNA index: 433
@@ -6342,7 +6342,7 @@ type NodeTwoFloats struct {
 
 // SDNA index: 436
 type NodeVertexCol struct {
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 437
@@ -6353,10 +6353,10 @@ type NodeCMPCombSepColor struct {
 
 // SDNA index: 438
 type NodeDefocus struct {
-	Bktype int8
-	X_pad0 int8
-	Preview int8
-	Gamco int8
+	Bktype uint8
+	X_pad0 uint8
+	Preview uint8
+	Gamco uint8
 	Samples int16
 	No_zbuf int16
 	Fstop float32
@@ -6364,7 +6364,7 @@ type NodeDefocus struct {
 	Bthresh float32
 	Scale float32
 	Rotation float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 }
 
 // SDNA index: 439
@@ -6375,20 +6375,20 @@ type NodeScriptDict struct {
 
 // SDNA index: 440
 type NodeGlare struct {
-	Quality int8
-	Type int8
-	Iter int8
-	Angle int8
-	X_pad0 int8
-	Size int8
-	Star_45 int8
-	Streaks int8
+	Quality uint8
+	Type uint8
+	Iter uint8
+	Angle uint8
+	X_pad0 uint8
+	Size uint8
+	Star_45 uint8
+	Streaks uint8
 	Colmod float32
 	Mix float32
 	Threshold float32
 	Fade float32
 	Angle_ofs float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 }
 
 // SDNA index: 441
@@ -6408,7 +6408,7 @@ type NodeLensDist struct {
 	Jit int16
 	Proj int16
 	Fit int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 443
@@ -6417,7 +6417,7 @@ type NodeColorBalance struct {
 	Offset [3]float32
 	Power [3]float32
 	Offset_basis float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Lift [3]float32
 	Gamma [3]float32
 	Gain [3]float32
@@ -6435,13 +6435,13 @@ type NodeColorspill struct {
 
 // SDNA index: 445
 type NodeConvertColorSpace struct {
-	From_color_space [64]int8
-	To_color_space [64]int8
+	From_color_space [64]uint8
+	To_color_space [64]uint8
 }
 
 // SDNA index: 446
 type NodeDilateErode struct {
-	Falloff int8
+	Falloff uint8
 }
 
 // SDNA index: 447
@@ -6452,7 +6452,7 @@ type NodeMask struct {
 
 // SDNA index: 448
 type NodeSetAlpha struct {
-	Mode int8
+	Mode uint8
 }
 
 // SDNA index: 449
@@ -6476,8 +6476,8 @@ type NodeTexSky struct {
 	Air_density float32
 	Dust_density float32
 	Ozone_density float32
-	Sun_disc int8
-	X_pad [7]int8
+	Sun_disc uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 451
@@ -6489,7 +6489,7 @@ type NodeTexImage struct {
 	Projection_blend float32
 	Interpolation int32
 	Extension int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 452
@@ -6513,21 +6513,21 @@ type NodeTexEnvironment struct {
 	Color_space int32
 	Projection int32
 	Interpolation int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 455
 type NodeTexGradient struct {
 	Base NodeTexBase
 	Gradient_type int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 456
 type NodeTexNoise struct {
 	Base NodeTexBase
 	Dimensions int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 457
@@ -6559,14 +6559,14 @@ type NodeTexWave struct {
 type NodeTexMagic struct {
 	Base NodeTexBase
 	Depth int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 461
 type NodeShaderAttribute struct {
-	Name [64]int8
+	Name [64]uint8
 	Type int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 462
@@ -6574,14 +6574,14 @@ type NodeShaderVectTransform struct {
 	Type int32
 	Convert_from int32
 	Convert_to int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 463
 type NodeShaderTexPointDensity struct {
 	Base NodeTexBase
 	Point_source int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Particle_system int32
 	Radius float32
 	Resolution int32
@@ -6591,23 +6591,23 @@ type NodeShaderTexPointDensity struct {
 	Ob_color_source int16
 	Pd PointDensity
 	Cached_resolution int32
-	Vertex_attribute_name [68]int8
+	Vertex_attribute_name [68]uint8
 }
 
 // SDNA index: 464
 type NodeShaderPrincipled struct {
-	Use_subsurface_auto_radius int8
-	X_pad [3]int8
+	Use_subsurface_auto_radius uint8
+	X_pad [3]uint8
 }
 
 // SDNA index: 465
 type TexNodeOutput struct {
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 466
 type NodeKeyingScreenData struct {
-	Tracking_object [64]int8
+	Tracking_object [64]uint8
 }
 
 // SDNA index: 467
@@ -6628,23 +6628,23 @@ type NodeKeyingData struct {
 
 // SDNA index: 468
 type NodeTrackPosData struct {
-	Tracking_object [64]int8
-	Track_name [64]int8
+	Tracking_object [64]uint8
+	Track_name [64]uint8
 }
 
 // SDNA index: 469
 type NodeTranslateData struct {
-	Wrap_axis int8
-	Relative int8
+	Wrap_axis uint8
+	Relative uint8
 }
 
 // SDNA index: 470
 type NodePlaneTrackDeformData struct {
-	Tracking_object [64]int8
-	Plane_track_name [64]int8
-	Flag int8
-	Motion_blur_samples int8
-	X_pad [2]int8
+	Tracking_object [64]uint8
+	Plane_track_name [64]uint8
+	Flag uint8
+	Motion_blur_samples uint8
+	X_pad [2]uint8
 	Motion_blur_shutter float32
 }
 
@@ -6652,43 +6652,43 @@ type NodePlaneTrackDeformData struct {
 type NodeShaderScript struct {
 	Mode int32
 	Flag int32
-	Filepath [1024]int8
-	Bytecode_hash [64]int8
-	Bytecode BlockPointer[*int8]
+	Filepath [1024]uint8
+	Bytecode_hash [64]uint8
+	Bytecode BlockPointer[*uint8]
 }
 
 // SDNA index: 472
 type NodeShaderTangent struct {
 	Direction_type int32
 	Axis int32
-	Uv_map [64]int8
+	Uv_map [64]uint8
 }
 
 // SDNA index: 473
 type NodeShaderNormalMap struct {
 	Space int32
-	Uv_map [64]int8
+	Uv_map [64]uint8
 }
 
 // SDNA index: 474
 type NodeShaderUVMap struct {
-	Uv_map [64]int8
+	Uv_map [64]uint8
 }
 
 // SDNA index: 475
 type NodeShaderVertexColor struct {
-	Layer_name [64]int8
+	Layer_name [64]uint8
 }
 
 // SDNA index: 476
 type NodeShaderTexIES struct {
 	Mode int32
-	Filepath [1024]int8
+	Filepath [1024]uint8
 }
 
 // SDNA index: 477
 type NodeShaderOutputAOV struct {
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 478
@@ -6702,15 +6702,15 @@ type CryptomatteEntry struct {
 	Next BlockPointer[*CryptomatteEntry]
 	Prev BlockPointer[*CryptomatteEntry]
 	Encoded_hash float32
-	Name [64]int8
-	X_pad [4]int8
+	Name [64]uint8
+	X_pad [4]uint8
 }
 
 // SDNA index: 480
 type CryptomatteLayer struct {
 	Next BlockPointer[*CryptomatteEntry]
 	Prev BlockPointer[*CryptomatteEntry]
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 481
@@ -6724,17 +6724,17 @@ type NodeCryptomatte_Runtime struct {
 type NodeCryptomatte struct {
 	Iuser ImageUser
 	Entries ListBase
-	Layer_name [64]int8
-	Matte_id BlockPointer[*int8]
+	Layer_name [64]uint8
+	Matte_id BlockPointer[*uint8]
 	Num_inputs int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime NodeCryptomatte_Runtime
 }
 
 // SDNA index: 483
 type NodeDenoise struct {
-	Hdr int8
-	Prefilter int8
+	Hdr uint8
+	Prefilter uint8
 }
 
 // SDNA index: 484
@@ -6742,7 +6742,7 @@ type NodeMapRange struct {
 	Data_type uint8
 	Interpolation_type uint8
 	Clamp uint8
-	X_pad [5]int8
+	X_pad [5]uint8
 }
 
 // SDNA index: 485
@@ -6778,7 +6778,7 @@ type NodeInputColor struct {
 
 // SDNA index: 491
 type NodeInputString struct {
-	String BlockPointer[*int8]
+	String BlockPointer[*uint8]
 }
 
 // SDNA index: 492
@@ -6926,7 +6926,7 @@ type NodeGeometryCurveSample struct {
 	Mode uint8
 	Use_all_curves Int8_t
 	Data_type Int8_t
-	X_pad [1]int8
+	X_pad [1]uint8
 }
 
 // SDNA index: 520
@@ -6934,7 +6934,7 @@ type NodeGeometryTransferAttribute struct {
 	Data_type Int8_t
 	Domain Int8_t
 	Mode uint8
-	X_pad [1]int8
+	X_pad [1]uint8
 }
 
 // SDNA index: 521
@@ -6942,7 +6942,7 @@ type NodeGeometrySampleIndex struct {
 	Data_type Int8_t
 	Domain Int8_t
 	Clamp Int8_t
-	X_pad [1]int8
+	X_pad [1]uint8
 }
 
 // SDNA index: 522
@@ -7031,7 +7031,7 @@ type NodeFunctionCompare struct {
 	Operation Int8_t
 	Data_type Int8_t
 	Mode Int8_t
-	X_pad [1]int8
+	X_pad [1]uint8
 }
 
 // SDNA index: 537
@@ -7046,7 +7046,7 @@ type NodeShaderMix struct {
 	Clamp_factor Int8_t
 	Clamp_result Int8_t
 	Blend_type Int8_t
-	X_pad [3]int8
+	X_pad [3]uint8
 }
 
 // SDNA index: 539
@@ -7058,7 +7058,7 @@ type FluidVertexVelocity struct {
 type FluidsimSettings struct {
 	Fmd BlockPointer[*FluidsimModifierData]
 	Threads int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Type int16
 	Show_advancedoptions int16
 	Resolutionxyz int16
@@ -7075,19 +7075,19 @@ type FluidsimSettings struct {
 	BakeStart int32
 	BakeEnd int32
 	FrameOffset int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Gstar float32
 	MaxRefine int32
 	IniVelx float32
 	IniVely float32
 	IniVelz float32
-	SurfdataPath [1024]int8
+	SurfdataPath [1024]uint8
 	BbStart [3]float32
 	BbSize [3]float32
 	Ipo BlockPointer[*Ipo]
 	TypeFlags int16
-	DomainNovecgen int8
-	VolumeInitType int8
+	DomainNovecgen uint8
+	VolumeInitType uint8
 	PartSlipValue float32
 	GenerateTracers int32
 	GenerateParticles float32
@@ -7125,7 +7125,7 @@ type PartDeflect struct {
 	F_damp float32
 	F_flow float32
 	F_wind_factor float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	F_size float32
 	F_power float32
 	Maxdist float32
@@ -7157,12 +7157,12 @@ type PartDeflect struct {
 	Drawvec1 [4]float32
 	Drawvec2 [4]float32
 	Drawvec_falloff_min [3]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Drawvec_falloff_max [3]float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	F_source BlockPointer[*Object]
 	Pdef_cfrict float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 542
@@ -7171,7 +7171,7 @@ type EffectorWeights struct {
 	Weight [14]float32
 	Global_gravity float32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 543
@@ -7191,11 +7191,11 @@ type SoftBody struct {
 	Totspring int32
 	Bpoint BlockPointer[*BodyPoint]
 	Bspring BlockPointer[*BodySpring]
-	X_pad int8
-	Msg_lock int8
+	X_pad uint8
+	Msg_lock uint8
 	Msg_value int16
 	Nodemass float32
-	NamedVG_Mass [64]int8
+	NamedVG_Mass [64]uint8
 	Grav float32
 	Mediafrict float32
 	Rklimit float32
@@ -7206,14 +7206,14 @@ type SoftBody struct {
 	Maxgoal float32
 	Defgoal float32
 	Vertgroup int16
-	NamedVG_Softgoal [64]int8
+	NamedVG_Softgoal [64]uint8
 	Fuzzyness int16
 	Inspring float32
 	Infrict float32
-	NamedVG_Spring_K [64]int8
-	X_pad1 [6]int8
-	Local int8
-	Solverflags int8
+	NamedVG_Spring_K [64]uint8
+	X_pad1 [6]uint8
+	Local uint8
+	Solverflags uint8
 	Keys BlockPointer[**SBVertex]
 	Totpointkey int32
 	Totkey int32
@@ -7247,37 +7247,37 @@ type SoftBody struct {
 type BDeformGroup struct {
 	Next BlockPointer[*BDeformGroup]
 	Prev BlockPointer[*BDeformGroup]
-	Name [64]int8
-	Flag int8
-	X_pad0 [7]int8
+	Name [64]uint8
+	Flag uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 547
 type BFaceMap struct {
 	Next BlockPointer[*BFaceMap]
 	Prev BlockPointer[*BFaceMap]
-	Name [64]int8
-	Flag int8
-	X_pad0 [7]int8
+	Name [64]uint8
+	Flag uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 548
 type BoundBox struct {
 	Vec [8][3]float32
 	Flag int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 549
 type Object_Runtime struct {
 	Last_data_mask CustomData_MeshMasks
-	Last_need_mapping int8
-	Collection_management int8
-	X_pad0 [2]int8
+	Last_need_mapping uint8
+	Collection_management uint8
+	X_pad0 [2]uint8
 	Parent_display_origin [3]float32
 	Select_id int32
-	X_pad1 [3]int8
-	Is_data_eval_owned int8
+	X_pad1 [3]uint8
+	Is_data_eval_owned uint8
 	Overlay_mode_transfer_start_time float64
 	Bb BlockPointer[*BoundBox]
 	Data_orig BlockPointer[*ID]
@@ -7306,8 +7306,8 @@ type ObjectLineArt struct {
 	Usage int16
 	Flags int16
 	Crease_threshold float32
-	Intersection_priority int8
-	X_pad [7]int8
+	Intersection_priority uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 551
@@ -7321,7 +7321,7 @@ type Object struct {
 	Par1 int32
 	Par2 int32
 	Par3 int32
-	Parsubstr [64]int8
+	Parsubstr [64]uint8
 	Parent BlockPointer[*Object]
 	Track BlockPointer[*Object]
 	Proxy BlockPointer[*Object]
@@ -7346,7 +7346,7 @@ type Object struct {
 	Mode int32
 	Restore_mode int32
 	Mat BlockPointer[**Material]
-	Matbits BlockPointer[*int8]
+	Matbits BlockPointer[*uint8]
 	Totcol int32
 	Actcol int32
 	Loc [3]float32
@@ -7374,30 +7374,30 @@ type Object struct {
 	Trackflag int16
 	Upflag int16
 	Nlaflag int16
-	X_pad1 int8
-	Duplicator_visibility_flag int8
+	X_pad1 uint8
+	Duplicator_visibility_flag uint8
 	Base_flag int16
 	Base_local_view_bits int16
 	Col_group int16
 	Col_mask int16
 	Rotmode int16
-	Boundtype int8
-	Collision_boundtype int8
+	Boundtype uint8
+	Collision_boundtype uint8
 	Dtx int16
-	Dt int8
-	Empty_drawtype int8
+	Dt uint8
+	Empty_drawtype uint8
 	Empty_drawsize float32
 	Dupfacesca float32
 	Index int16
 	Actdef int16
 	Actfmap int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Col [4]float32
 	Softflag int16
 	Restrictflag int16
 	Shapenr int16
-	Shapeflag int8
-	X_pad3 [1]int8
+	Shapeflag uint8
+	X_pad3 [1]uint8
 	Constraints ListBase
 	Nlastrips ListBase
 	Hooks ListBase
@@ -7411,11 +7411,11 @@ type Object struct {
 	Rigidbody_constraint BlockPointer[*RigidBodyCon]
 	Ima_ofs [2]float32
 	Iuser BlockPointer[*ImageUser]
-	Empty_image_visibility_flag int8
-	Empty_image_depth int8
-	Empty_image_flag int8
+	Empty_image_visibility_flag uint8
+	Empty_image_depth uint8
+	Empty_image_flag uint8
 	Modifier_flag uint8
-	X_pad8 [4]int8
+	X_pad8 [4]uint8
 	Preview BlockPointer[*PreviewImage]
 	Lineart ObjectLineArt
 	Lightgroup BlockPointer[*LightgroupMembership]
@@ -7431,7 +7431,7 @@ type ObHook struct {
 	Mat [4][4]float32
 	Cent [3]float32
 	Falloff float32
-	Name [64]int8
+	Name [64]uint8
 	Indexar BlockPointer[*int32]
 	Totindex int32
 	Curindex int32
@@ -7469,7 +7469,7 @@ type HairKey struct {
 	Time float32
 	Weight float32
 	Editflag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	World_co [3]float32
 }
 
@@ -7488,7 +7488,7 @@ type BoidParticle struct {
 	Data BoidData
 	Gravity [3]float32
 	Wander [3]float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 559
@@ -7506,7 +7506,7 @@ type ChildParticle struct {
 	W [4]float32
 	Fuv [4]float32
 	Foffset float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 561
@@ -7529,7 +7529,7 @@ type ParticleDupliWeight struct {
 	Count int16
 	Flag int16
 	Index int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 563
@@ -7549,7 +7549,7 @@ type ParticleData struct {
 	Foffset float32
 	Size float32
 	Sphdensity float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Hair_index int32
 	Flag int16
 	Alive int16
@@ -7573,7 +7573,7 @@ type SPHFluidSettings struct {
 	Flag int32
 	Spring_frames int32
 	Solver int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 565
@@ -7585,7 +7585,7 @@ type ParticleSettings struct {
 	Effector_weights BlockPointer[*EffectorWeights]
 	Collision_group BlockPointer[*Collection]
 	Flag int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Type int16
 	From int16
 	Distr int16
@@ -7598,7 +7598,7 @@ type ParticleSettings struct {
 	Draw_size float32
 	Draw_as int16
 	Childtype int16
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Ren_as int16
 	Subframes int16
 	Draw_col int16
@@ -7641,7 +7641,7 @@ type ParticleSettings struct {
 	Grid_res int32
 	Effector_amount int32
 	Time_flag int16
-	X_pad0 [6]int8
+	X_pad0 [6]uint8
 	Normfac float32
 	Obfac float32
 	Randfac float32
@@ -7663,7 +7663,7 @@ type ParticleSettings struct {
 	Dampfac float32
 	Randlength float32
 	Child_flag int32
-	X_pad3 [4]int8
+	X_pad3 [4]uint8
 	Child_nbr int32
 	Ren_child_nbr int32
 	Parents float32
@@ -7679,7 +7679,7 @@ type ParticleSettings struct {
 	Kink_flat float32
 	Kink_amp_clump float32
 	Kink_extra_steps int32
-	X_pad4 [4]int8
+	X_pad4 [4]uint8
 	Kink_axis_random float32
 	Kink_amp_random float32
 	Rough1 float32
@@ -7714,11 +7714,11 @@ type ParticleSettings struct {
 	Pd BlockPointer[*PartDeflect]
 	Pd2 BlockPointer[*PartDeflect]
 	Use_modifier_stack int16
-	X_pad5 [2]int8
+	X_pad5 [2]uint8
 	Shape_flag int16
-	X_pad6 [2]int8
+	X_pad6 [2]uint8
 	Twist float32
-	X_pad8 [4]int8
+	X_pad8 [4]uint8
 	Shape float32
 	Rad_root float32
 	Rad_tip float32
@@ -7747,7 +7747,7 @@ type ParticleSystem struct {
 	Lattice_deform_data BlockPointer[*LatticeDeformData]
 	Parent BlockPointer[*Object]
 	Targets ListBase
-	Name [64]int8
+	Name [64]uint8
 	Imat [4][4]float32
 	Cfra float32
 	Tree_frame float32
@@ -7764,13 +7764,13 @@ type ParticleSystem struct {
 	Target_psys int16
 	Totkeyed int16
 	Bakespace int16
-	X_pad1 [6]int8
-	Bb_uvname [3][68]int8
-	X_pad2 [4]int8
+	X_pad1 [6]uint8
+	Bb_uvname [3][68]uint8
+	X_pad2 [4]uint8
 	Vgroup [13]int16
 	Vg_neg int16
 	Rt3 int16
-	X_pad3 [6]int8
+	X_pad3 [6]uint8
 	Pointcache BlockPointer[*PointCache]
 	Ptcaches ListBase
 	Effectors BlockPointer[*ListBase]
@@ -7819,18 +7819,18 @@ type PointCache struct {
 	Editframe int32
 	Last_exact int32
 	Last_valid int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Totpoint int32
 	Index int32
 	Compression int16
-	X_pad0 [2]int8
-	Name [64]int8
-	Prev_name [64]int8
-	Info [128]int8
-	Path [1024]int8
-	Cached_frames BlockPointer[*int8]
+	X_pad0 [2]uint8
+	Name [64]uint8
+	Prev_name [64]uint8
+	Info [128]uint8
+	Path [1024]uint8
+	Cached_frames BlockPointer[*uint8]
 	Cached_frames_len int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Mem_cache ListBase
 	Edit BlockPointer[*PTCacheEdit]
 	Free_edit func()
@@ -7865,7 +7865,7 @@ type RigidBodyWorld struct {
 	Group BlockPointer[*Collection]
 	Objects BlockPointer[**Object]
 	Constraints BlockPointer[*Collection]
-	X_pad [4]int8
+	X_pad [4]uint8
 	Ltime float32
 	Shared BlockPointer[*RigidBodyWorld_Shared]
 	Pointcache BlockPointer[*PointCache]
@@ -7884,7 +7884,7 @@ type RigidBodyOb struct {
 	Flag int32
 	Col_groups int32
 	Mesh_source int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Mass float32
 	Friction float32
 	Restitution float32
@@ -7895,7 +7895,7 @@ type RigidBodyOb struct {
 	Ang_sleep_thresh float32
 	Orn [4]float32
 	Pos [3]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Shared BlockPointer[*RigidBodyOb_Shared]
 }
 
@@ -7907,8 +7907,8 @@ type RigidBodyCon struct {
 	Num_solver_iterations int16
 	Flag int32
 	Breaking_threshold float32
-	Spring_type int8
-	X_pad [3]int8
+	Spring_type uint8
+	X_pad [3]uint8
 	Limit_lin_x_lower float32
 	Limit_lin_x_upper float32
 	Limit_lin_y_lower float32
@@ -7953,8 +7953,8 @@ type AviCodecData struct {
 	DwBytesPerSecond int32
 	DwFlags int32
 	DwInterleaveEvery int32
-	X_pad [4]int8
-	Avicodecname [128]int8
+	X_pad [4]uint8
+	Avicodecname [128]uint8
 }
 
 // SDNA index: 576
@@ -7988,16 +7988,16 @@ type AudioData struct {
 	Doppler_factor float32
 	Distance_model int32
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Volume float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 }
 
 // SDNA index: 578
 type SceneRenderLayer struct {
 	Next BlockPointer[*SceneRenderLayer]
 	Prev BlockPointer[*SceneRenderLayer]
-	Name [64]int8
+	Name [64]uint8
 	Mat_override BlockPointer[*Material]
 	Lay int32
 	Lay_zmask int32
@@ -8015,42 +8015,42 @@ type SceneRenderLayer struct {
 type SceneRenderView struct {
 	Next BlockPointer[*SceneRenderView]
 	Prev BlockPointer[*SceneRenderView]
-	Name [64]int8
-	Suffix [64]int8
+	Name [64]uint8
+	Suffix [64]uint8
 	Viewflag int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 }
 
 // SDNA index: 580
 type Stereo3dFormat struct {
 	Flag int16
-	Display_mode int8
-	Anaglyph_type int8
-	Interlace_type int8
-	X_pad [3]int8
+	Display_mode uint8
+	Anaglyph_type uint8
+	Interlace_type uint8
+	X_pad [3]uint8
 }
 
 // SDNA index: 581
 type ImageFormatData struct {
-	Imtype int8
-	Depth int8
-	Planes int8
-	Flag int8
-	Quality int8
-	Compress int8
-	Exr_codec int8
-	Cineon_flag int8
+	Imtype uint8
+	Depth uint8
+	Planes uint8
+	Flag uint8
+	Quality uint8
+	Compress uint8
+	Exr_codec uint8
+	Cineon_flag uint8
 	Cineon_white int16
 	Cineon_black int16
 	Cineon_gamma float32
-	Jp2_flag int8
-	Jp2_codec int8
-	Tiff_codec int8
-	X_pad [4]int8
-	Views_format int8
+	Jp2_flag uint8
+	Jp2_codec uint8
+	Tiff_codec uint8
+	X_pad [4]uint8
+	Views_format uint8
 	Stereo3d_format Stereo3dFormat
-	Color_management int8
-	X_pad1 [7]int8
+	Color_management uint8
+	X_pad1 [7]uint8
 	View_settings ColorManagedViewSettings
 	Display_settings ColorManagedDisplaySettings
 	Linear_colorspace_settings ColorManagedColorspaceSettings
@@ -8059,7 +8059,7 @@ type ImageFormatData struct {
 // SDNA index: 582
 type BakeData struct {
 	Im_format ImageFormatData
-	Filepath [1024]int8
+	Filepath [1024]uint8
 	Width int16
 	Height int16
 	Margin int16
@@ -8067,13 +8067,13 @@ type BakeData struct {
 	Cage_extrusion float32
 	Max_ray_distance float32
 	Pass_filter int32
-	Normal_swizzle [3]int8
-	Normal_space int8
-	Target int8
-	Save_mode int8
-	Margin_type int8
-	View_from int8
-	X_pad [4]int8
+	Normal_swizzle [3]uint8
+	Normal_space uint8
+	Target uint8
+	Save_mode uint8
+	Margin_type uint8
+	View_from uint8
+	X_pad [4]uint8
 	Cage_object BlockPointer[*Object]
 }
 
@@ -8098,7 +8098,7 @@ type RenderData struct {
 	Stereomode int16
 	Dimensionspreset int16
 	Size int16
-	X_pad6 [2]int8
+	X_pad6 [2]uint8
 	Xsch int32
 	Ysch int32
 	Tilex int32
@@ -8107,17 +8107,17 @@ type RenderData struct {
 	Imtype int16
 	Subimtype int16
 	Quality int16
-	Use_lock_interface int8
-	X_pad7 [3]int8
+	Use_lock_interface uint8
+	X_pad7 [3]uint8
 	Scemode int32
 	Mode int32
 	Frs_sec int16
-	Alphamode int8
-	X_pad0 [1]int8
+	Alphamode uint8
+	X_pad0 [1]uint8
 	Border Rctf
 	Layers ListBase
 	Actlay int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Xasp float32
 	Yasp float32
 	Frs_sec_base float32
@@ -8129,20 +8129,20 @@ type RenderData struct {
 	Bake_filter int16
 	Bake_samples int16
 	Bake_margin_type int16
-	X_pad9 [6]int8
+	X_pad9 [6]uint8
 	Bake_biasdist float32
 	Bake_user_scale float32
-	Pic [1024]int8
+	Pic [1024]uint8
 	Stamp int32
 	Stamp_font_id int16
-	X_pad3 [2]int8
-	Stamp_udata [768]int8
+	X_pad3 [2]uint8
+	Stamp_udata [768]uint8
 	Fg_stamp [4]float32
 	Bg_stamp [4]float32
-	Seq_prev_type int8
-	Seq_rend_type int8
-	Seq_flag int8
-	X_pad5 [3]int8
+	Seq_prev_type uint8
+	Seq_rend_type uint8
+	Seq_flag uint8
+	X_pad5 [3]uint8
 	Simplify_subsurf int16
 	Simplify_subsurf_render int16
 	Simplify_gpencil int16
@@ -8153,8 +8153,8 @@ type RenderData struct {
 	Simplify_shadows_render float32
 	Line_thickness_mode int32
 	Unit_line_thickness float32
-	Engine [32]int8
-	X_pad2 [2]int8
+	Engine [32]uint8
+	X_pad2 [2]uint8
 	Perf_flag int16
 	Bake BakeData
 	X_pad8 int32
@@ -8172,13 +8172,13 @@ type RenderData struct {
 type RenderProfile struct {
 	Next BlockPointer[*RenderProfile]
 	Prev BlockPointer[*RenderProfile]
-	Name [32]int8
+	Name [32]uint8
 	Particle_perc int16
 	Subsurf_max int16
 	Shadbufsample_max int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Ao_error float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 }
 
 // SDNA index: 585
@@ -8186,7 +8186,7 @@ type TimeMarker struct {
 	Next BlockPointer[*TimeMarker]
 	Prev BlockPointer[*TimeMarker]
 	Frame int32
-	Name [64]int8
+	Name [64]uint8
 	Flag int32
 	Camera BlockPointer[*Object]
 	Prop BlockPointer[*IDProperty]
@@ -8196,7 +8196,7 @@ type TimeMarker struct {
 type Paint_Runtime struct {
 	Tool_offset int32
 	Ob_mode int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 587
@@ -8209,16 +8209,16 @@ type Paint struct {
 	Brush BlockPointer[*Brush]
 	Tool_slots BlockPointer[*PaintToolSlot]
 	Tool_slots_len int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Palette BlockPointer[*Palette]
 	Cavity_curve BlockPointer[*CurveMapping]
 	Paint_cursor BlockPointer[*any]
-	Paint_cursor_col [4]int8
+	Paint_cursor_col [4]uint8
 	Flags int32
 	Num_input_samples int32
 	Symmetry_flags int32
 	Tile_offset [3]float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Runtime Paint_Runtime
 }
 
@@ -8237,13 +8237,13 @@ type ImagePaintSettings struct {
 	Stencil_col [3]float32
 	Dither float32
 	Interp int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 590
 type PaintModeSettings struct {
-	Canvas_source int8
-	X_pad [7]int8
+	Canvas_source uint8
+	X_pad [7]uint8
 	Canvas_image BlockPointer[*Image]
 	Image_user ImageUser
 }
@@ -8267,7 +8267,7 @@ type ParticleEditSettings struct {
 	Brush [7]ParticleBrushData
 	Paintcursor BlockPointer[*any]
 	Emitterdist float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Selectmode int32
 	Edittype int32
 	Draw_step int32
@@ -8291,7 +8291,7 @@ type Sculpt struct {
 	Detail_percent float32
 	Automasking_cavity_blur_steps int32
 	Automasking_cavity_factor float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Automasking_start_normal_limit float32
 	Automasking_start_normal_falloff float32
 	Automasking_view_normal_limit float32
@@ -8322,38 +8322,38 @@ type GpPaint struct {
 type GpVertexPaint struct {
 	Paint Paint
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 598
 type GpSculptPaint struct {
 	Paint Paint
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 599
 type GpWeightPaint struct {
 	Paint Paint
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 600
 type VPaint struct {
 	Paint Paint
-	Flag int8
-	X_pad [3]int8
+	Flag uint8
+	X_pad [3]uint8
 	Radial_symm [3]int32
 }
 
 // SDNA index: 601
 type GP_Sculpt_Guide struct {
-	Use_guide int8
-	Use_snapping int8
-	Reference_point int8
-	Type int8
-	X_pad2 [4]int8
+	Use_guide uint8
+	Use_snapping uint8
+	Reference_point uint8
+	Type uint8
+	X_pad2 [4]uint8
 	Angle float32
 	Angle_snap float32
 	Spacing float32
@@ -8367,7 +8367,7 @@ type GP_Sculpt_Settings struct {
 	Flag int32
 	Lock_axis int32
 	Isect_threshold float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Cur_falloff BlockPointer[*CurveMapping]
 	Cur_primitive BlockPointer[*CurveMapping]
 	Guide GP_Sculpt_Guide
@@ -8396,10 +8396,10 @@ type UnifiedPaintSettings struct {
 	Brush_rotation_sec float32
 	Anchored_size int32
 	Overlap_factor float32
-	Draw_inverted int8
-	Stroke_active int8
-	Draw_anchored int8
-	Do_linear_conversion int8
+	Draw_inverted uint8
+	Stroke_active uint8
+	Draw_anchored uint8
+	Do_linear_conversion uint8
 	Last_location [3]float32
 	Last_hit int32
 	Anchored_initial_mouse [2]float32
@@ -8414,12 +8414,12 @@ type UnifiedPaintSettings struct {
 
 // SDNA index: 605
 type CurvePaintSettings struct {
-	Curve_type int8
-	Flag int8
-	Depth_mode int8
-	Surface_plane int8
-	Fit_method int8
-	X_pad int8
+	Curve_type uint8
+	Flag uint8
+	Depth_mode uint8
+	Surface_plane uint8
+	Fit_method uint8
+	X_pad uint8
 	Error_threshold int16
 	Radius_min float32
 	Radius_max float32
@@ -8431,15 +8431,15 @@ type CurvePaintSettings struct {
 
 // SDNA index: 606
 type MeshStatVis struct {
-	Type int8
-	X_pad1 [2]int8
-	Overhang_axis int8
+	Type uint8
+	X_pad1 [2]uint8
+	Overhang_axis uint8
 	Overhang_min float32
 	Overhang_max float32
 	Thickness_min float32
 	Thickness_max float32
-	Thickness_samples int8
-	X_pad2 [3]int8
+	Thickness_samples uint8
+	X_pad2 [3]uint8
 	Distort_min float32
 	Distort_max float32
 	Sharp_min float32
@@ -8469,24 +8469,24 @@ type ToolSettings struct {
 	Curves_sculpt BlockPointer[*CurvesSculpt]
 	Vgroup_weight float32
 	Doublimit float32
-	Automerge int8
-	Object_flag int8
-	Selectmode int8
-	Unwrapper int8
-	Uvcalc_flag int8
-	Uv_flag int8
-	Uv_selectmode int8
-	Uv_sticky int8
+	Automerge uint8
+	Object_flag uint8
+	Selectmode uint8
+	Unwrapper uint8
+	Uvcalc_flag uint8
+	Uv_flag uint8
+	Uv_selectmode uint8
+	Uv_sticky uint8
 	Uvcalc_margin float32
 	Autoik_chainlen int16
-	Gpencil_flags int8
-	Gpencil_v3d_align int8
-	Gpencil_v2d_align int8
-	X_pad0 [2]int8
-	Annotate_v3d_align int8
+	Gpencil_flags uint8
+	Gpencil_v3d_align uint8
+	Gpencil_v2d_align uint8
+	X_pad0 [2]uint8
+	Annotate_v3d_align uint8
 	Annotate_thickness int16
-	Gpencil_selectmode_edit int8
-	Gpencil_selectmode_sculpt int8
+	Gpencil_selectmode_edit uint8
+	Gpencil_selectmode_sculpt uint8
 	Gp_sculpt GP_Sculpt_Settings
 	Gp_interpolate GP_Interpolate_Settings
 	Imapaint ImagePaintSettings
@@ -8495,40 +8495,40 @@ type ToolSettings struct {
 	Proportional_size float32
 	Select_thresh float32
 	Autokey_flag int16
-	Autokey_mode int8
-	Keyframe_type int8
-	Multires_subdiv_type int8
-	Edge_mode int8
-	Edge_mode_live_unwrap int8
-	Transform_pivot_point int8
-	Transform_flag int8
-	X_pad1 [1]int8
+	Autokey_mode uint8
+	Keyframe_type uint8
+	Multires_subdiv_type uint8
+	Edge_mode uint8
+	Edge_mode_live_unwrap uint8
+	Transform_pivot_point uint8
+	Transform_flag uint8
+	X_pad1 [1]uint8
 	Snap_mode int16
-	Snap_node_mode int8
-	Snap_uv_mode int8
+	Snap_node_mode uint8
+	Snap_uv_mode uint8
 	Snap_flag int16
 	Snap_flag_node int16
 	Snap_flag_seq int16
 	Snap_uv_flag int16
-	Snap_target int8
-	Snap_transform_mode_flag int8
+	Snap_target uint8
+	Snap_transform_mode_flag uint8
 	Snap_face_nearest_steps int16
-	Proportional_edit int8
-	Prop_mode int8
-	Proportional_objects int8
-	Proportional_mask int8
-	Proportional_action int8
-	Proportional_fcurve int8
-	Lock_markers int8
-	Auto_normalize int8
-	Wpaint_lock_relative int8
-	Multipaint int8
-	Weightuser int8
-	Vgroupsubset int8
-	Gpencil_selectmode_vertex int8
-	Uv_sculpt_settings int8
-	Uv_relax_method int8
-	Workspace_tool_type int8
+	Proportional_edit uint8
+	Prop_mode uint8
+	Proportional_objects uint8
+	Proportional_mask uint8
+	Proportional_action uint8
+	Proportional_fcurve uint8
+	Lock_markers uint8
+	Auto_normalize uint8
+	Wpaint_lock_relative uint8
+	Multipaint uint8
+	Weightuser uint8
+	Vgroupsubset uint8
+	Gpencil_selectmode_vertex uint8
+	Uv_sculpt_settings uint8
+	Uv_relax_method uint8
+	Workspace_tool_type uint8
 	Sculpt_paint_settings int16
 	Sculpt_paint_unified_size int32
 	Sculpt_paint_unified_unprojected_radius float32
@@ -8537,7 +8537,7 @@ type ToolSettings struct {
 	Curve_paint_settings CurvePaintSettings
 	Statvis MeshStatVis
 	Normal_vector [3]float32
-	X_pad6 [4]int8
+	X_pad6 [4]uint8
 	Custom_bevel_profile_preset BlockPointer[*CurveProfile]
 	Sequencer_tool_settings BlockPointer[*SequencerToolSettings]
 }
@@ -8545,14 +8545,14 @@ type ToolSettings struct {
 // SDNA index: 609
 type UnitSettings struct {
 	Scale_length float32
-	System int8
-	System_rotation int8
+	System uint8
+	System_rotation uint8
 	Flag int16
-	Length_unit int8
-	Mass_unit int8
-	Time_unit int8
-	Temperature_unit int8
-	X_pad [4]int8
+	Length_unit uint8
+	Mass_unit uint8
+	Time_unit uint8
+	Temperature_unit uint8
+	X_pad [4]uint8
 }
 
 // SDNA index: 610
@@ -8560,7 +8560,7 @@ type PhysicsSettings struct {
 	Gravity [3]float32
 	Flag int32
 	Quick_cache_step int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 611
@@ -8579,9 +8579,9 @@ type SceneDisplay struct {
 	Matcap_ssao_distance float32
 	Matcap_ssao_attenuation float32
 	Matcap_ssao_samples int32
-	Viewport_aa int8
-	Render_aa int8
-	X_pad [6]int8
+	Viewport_aa uint8
+	Render_aa uint8
+	X_pad [6]uint8
 	Shading View3DShading
 }
 
@@ -8636,10 +8636,10 @@ type SceneEEVEE struct {
 	Shadow_cube_size int32
 	Shadow_cascade_size int32
 	Shadow_pool_size int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Light_cache BlockPointer[*LightCache]
 	Light_cache_data BlockPointer[*LightCache]
-	Light_cache_info [64]int8
+	Light_cache_info [64]uint8
 	Overscan float32
 	Light_threshold float32
 }
@@ -8647,15 +8647,15 @@ type SceneEEVEE struct {
 // SDNA index: 614
 type SceneGpencil struct {
 	Smaa_threshold float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 615
 type TransformOrientationSlot struct {
 	Type int32
 	Index_custom int32
-	Flag int8
-	X_pad0 [7]int8
+	Flag uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 616
@@ -8672,10 +8672,10 @@ type Scene struct {
 	Cursor View3DCursor
 	Lay int32
 	Layact int32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Flag int16
-	Use_nodes int8
-	X_pad3 [1]int8
+	Use_nodes uint8
+	X_pad3 [1]uint8
 	Nodetree BlockPointer[*BNodeTree]
 	Ed BlockPointer[*Editing]
 	Toolsettings BlockPointer[*ToolSettings]
@@ -8692,7 +8692,7 @@ type Scene struct {
 	Speaker_handles BlockPointer[*any]
 	Fps_info BlockPointer[*any]
 	Depsgraph_hash BlockPointer[*GHash]
-	X_pad7 [4]int8
+	X_pad7 [4]uint8
 	Active_keyingset int32
 	Keyingsets ListBase
 	Unit UnitSettings
@@ -8728,16 +8728,16 @@ type BScreen struct {
 	Flag int16
 	Winid int16
 	Redraws_flag int16
-	Temp int8
-	State int8
-	Do_draw int8
-	Do_refresh int8
-	Do_draw_gesture int8
-	Do_draw_paintcursor int8
-	Do_draw_drag int8
-	Skip_handling int8
-	Scrubbing int8
-	X_pad [1]int8
+	Temp uint8
+	State uint8
+	Do_draw uint8
+	Do_refresh uint8
+	Do_draw_gesture uint8
+	Do_draw_paintcursor uint8
+	Do_draw_drag uint8
+	Skip_handling uint8
+	Scrubbing uint8
+	X_pad [1]uint8
 	Active_region BlockPointer[*ARegion]
 	Animtimer BlockPointer[*WmTimer]
 	Context BlockPointer[*any]
@@ -8763,7 +8763,7 @@ type ScrEdge struct {
 	V2 BlockPointer[*ScrVert]
 	Border int16
 	Flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 620
@@ -8776,7 +8776,7 @@ type ScrAreaMap struct {
 // SDNA index: 621
 type Panel_Runtime struct {
 	Region_ofsx int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Custom_data_ptr BlockPointer[*PointerRNA]
 	Block BlockPointer[*UiBlock]
 	Context BlockPointer[*BContextStore]
@@ -8788,8 +8788,8 @@ type Panel struct {
 	Prev BlockPointer[*Panel]
 	Type BlockPointer[*PanelType]
 	Layout BlockPointer[*UiLayout]
-	Panelname [64]int8
-	Drawname [64]int8
+	Panelname [64]uint8
+	Drawname [64]uint8
 	Ofsx int32
 	Ofsy int32
 	Sizex int32
@@ -8799,7 +8799,7 @@ type Panel struct {
 	Labelofs int16
 	Flag int16
 	Runtime_flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Sortorder int32
 	Activedata BlockPointer[*any]
 	Children ListBase
@@ -8810,7 +8810,7 @@ type Panel struct {
 type PanelCategoryStack struct {
 	Next BlockPointer[*PanelCategoryStack]
 	Prev BlockPointer[*PanelCategoryStack]
-	Idname [64]int8
+	Idname [64]uint8
 }
 
 // SDNA index: 624
@@ -8818,14 +8818,14 @@ type UiList struct {
 	Next BlockPointer[*UiList]
 	Prev BlockPointer[*UiList]
 	Type BlockPointer[*UiListType]
-	List_id [64]int8
+	List_id [64]uint8
 	Layout_type int32
 	Flag int32
 	List_scroll int32
 	List_grip int32
 	List_last_len int32
 	List_last_activei int32
-	Filter_byname [64]int8
+	Filter_byname [64]uint8
 	Filter_flag int32
 	Filter_sort_flag int32
 	Properties BlockPointer[*IDProperty]
@@ -8836,18 +8836,18 @@ type UiList struct {
 type TransformOrientation struct {
 	Next BlockPointer[*TransformOrientation]
 	Prev BlockPointer[*TransformOrientation]
-	Name [64]int8
+	Name [64]uint8
 	Mat [3][3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 626
 type UiPreview struct {
 	Next BlockPointer[*UiPreview]
 	Prev BlockPointer[*UiPreview]
-	Preview_id [64]int8
+	Preview_id [64]uint8
 	Height int16
-	X_pad1 [6]int8
+	X_pad1 [6]uint8
 }
 
 // SDNA index: 627
@@ -8857,14 +8857,14 @@ type ScrGlobalAreaData struct {
 	Size_max int16
 	Align int16
 	Flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 }
 
 // SDNA index: 628
 type ScrArea_Runtime struct {
 	Tool BlockPointer[*BToolRef]
-	Is_tool_set int8
-	X_pad0 [7]int8
+	Is_tool_set uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 629
@@ -8877,16 +8877,16 @@ type ScrArea struct {
 	V4 BlockPointer[*ScrVert]
 	Full BlockPointer[*BScreen]
 	Totrct Rcti
-	Spacetype int8
-	Butspacetype int8
+	Spacetype uint8
+	Butspacetype uint8
 	Butspacetype_subtype int16
 	Winx int16
 	Winy int16
-	Headertype int8
-	Do_refresh int8
+	Headertype uint8
+	Do_refresh uint8
 	Flag int16
 	Region_active_win int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Type BlockPointer[*SpaceType]
 	Global BlockPointer[*ScrGlobalAreaData]
 	Spacedata ListBase
@@ -8898,7 +8898,7 @@ type ScrArea struct {
 
 // SDNA index: 630
 type ARegion_Runtime struct {
-	Category BlockPointer[*int8]
+	Category BlockPointer[*uint8]
 	Visible_rect Rcti
 	Offset_x int32
 	Offset_y int32
@@ -8935,7 +8935,7 @@ type ARegion struct {
 	Gizmo_map BlockPointer[*WmGizmoMap]
 	Regiontimer BlockPointer[*WmTimer]
 	Draw_buffer BlockPointer[*WmDrawBuffer]
-	Headerstr BlockPointer[*int8]
+	Headerstr BlockPointer[*uint8]
 	Regiondata BlockPointer[*any]
 	Runtime ARegion_Runtime
 }
@@ -8949,7 +8949,7 @@ type StripAnim struct {
 
 // SDNA index: 633
 type StripElem struct {
-	Name [256]int8
+	Name [256]uint8
 	Orig_width int32
 	Orig_height int32
 	Orig_fps float32
@@ -8984,21 +8984,21 @@ type StripColorBalance struct {
 	Offset [3]float32
 	Power [3]float32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 637
 type StripProxy struct {
-	Dir [768]int8
-	File [256]int8
+	Dir [768]uint8
+	File [256]uint8
 	Anim BlockPointer[*Anim]
 	Tc int16
 	Quality int16
 	Build_size_flags int16
 	Build_tc_flags int16
 	Build_flags int16
-	Storage int8
-	X_pad [5]int8
+	Storage uint8
+	X_pad [5]uint8
 }
 
 // SDNA index: 638
@@ -9010,7 +9010,7 @@ type Strip struct {
 	Startstill int32
 	Endstill int32
 	Stripdata BlockPointer[*StripElem]
-	Dir [768]int8
+	Dir [768]uint8
 	Proxy BlockPointer[*StripProxy]
 	Crop BlockPointer[*StripCrop]
 	Transform BlockPointer[*StripTransform]
@@ -9029,7 +9029,7 @@ type Sequence struct {
 	Prev BlockPointer[*Sequence]
 	Tmp BlockPointer[*any]
 	Lib BlockPointer[*any]
-	Name [64]int8
+	Name [64]uint8
 	Flag int32
 	Type int32
 	Len int32
@@ -9075,12 +9075,12 @@ type Sequence struct {
 	Blend_mode int32
 	Blend_opacity float32
 	Color_tag Int8_t
-	Alpha_mode int8
-	X_pad4 [2]int8
+	Alpha_mode uint8
+	X_pad4 [2]uint8
 	Cache_flag int32
 	Sfra int32
-	Views_format int8
-	X_pad1 [3]int8
+	Views_format uint8
+	X_pad1 [3]uint8
 	Stereo3d_format BlockPointer[*Stereo3dFormat]
 	Prop BlockPointer[*IDProperty]
 	Modifiers ListBase
@@ -9103,7 +9103,7 @@ type MetaStack struct {
 type SeqTimelineChannel struct {
 	Next BlockPointer[*SeqTimelineChannel]
 	Prev BlockPointer[*SeqTimelineChannel]
-	Name [64]int8
+	Name [64]uint8
 	Index int32
 	Flag int32
 }
@@ -9122,9 +9122,9 @@ type Editing struct {
 	Metastack ListBase
 	Channels ListBase
 	Act_seq BlockPointer[*Sequence]
-	Act_imagedir [1024]int8
-	Act_sounddir [1024]int8
-	Proxy_dir [1024]int8
+	Act_imagedir [1024]uint8
+	Act_sounddir [1024]uint8
+	Proxy_dir [1024]uint8
 	Proxy_storage int32
 	Over_ofs int32
 	Over_cfra int32
@@ -9172,7 +9172,7 @@ type TransformVars struct {
 // SDNA index: 648
 type SolidColorVars struct {
 	Col [3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 649
@@ -9194,7 +9194,7 @@ type GaussianBlurVars struct {
 
 // SDNA index: 651
 type TextVars struct {
-	Text [512]int8
+	Text [512]uint8
 	Text_font BlockPointer[*VFont]
 	Text_blf_id int32
 	Text_size float32
@@ -9204,10 +9204,10 @@ type TextVars struct {
 	Loc [2]float32
 	Wrap_width float32
 	Box_margin float32
-	Flag int8
-	Align int8
-	Align_y int8
-	X_pad [5]int8
+	Flag uint8
+	Align uint8
+	Align_y uint8
+	X_pad [5]uint8
 }
 
 // SDNA index: 652
@@ -9222,7 +9222,7 @@ type SequenceModifierData struct {
 	Prev BlockPointer[*SequenceModifierData]
 	Type int32
 	Flag int32
-	Name [64]int8
+	Name [64]uint8
 	Mask_input_type int32
 	Mask_time int32
 	Mask_sequence BlockPointer[*Sequence]
@@ -9264,7 +9264,7 @@ type SequencerMaskModifierData struct {
 type WhiteBalanceModifierData struct {
 	Modifier SequenceModifierData
 	White_value [3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 660
@@ -9301,17 +9301,17 @@ type ShaderFxData struct {
 	Prev BlockPointer[*ShaderFxData]
 	Type int32
 	Mode int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Flag int16
 	Ui_expand_flag int16
-	Name [64]int8
-	Error BlockPointer[*int8]
+	Name [64]uint8
+	Error BlockPointer[*uint8]
 }
 
 // SDNA index: 664
 type ShaderFxData_Runtime struct {
 	Loc [3]float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Fx_sh BlockPointer[*DRWShadingGroup]
 	Fx_sh_b BlockPointer[*DRWShadingGroup]
 	Fx_sh_c BlockPointer[*DRWShadingGroup]
@@ -9324,7 +9324,7 @@ type BlurShaderFxData struct {
 	Flag int32
 	Samples int32
 	Rotation float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9336,7 +9336,7 @@ type ColorizeShaderFxData struct {
 	High_color [4]float32
 	Factor float32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9360,7 +9360,7 @@ type GlowShaderFxData struct {
 	Samples int32
 	Rotation float32
 	Blend_mode int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9383,7 +9383,7 @@ type RimShaderFxData struct {
 	Mode int32
 	Blur [2]int32
 	Samples int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9402,7 +9402,7 @@ type ShadowShaderFxData struct {
 	Rotation float32
 	Blur [2]int32
 	Samples int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9425,7 +9425,7 @@ type WaveShaderFxData struct {
 	Phase float32
 	Orientation int32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime ShaderFxData_Runtime
 }
 
@@ -9435,13 +9435,13 @@ type Simulation struct {
 	Adt BlockPointer[*AnimData]
 	Nodetree BlockPointer[*BNodeTree]
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 675
 type BSound struct {
 	Id ID
-	Name [1024]int8
+	Name [1024]uint8
 	Packedfile BlockPointer[*PackedFile]
 	Handle BlockPointer[*any]
 	Newpackedfile BlockPointer[*PackedFile]
@@ -9454,7 +9454,7 @@ type BSound struct {
 	Distance float32
 	Flags int16
 	Tags int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Offset_time float64
 	Cache BlockPointer[*any]
 	Waveform BlockPointer[*any]
@@ -9469,9 +9469,9 @@ type SpaceLink struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 677
@@ -9479,11 +9479,11 @@ type SpaceInfo struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
-	Rpt_mask int8
-	X_pad [7]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
+	Rpt_mask uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 678
@@ -9491,18 +9491,18 @@ type SpaceButs struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Space_subtype int16
 	Mainb int16
 	Mainbo int16
 	Mainbuser int16
 	Preview int16
-	X_pad [4]int8
-	Flag int8
-	Outliner_sync int8
+	X_pad [4]uint8
+	Flag uint8
+	Outliner_sync uint8
 	Path BlockPointer[*any]
 	Pathflag int32
 	Dataicon int32
@@ -9516,31 +9516,31 @@ type SpaceOops struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Tree ListBase
 	Treestore BlockPointer[*BLI_mempool]
-	Search_string [64]int8
+	Search_string [64]uint8
 	Flag int16
 	Outlinevis int16
 	Lib_override_view_mode int16
 	Storeflag int16
-	Search_flags int8
-	X_pad [6]int8
-	Sync_select_dirty int8
+	Search_flags uint8
+	X_pad [6]uint8
+	Sync_select_dirty uint8
 	Filter int32
-	Filter_state int8
-	Show_restrict_flags int8
+	Filter_state uint8
+	Show_restrict_flags uint8
 	Filter_id_type int16
 	Runtime BlockPointer[*SpaceOutliner_Runtime]
 }
 
 // SDNA index: 680
 type SpaceGraph_Runtime struct {
-	Flag int8
-	X_pad [7]int8
+	Flag uint8
+	X_pad [7]uint8
 	Ghost_curves ListBase
 }
 
@@ -9549,9 +9549,9 @@ type SpaceIpo struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Ads BlockPointer[*BDopeSheet]
 	Mode int16
@@ -9560,7 +9560,7 @@ type SpaceIpo struct {
 	CursorTime float32
 	CursorVal float32
 	Around int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Runtime SpaceGraph_Runtime
 }
 
@@ -9569,12 +9569,12 @@ type SpaceNla struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Autosnap int16
 	Flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Ads BlockPointer[*BDopeSheet]
 	V2d View2D
 }
@@ -9582,13 +9582,13 @@ type SpaceNla struct {
 // SDNA index: 683
 type SequencerPreviewOverlay struct {
 	Flag int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 684
 type SequencerTimelineOverlay struct {
 	Flag int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 685
@@ -9604,9 +9604,9 @@ type SpaceSeq struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Xof float32
 	Yof float32
@@ -9616,59 +9616,59 @@ type SpaceSeq struct {
 	Zebra int16
 	Flag int32
 	Zoom float32
-	View int8
-	Overlay_type int8
-	Draw_flag int8
-	Gizmo_flag int8
-	X_pad [4]int8
+	View uint8
+	Overlay_type uint8
+	Draw_flag uint8
+	Gizmo_flag uint8
+	X_pad [4]uint8
 	Cursor [2]float32
 	Gpd BlockPointer[*BGPdata]
 	Scopes SequencerScopes
 	Preview_overlay SequencerPreviewOverlay
 	Timeline_overlay SequencerTimelineOverlay
-	Multiview_eye int8
-	X_pad2 [7]int8
+	Multiview_eye uint8
+	X_pad2 [7]uint8
 	Runtime SpaceSeqRuntime
 }
 
 // SDNA index: 687
 type MaskSpaceInfo struct {
 	Mask BlockPointer[*Mask]
-	Draw_flag int8
-	Draw_type int8
-	Overlay_mode int8
-	X_pad3 [1]int8
+	Draw_flag uint8
+	Draw_type uint8
+	Overlay_mode uint8
+	X_pad3 [1]uint8
 	Blend_factor float32
 }
 
 // SDNA index: 688
 type FileSelectParams struct {
-	Title [96]int8
-	Dir [1090]int8
-	File [256]int8
-	Renamefile [256]int8
+	Title [96]uint8
+	Dir [1090]uint8
+	File [256]uint8
+	Renamefile [256]uint8
 	Rename_flag int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Rename_id BlockPointer[*ID]
 	X_pad3 BlockPointer[*any]
-	Filter_glob [256]int8
-	Filter_search [64]int8
+	Filter_glob [256]uint8
+	Filter_search [64]uint8
 	Filter_id uint64
 	Active_file int32
 	Highlight_file int32
 	Sel_first int32
 	Sel_last int32
 	Thumbnail_size int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Type int16
 	Flag int16
 	Sort int16
 	Display int16
-	Details_flags int8
-	X_pad2 [3]int8
+	Details_flags uint8
+	X_pad2 [3]uint8
 	Filter int32
 	Recursion_level int16
-	X_pad4 [2]int8
+	X_pad4 [2]uint8
 }
 
 // SDNA index: 689
@@ -9676,18 +9676,18 @@ type FileAssetSelectParams struct {
 	Base_params FileSelectParams
 	Asset_library_ref AssetLibraryReference
 	Asset_catalog_visibility int16
-	X_pad [6]int8
+	X_pad [6]uint8
 	Catalog_id BUUID
 	Import_type int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 }
 
 // SDNA index: 690
 type FileFolderHistory struct {
 	Next BlockPointer[*FileFolderLists]
 	Prev BlockPointer[*FileFolderLists]
-	Browse_mode int8
-	X_pad [7]int8
+	Browse_mode uint8
+	X_pad [7]uint8
 	Folders_prev ListBase
 	Folders_next ListBase
 }
@@ -9697,11 +9697,11 @@ type SpaceFile struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
-	Browse_mode int8
-	X_pad1 [1]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
+	Browse_mode uint8
+	X_pad1 [1]uint8
 	Tags int16
 	Scroll_offset int32
 	Params BlockPointer[*FileSelectParams]
@@ -9725,7 +9725,7 @@ type SpaceFile struct {
 // SDNA index: 692
 type SpaceImageOverlay struct {
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 693
@@ -9733,9 +9733,9 @@ type SpaceImage struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Image BlockPointer[*Image]
 	Iuser ImageUser
 	Scopes Scopes
@@ -9747,17 +9747,17 @@ type SpaceImage struct {
 	Zoom float32
 	Centx float32
 	Centy float32
-	Mode int8
-	Mode_prev int8
-	Pin int8
-	Pixel_snap_mode int8
-	Lock int8
-	Dt_uv int8
-	Dt_uvstretch int8
-	Around int8
-	Gizmo_flag int8
-	Grid_shape_source int8
-	X_pad1 [2]int8
+	Mode uint8
+	Mode_prev uint8
+	Pin uint8
+	Pixel_snap_mode uint8
+	Lock uint8
+	Dt_uv uint8
+	Dt_uvstretch uint8
+	Around uint8
+	Gizmo_flag uint8
+	Grid_shape_source uint8
+	X_pad1 [2]uint8
 	Flag int32
 	Uv_opacity float32
 	Tile_grid_shape [2]int32
@@ -9776,7 +9776,7 @@ type SpaceText_Runtime struct {
 	Viewlines int32
 	Scroll_px_per_line float32
 	Scroll_ofs_px [2]int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Drawcache BlockPointer[*any]
 }
 
@@ -9785,28 +9785,28 @@ type SpaceText struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Text BlockPointer[*Text]
 	Top int32
 	Left int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Flags int16
 	Lheight int16
 	Tabnumber int32
-	Wordwrap int8
-	Doplugins int8
-	Showlinenrs int8
-	Showsyntax int8
-	Line_hlight int8
-	Overwrite int8
-	Live_edit int8
-	X_pad2 [1]int8
-	Findstr [256]int8
-	Replacestr [256]int8
+	Wordwrap uint8
+	Doplugins uint8
+	Showlinenrs uint8
+	Showsyntax uint8
+	Line_hlight uint8
+	Overwrite uint8
+	Live_edit uint8
+	X_pad2 [1]uint8
+	Findstr [256]uint8
+	Replacestr [256]uint8
 	Margin_column int16
-	X_pad3 [2]int8
+	X_pad3 [2]uint8
 	Runtime SpaceText_Runtime
 }
 
@@ -9820,8 +9820,8 @@ type Script struct {
 	Py_globaldict BlockPointer[*any]
 	Flags int32
 	Lastspace int32
-	Scriptname [1024]int8
-	Scriptarg [256]int8
+	Scriptname [1024]uint8
+	Scriptarg [256]uint8
 }
 
 // SDNA index: 697
@@ -9829,13 +9829,13 @@ type SpaceScript struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Script BlockPointer[*Script]
 	Flags int16
 	Menunr int16
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	But_refs BlockPointer[*any]
 }
 
@@ -9845,10 +9845,10 @@ type BNodeTreePath struct {
 	Prev BlockPointer[*BNodeTreePath]
 	Nodetree BlockPointer[*BNodeTree]
 	Parent_key BNodeInstanceKey
-	X_pad [4]int8
+	X_pad [4]uint8
 	View_center [2]float32
-	Node_name [64]int8
-	Display_name [64]int8
+	Node_name [64]uint8
+	Display_name [64]uint8
 }
 
 // SDNA index: 699
@@ -9861,28 +9861,28 @@ type SpaceNode struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	V2d View2D
 	Id BlockPointer[*ID]
 	From BlockPointer[*ID]
 	Flag int16
-	Insert_ofs_dir int8
-	X_pad1 int8
+	Insert_ofs_dir uint8
+	X_pad1 uint8
 	Xof float32
 	Yof float32
 	Zoom float32
 	Treepath ListBase
 	Edittree BlockPointer[*BNodeTree]
 	Nodetree BlockPointer[*BNodeTree]
-	Tree_idname [64]int8
+	Tree_idname [64]uint8
 	Treetype int32
 	Texfrom int16
 	Shaderfrom int16
 	Gpd BlockPointer[*BGPdata]
 	Overlay SpaceNodeOverlay
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Runtime BlockPointer[*SpaceNode_Runtime]
 }
 
@@ -9892,7 +9892,7 @@ type ConsoleLine struct {
 	Prev BlockPointer[*ConsoleLine]
 	Len_alloc int32
 	Len int32
-	Line BlockPointer[*int8]
+	Line BlockPointer[*uint8]
 	Cursor int32
 	Type int32
 }
@@ -9902,15 +9902,15 @@ type SpaceConsole struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Lheight int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Scrollback ListBase
 	History ListBase
-	Prompt [256]int8
-	Language [32]int8
+	Prompt [256]uint8
+	Language [32]uint8
 	Sel_start int32
 	Sel_end int32
 }
@@ -9920,12 +9920,12 @@ type SpaceUserPref struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
-	X_pad1 [7]int8
-	Filter_type int8
-	Filter [64]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
+	X_pad1 [7]uint8
+	Filter_type uint8
+	Filter [64]uint8
 }
 
 // SDNA index: 704
@@ -9933,11 +9933,11 @@ type SpaceClip struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
-	Gizmo_flag int8
-	X_pad1 [3]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
+	Gizmo_flag uint8
+	X_pad1 [3]uint8
 	Xof float32
 	Yof float32
 	Xlockof float32
@@ -9953,14 +9953,14 @@ type SpaceClip struct {
 	Loc [2]float32
 	Scale float32
 	Angle float32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Stabmat [4][4]float32
 	Unistabmat [4][4]float32
 	Postproc_flag int32
 	Gpencil_src int16
-	X_pad2 [2]int8
+	X_pad2 [2]uint8
 	Around int32
-	X_pad4 [4]int8
+	X_pad4 [4]uint8
 	Cursor [2]float32
 	Mask_info MaskSpaceInfo
 }
@@ -9970,9 +9970,9 @@ type SpaceTopBar struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 706
@@ -9980,14 +9980,14 @@ type SpaceStatusBar struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 707
 type SpreadsheetColumnID struct {
-	Name BlockPointer[*int8]
+	Name BlockPointer[*uint8]
 }
 
 // SDNA index: 708
@@ -9996,8 +9996,8 @@ type SpreadsheetColumn struct {
 	Prev BlockPointer[*SpreadsheetColumn]
 	Id BlockPointer[*SpreadsheetColumnID]
 	Data_type uint8
-	X_pad0 [7]int8
-	Display_name BlockPointer[*int8]
+	X_pad0 [7]uint8
+	Display_name BlockPointer[*uint8]
 }
 
 // SDNA index: 709
@@ -10005,9 +10005,9 @@ type SpaceSpreadsheet struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Columns ListBase
 	Row_filters ListBase
 	Viewer_path ViewerPath
@@ -10023,18 +10023,18 @@ type SpaceSpreadsheet struct {
 type SpreadsheetRowFilter struct {
 	Next BlockPointer[*SpreadsheetRowFilter]
 	Prev BlockPointer[*SpreadsheetRowFilter]
-	Column_name [64]int8
+	Column_name [64]uint8
 	Operation uint8
 	Flag uint8
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Value_int int32
-	Value_string BlockPointer[*int8]
+	Value_string BlockPointer[*uint8]
 	Value_float float32
 	Threshold float32
 	Value_float2 [2]float32
 	Value_float3 [3]float32
 	Value_color [4]float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 }
 
 // SDNA index: 711
@@ -10053,26 +10053,26 @@ type Speaker struct {
 	Volume float32
 	Pitch float32
 	Flag int16
-	X_pad1 [6]int8
+	X_pad1 [6]uint8
 }
 
 // SDNA index: 712
 type TextLine struct {
 	Next BlockPointer[*TextLine]
 	Prev BlockPointer[*TextLine]
-	Line BlockPointer[*int8]
-	Format BlockPointer[*int8]
+	Line BlockPointer[*uint8]
+	Format BlockPointer[*uint8]
 	Len int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 713
 type Text struct {
 	Id ID
-	Name BlockPointer[*int8]
+	Name BlockPointer[*uint8]
 	Compiled BlockPointer[*any]
 	Flags int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Lines ListBase
 	Curl BlockPointer[*TextLine]
 	Sell BlockPointer[*TextLine]
@@ -10089,20 +10089,20 @@ type MTex struct {
 	Blendtype int16
 	Object BlockPointer[*Object]
 	Tex BlockPointer[*Tex]
-	Uvname [68]int8
-	X_pad1 [4]int8
-	Projx int8
-	Projy int8
-	Projz int8
-	Mapping int8
-	Brush_map_mode int8
-	Brush_angle_mode int8
-	X_pad [2]int8
+	Uvname [68]uint8
+	X_pad1 [4]uint8
+	Projx uint8
+	Projy uint8
+	Projz uint8
+	Mapping uint8
+	Brush_map_mode uint8
+	Brush_angle_mode uint8
+	X_pad [2]uint8
 	Ofs [3]float32
 	Size [3]float32
 	Rot float32
 	Random_angle float32
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Colormodel int16
 	Normapspace int16
 	Which_output int16
@@ -10166,10 +10166,10 @@ type CBData struct {
 type ColorBand struct {
 	Tot int16
 	Cur int16
-	Ipotype int8
-	Ipotype_hue int8
-	Color_mode int8
-	X_pad [1]int8
+	Ipotype uint8
+	Ipotype_hue uint8
+	Color_mode uint8
+	X_pad [1]uint8
 	Data [32]CBData
 }
 
@@ -10180,7 +10180,7 @@ type PointDensity struct {
 	Falloff_softness float32
 	Radius float32
 	Source int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Color_source int16
 	Ob_color_source int16
 	Totpoints int32
@@ -10188,19 +10188,19 @@ type PointDensity struct {
 	Psys int32
 	Psys_cache_space int16
 	Ob_cache_space int16
-	Vertex_attribute_name [68]int8
-	X_pad1 [4]int8
+	Vertex_attribute_name [68]uint8
+	X_pad1 [4]uint8
 	Point_tree BlockPointer[*any]
 	Point_data BlockPointer[*float32]
 	Noise_size float32
 	Noise_depth int16
 	Noise_influence int16
 	Noise_basis int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 	Noise_fac float32
 	Speed_scale float32
 	Falloff_speed_scale float32
-	X_pad3 [4]int8
+	X_pad3 [4]uint8
 	Coba BlockPointer[*ColorBand]
 	Falloff_curve BlockPointer[*CurveMapping]
 }
@@ -10218,7 +10218,7 @@ type Tex struct {
 	Gfac float32
 	Bfac float32
 	Filtersize float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 	Mg_H float32
 	Mg_lacunarity float32
 	Mg_octaves float32
@@ -10257,15 +10257,15 @@ type Tex struct {
 	Sfra int32
 	Checkerdist float32
 	Nabla float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Iuser ImageUser
 	Nodetree BlockPointer[*BNodeTree]
 	Ipo BlockPointer[*Ipo]
 	Ima BlockPointer[*Image]
 	Coba BlockPointer[*ColorBand]
 	Preview BlockPointer[*PreviewImage]
-	Use_nodes int8
-	X_pad [7]int8
+	Use_nodes uint8
+	X_pad [7]uint8
 }
 
 // SDNA index: 719
@@ -10274,10 +10274,10 @@ type TexMapping struct {
 	Rot [3]float32
 	Size [3]float32
 	Flag int32
-	Projx int8
-	Projy int8
-	Projz int8
-	Mapping int8
+	Projx uint8
+	Projy uint8
+	Projz uint8
+	Mapping uint8
 	Type int32
 	Mat [4][4]float32
 	Min [3]float32
@@ -10295,7 +10295,7 @@ type ColorMapping struct {
 	Blend_color [3]float32
 	Blend_factor float32
 	Blend_type int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 721
@@ -10309,12 +10309,12 @@ type MovieReconstructedCamera struct {
 type MovieTrackingCamera struct {
 	Intrinsics BlockPointer[*any]
 	Distortion_model int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Sensor_width float32
 	Pixel_aspect float32
 	Focal float32
 	Units int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Principal_point [2]float32
 	Principal [2]float32
 	K1 float32
@@ -10346,7 +10346,7 @@ type MovieTrackingMarker struct {
 type MovieTrackingTrack struct {
 	Next BlockPointer[*MovieTrackingTrack]
 	Prev BlockPointer[*MovieTrackingTrack]
-	Name [64]int8
+	Name [64]uint8
 	Pat_min [2]float32
 	Pat_max [2]float32
 	Search_min [2]float32
@@ -10383,10 +10383,10 @@ type MovieTrackingPlaneMarker struct {
 type MovieTrackingPlaneTrack struct {
 	Next BlockPointer[*MovieTrackingPlaneTrack]
 	Prev BlockPointer[*MovieTrackingPlaneTrack]
-	Name [64]int8
+	Name [64]uint8
 	Point_tracks BlockPointer[**MovieTrackingTrack]
 	Point_tracksnr int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Markers BlockPointer[*MovieTrackingPlaneMarker]
 	Markersnr int32
 	Flag int32
@@ -10453,7 +10453,7 @@ type MovieTrackingReconstruction struct {
 type MovieTrackingObject struct {
 	Next BlockPointer[*MovieTrackingObject]
 	Prev BlockPointer[*MovieTrackingObject]
-	Name [64]int8
+	Name [64]uint8
 	Flag int32
 	Scale float32
 	Tracks ListBase
@@ -10467,7 +10467,7 @@ type MovieTrackingObject struct {
 
 // SDNA index: 731
 type MovieTrackingStats struct {
-	Message [256]int8
+	Message [256]uint8
 }
 
 // SDNA index: 732
@@ -10475,8 +10475,8 @@ type MovieTrackingDopesheetChannel struct {
 	Next BlockPointer[*MovieTrackingDopesheetChannel]
 	Prev BlockPointer[*MovieTrackingDopesheetChannel]
 	Track BlockPointer[*MovieTrackingTrack]
-	X_pad [4]int8
-	Name [64]int8
+	X_pad [4]uint8
+	Name [64]uint8
 	Tot_segment int32
 	Segments BlockPointer[*int32]
 	Max_segment int32
@@ -10492,7 +10492,7 @@ type MovieTrackingDopesheetCoverageSegment struct {
 	Coverage int32
 	Start_frame int32
 	End_frame int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 734
@@ -10503,7 +10503,7 @@ type MovieTrackingDopesheet struct {
 	Coverage_segments ListBase
 	Channels ListBase
 	Tot_channel int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 735
@@ -10526,24 +10526,24 @@ type MovieTracking struct {
 // SDNA index: 736
 type UiFontStyle struct {
 	Uifont_id int16
-	X_pad1 [2]int8
+	X_pad1 [2]uint8
 	Points float32
 	Italic int16
 	Bold int16
 	Shadow int16
 	Shadx int16
 	Shady int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 	Shadowalpha float32
 	Shadowcolor float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 }
 
 // SDNA index: 737
 type UiStyle struct {
 	Next BlockPointer[*UiStyle]
 	Prev BlockPointer[*UiStyle]
-	Name [64]int8
+	Name [64]uint8
 	Paneltitle UiFontStyle
 	Grouplabel UiFontStyle
 	Widgetlabel UiFontStyle
@@ -10558,19 +10558,19 @@ type UiStyle struct {
 	Buttonspacey int16
 	Panelspace int16
 	Panelouter int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 738
 type UiWidgetColors struct {
-	Outline [4]int8
-	Inner [4]int8
-	Inner_sel [4]int8
-	Item [4]int8
-	Text [4]int8
-	Text_sel [4]int8
-	Shaded int8
-	X_pad0 [7]int8
+	Outline [4]uint8
+	Inner [4]uint8
+	Inner_sel [4]uint8
+	Item [4]uint8
+	Text [4]uint8
+	Text_sel [4]uint8
+	Shaded uint8
+	X_pad0 [7]uint8
 	Shadetop int16
 	Shadedown int16
 	Roundness float32
@@ -10578,26 +10578,26 @@ type UiWidgetColors struct {
 
 // SDNA index: 739
 type UiWidgetStateColors struct {
-	Inner_anim [4]int8
-	Inner_anim_sel [4]int8
-	Inner_key [4]int8
-	Inner_key_sel [4]int8
-	Inner_driven [4]int8
-	Inner_driven_sel [4]int8
-	Inner_overridden [4]int8
-	Inner_overridden_sel [4]int8
-	Inner_changed [4]int8
-	Inner_changed_sel [4]int8
+	Inner_anim [4]uint8
+	Inner_anim_sel [4]uint8
+	Inner_key [4]uint8
+	Inner_key_sel [4]uint8
+	Inner_driven [4]uint8
+	Inner_driven_sel [4]uint8
+	Inner_overridden [4]uint8
+	Inner_overridden_sel [4]uint8
+	Inner_changed [4]uint8
+	Inner_changed_sel [4]uint8
 	Blend float32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 740
 type UiPanelColors struct {
-	Header [4]int8
-	Back [4]int8
-	Sub_back [4]int8
-	X_pad0 [4]int8
+	Header [4]uint8
+	Back [4]uint8
+	Sub_back [4]uint8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 741
@@ -10624,294 +10624,294 @@ type ThemeUI struct {
 	Wcol_pie_menu UiWidgetColors
 	Wcol_view_item UiWidgetColors
 	Wcol_state UiWidgetStateColors
-	Widget_emboss [4]int8
+	Widget_emboss [4]uint8
 	Menu_shadow_fac float32
 	Menu_shadow_width int16
-	Editor_outline [4]int8
-	Transparent_checker_primary [4]int8
-	Transparent_checker_secondary [4]int8
-	Transparent_checker_size int8
-	X_pad1 [1]int8
+	Editor_outline [4]uint8
+	Transparent_checker_primary [4]uint8
+	Transparent_checker_secondary [4]uint8
+	Transparent_checker_size uint8
+	X_pad1 [1]uint8
 	Icon_alpha float32
 	Icon_saturation float32
-	Widget_text_cursor [4]int8
-	Xaxis [4]int8
-	Yaxis [4]int8
-	Zaxis [4]int8
-	Gizmo_hi [4]int8
-	Gizmo_primary [4]int8
-	Gizmo_secondary [4]int8
-	Gizmo_view_align [4]int8
-	Gizmo_a [4]int8
-	Gizmo_b [4]int8
-	Icon_scene [4]int8
-	Icon_collection [4]int8
-	Icon_object [4]int8
-	Icon_object_data [4]int8
-	Icon_modifier [4]int8
-	Icon_shading [4]int8
-	Icon_folder [4]int8
+	Widget_text_cursor [4]uint8
+	Xaxis [4]uint8
+	Yaxis [4]uint8
+	Zaxis [4]uint8
+	Gizmo_hi [4]uint8
+	Gizmo_primary [4]uint8
+	Gizmo_secondary [4]uint8
+	Gizmo_view_align [4]uint8
+	Gizmo_a [4]uint8
+	Gizmo_b [4]uint8
+	Icon_scene [4]uint8
+	Icon_collection [4]uint8
+	Icon_object [4]uint8
+	Icon_object_data [4]uint8
+	Icon_modifier [4]uint8
+	Icon_shading [4]uint8
+	Icon_folder [4]uint8
 	Icon_border_intensity float32
 	Panel_roundness float32
-	X_pad2 [4]int8
+	X_pad2 [4]uint8
 }
 
 // SDNA index: 742
 type ThemeSpace struct {
-	Back [4]int8
-	Back_grad [4]int8
-	Show_back_grad int8
-	X_pad0 [3]int8
-	Title [4]int8
-	Text [4]int8
-	Text_hi [4]int8
-	Header [4]int8
-	Header_title [4]int8
-	Header_text [4]int8
-	Header_text_hi [4]int8
-	Tab_active [4]int8
-	Tab_inactive [4]int8
-	Tab_back [4]int8
-	Tab_outline [4]int8
-	Button [4]int8
-	Button_title [4]int8
-	Button_text [4]int8
-	Button_text_hi [4]int8
-	List [4]int8
-	List_title [4]int8
-	List_text [4]int8
-	List_text_hi [4]int8
-	Navigation_bar [4]int8
-	Execution_buts [4]int8
+	Back [4]uint8
+	Back_grad [4]uint8
+	Show_back_grad uint8
+	X_pad0 [3]uint8
+	Title [4]uint8
+	Text [4]uint8
+	Text_hi [4]uint8
+	Header [4]uint8
+	Header_title [4]uint8
+	Header_text [4]uint8
+	Header_text_hi [4]uint8
+	Tab_active [4]uint8
+	Tab_inactive [4]uint8
+	Tab_back [4]uint8
+	Tab_outline [4]uint8
+	Button [4]uint8
+	Button_title [4]uint8
+	Button_text [4]uint8
+	Button_text_hi [4]uint8
+	List [4]uint8
+	List_title [4]uint8
+	List_text [4]uint8
+	List_text_hi [4]uint8
+	Navigation_bar [4]uint8
+	Execution_buts [4]uint8
 	Panelcolors UiPanelColors
-	Shade1 [4]int8
-	Shade2 [4]int8
-	Hilite [4]int8
-	Grid [4]int8
-	View_overlay [4]int8
-	Wire [4]int8
-	Wire_edit [4]int8
-	Select [4]int8
-	Lamp [4]int8
-	Speaker [4]int8
-	Empty [4]int8
-	Camera [4]int8
-	Active [4]int8
-	Group [4]int8
-	Group_active [4]int8
-	Transform [4]int8
-	Vertex [4]int8
-	Vertex_select [4]int8
-	Vertex_active [4]int8
-	Vertex_bevel [4]int8
-	Vertex_unreferenced [4]int8
-	Edge [4]int8
-	Edge_select [4]int8
-	Edge_seam [4]int8
-	Edge_sharp [4]int8
-	Edge_facesel [4]int8
-	Edge_crease [4]int8
-	Edge_bevel [4]int8
-	Face [4]int8
-	Face_select [4]int8
-	Face_back [4]int8
-	Face_front [4]int8
-	Face_dot [4]int8
-	Extra_edge_len [4]int8
-	Extra_edge_angle [4]int8
-	Extra_face_angle [4]int8
-	Extra_face_area [4]int8
-	Normal [4]int8
-	Vertex_normal [4]int8
-	Loop_normal [4]int8
-	Bone_solid [4]int8
-	Bone_pose [4]int8
-	Bone_pose_active [4]int8
-	Bone_locked_weight [4]int8
-	Strip [4]int8
-	Strip_select [4]int8
-	Cframe [4]int8
-	Time_keyframe [4]int8
-	Time_gp_keyframe [4]int8
-	Freestyle_edge_mark [4]int8
-	Freestyle_face_mark [4]int8
-	Scrubbing_background [4]int8
-	Time_marker_line [4]int8
-	Time_marker_line_selected [4]int8
-	Nurb_uline [4]int8
-	Nurb_vline [4]int8
-	Act_spline [4]int8
-	Nurb_sel_uline [4]int8
-	Nurb_sel_vline [4]int8
-	Lastsel_point [4]int8
-	Handle_free [4]int8
-	Handle_auto [4]int8
-	Handle_vect [4]int8
-	Handle_align [4]int8
-	Handle_auto_clamped [4]int8
-	Handle_sel_free [4]int8
-	Handle_sel_auto [4]int8
-	Handle_sel_vect [4]int8
-	Handle_sel_align [4]int8
-	Handle_sel_auto_clamped [4]int8
-	Ds_channel [4]int8
-	Ds_subchannel [4]int8
-	Ds_ipoline [4]int8
-	Keytype_keyframe [4]int8
-	Keytype_extreme [4]int8
-	Keytype_breakdown [4]int8
-	Keytype_jitter [4]int8
-	Keytype_movehold [4]int8
-	Keytype_keyframe_select [4]int8
-	Keytype_extreme_select [4]int8
-	Keytype_breakdown_select [4]int8
-	Keytype_jitter_select [4]int8
-	Keytype_movehold_select [4]int8
-	Keyborder [4]int8
-	Keyborder_select [4]int8
-	X_pad4 [3]int8
-	Console_output [4]int8
-	Console_input [4]int8
-	Console_info [4]int8
-	Console_error [4]int8
-	Console_cursor [4]int8
-	Console_select [4]int8
-	Vertex_size int8
-	Outline_width int8
-	Obcenter_dia int8
-	Facedot_size int8
-	Noodle_curving int8
-	Grid_levels int8
-	X_pad5 [3]int8
+	Shade1 [4]uint8
+	Shade2 [4]uint8
+	Hilite [4]uint8
+	Grid [4]uint8
+	View_overlay [4]uint8
+	Wire [4]uint8
+	Wire_edit [4]uint8
+	Select [4]uint8
+	Lamp [4]uint8
+	Speaker [4]uint8
+	Empty [4]uint8
+	Camera [4]uint8
+	Active [4]uint8
+	Group [4]uint8
+	Group_active [4]uint8
+	Transform [4]uint8
+	Vertex [4]uint8
+	Vertex_select [4]uint8
+	Vertex_active [4]uint8
+	Vertex_bevel [4]uint8
+	Vertex_unreferenced [4]uint8
+	Edge [4]uint8
+	Edge_select [4]uint8
+	Edge_seam [4]uint8
+	Edge_sharp [4]uint8
+	Edge_facesel [4]uint8
+	Edge_crease [4]uint8
+	Edge_bevel [4]uint8
+	Face [4]uint8
+	Face_select [4]uint8
+	Face_back [4]uint8
+	Face_front [4]uint8
+	Face_dot [4]uint8
+	Extra_edge_len [4]uint8
+	Extra_edge_angle [4]uint8
+	Extra_face_angle [4]uint8
+	Extra_face_area [4]uint8
+	Normal [4]uint8
+	Vertex_normal [4]uint8
+	Loop_normal [4]uint8
+	Bone_solid [4]uint8
+	Bone_pose [4]uint8
+	Bone_pose_active [4]uint8
+	Bone_locked_weight [4]uint8
+	Strip [4]uint8
+	Strip_select [4]uint8
+	Cframe [4]uint8
+	Time_keyframe [4]uint8
+	Time_gp_keyframe [4]uint8
+	Freestyle_edge_mark [4]uint8
+	Freestyle_face_mark [4]uint8
+	Scrubbing_background [4]uint8
+	Time_marker_line [4]uint8
+	Time_marker_line_selected [4]uint8
+	Nurb_uline [4]uint8
+	Nurb_vline [4]uint8
+	Act_spline [4]uint8
+	Nurb_sel_uline [4]uint8
+	Nurb_sel_vline [4]uint8
+	Lastsel_point [4]uint8
+	Handle_free [4]uint8
+	Handle_auto [4]uint8
+	Handle_vect [4]uint8
+	Handle_align [4]uint8
+	Handle_auto_clamped [4]uint8
+	Handle_sel_free [4]uint8
+	Handle_sel_auto [4]uint8
+	Handle_sel_vect [4]uint8
+	Handle_sel_align [4]uint8
+	Handle_sel_auto_clamped [4]uint8
+	Ds_channel [4]uint8
+	Ds_subchannel [4]uint8
+	Ds_ipoline [4]uint8
+	Keytype_keyframe [4]uint8
+	Keytype_extreme [4]uint8
+	Keytype_breakdown [4]uint8
+	Keytype_jitter [4]uint8
+	Keytype_movehold [4]uint8
+	Keytype_keyframe_select [4]uint8
+	Keytype_extreme_select [4]uint8
+	Keytype_breakdown_select [4]uint8
+	Keytype_jitter_select [4]uint8
+	Keytype_movehold_select [4]uint8
+	Keyborder [4]uint8
+	Keyborder_select [4]uint8
+	X_pad4 [3]uint8
+	Console_output [4]uint8
+	Console_input [4]uint8
+	Console_info [4]uint8
+	Console_error [4]uint8
+	Console_cursor [4]uint8
+	Console_select [4]uint8
+	Vertex_size uint8
+	Outline_width uint8
+	Obcenter_dia uint8
+	Facedot_size uint8
+	Noodle_curving uint8
+	Grid_levels uint8
+	X_pad5 [3]uint8
 	Dash_alpha float32
-	Syntaxl [4]int8
-	Syntaxs [4]int8
-	Syntaxb [4]int8
-	Syntaxn [4]int8
-	Syntaxv [4]int8
-	Syntaxc [4]int8
-	Syntaxd [4]int8
-	Syntaxr [4]int8
-	Line_numbers [4]int8
-	X_pad6 [3]int8
-	Nodeclass_output [4]int8
-	Nodeclass_filter [4]int8
-	Nodeclass_vector [4]int8
-	Nodeclass_texture [4]int8
-	Nodeclass_shader [4]int8
-	Nodeclass_script [4]int8
-	Nodeclass_pattern [4]int8
-	Nodeclass_layout [4]int8
-	Nodeclass_geometry [4]int8
-	Nodeclass_attribute [4]int8
-	Movie [4]int8
-	Movieclip [4]int8
-	Mask [4]int8
-	Image [4]int8
-	Scene [4]int8
-	Audio [4]int8
-	Effect [4]int8
-	Transition [4]int8
-	Meta [4]int8
-	Text_strip [4]int8
-	Color_strip [4]int8
-	Active_strip [4]int8
-	Selected_strip [4]int8
-	X_pad7 [1]int8
+	Syntaxl [4]uint8
+	Syntaxs [4]uint8
+	Syntaxb [4]uint8
+	Syntaxn [4]uint8
+	Syntaxv [4]uint8
+	Syntaxc [4]uint8
+	Syntaxd [4]uint8
+	Syntaxr [4]uint8
+	Line_numbers [4]uint8
+	X_pad6 [3]uint8
+	Nodeclass_output [4]uint8
+	Nodeclass_filter [4]uint8
+	Nodeclass_vector [4]uint8
+	Nodeclass_texture [4]uint8
+	Nodeclass_shader [4]uint8
+	Nodeclass_script [4]uint8
+	Nodeclass_pattern [4]uint8
+	Nodeclass_layout [4]uint8
+	Nodeclass_geometry [4]uint8
+	Nodeclass_attribute [4]uint8
+	Movie [4]uint8
+	Movieclip [4]uint8
+	Mask [4]uint8
+	Image [4]uint8
+	Scene [4]uint8
+	Audio [4]uint8
+	Effect [4]uint8
+	Transition [4]uint8
+	Meta [4]uint8
+	Text_strip [4]uint8
+	Color_strip [4]uint8
+	Active_strip [4]uint8
+	Selected_strip [4]uint8
+	X_pad7 [1]uint8
 	Keyframe_scale_fac float32
-	Editmesh_active [4]int8
-	Handle_vertex [4]int8
-	Handle_vertex_select [4]int8
-	Handle_vertex_size int8
-	Clipping_border_3d [4]int8
-	Marker_outline [4]int8
-	Marker [4]int8
-	Act_marker [4]int8
-	Sel_marker [4]int8
-	Dis_marker [4]int8
-	Lock_marker [4]int8
-	Bundle_solid [4]int8
-	Path_before [4]int8
-	Path_after [4]int8
-	Path_keyframe_before [4]int8
-	Path_keyframe_after [4]int8
-	Camera_path [4]int8
-	Camera_passepartout [4]int8
-	X_pad1 [2]int8
-	Gp_vertex_size int8
-	Gp_vertex [4]int8
-	Gp_vertex_select [4]int8
-	Preview_back [4]int8
-	Preview_stitch_face [4]int8
-	Preview_stitch_edge [4]int8
-	Preview_stitch_vert [4]int8
-	Preview_stitch_stitchable [4]int8
-	Preview_stitch_unstitchable [4]int8
-	Preview_stitch_active [4]int8
-	Uv_shadow [4]int8
-	Match [4]int8
-	Selected_highlight [4]int8
-	Selected_object [4]int8
-	Active_object [4]int8
-	Edited_object [4]int8
-	Row_alternate [4]int8
-	Skin_root [4]int8
-	Anim_active [4]int8
-	Anim_non_active [4]int8
-	Anim_preview_range [4]int8
-	Nla_tweaking [4]int8
-	Nla_tweakdupli [4]int8
-	Nla_track [4]int8
-	Nla_transition [4]int8
-	Nla_transition_sel [4]int8
-	Nla_meta [4]int8
-	Nla_meta_sel [4]int8
-	Nla_sound [4]int8
-	Nla_sound_sel [4]int8
-	Info_selected [4]int8
-	Info_selected_text [4]int8
-	Info_error [4]int8
-	Info_error_text [4]int8
-	Info_warning [4]int8
-	Info_warning_text [4]int8
-	Info_info [4]int8
-	Info_info_text [4]int8
-	Info_debug [4]int8
-	Info_debug_text [4]int8
-	Info_property [4]int8
-	Info_property_text [4]int8
-	Info_operator [4]int8
-	Info_operator_text [4]int8
-	Paint_curve_pivot [4]int8
-	Paint_curve_handle [4]int8
-	Metadatabg [4]int8
-	Metadatatext [4]int8
+	Editmesh_active [4]uint8
+	Handle_vertex [4]uint8
+	Handle_vertex_select [4]uint8
+	Handle_vertex_size uint8
+	Clipping_border_3d [4]uint8
+	Marker_outline [4]uint8
+	Marker [4]uint8
+	Act_marker [4]uint8
+	Sel_marker [4]uint8
+	Dis_marker [4]uint8
+	Lock_marker [4]uint8
+	Bundle_solid [4]uint8
+	Path_before [4]uint8
+	Path_after [4]uint8
+	Path_keyframe_before [4]uint8
+	Path_keyframe_after [4]uint8
+	Camera_path [4]uint8
+	Camera_passepartout [4]uint8
+	X_pad1 [2]uint8
+	Gp_vertex_size uint8
+	Gp_vertex [4]uint8
+	Gp_vertex_select [4]uint8
+	Preview_back [4]uint8
+	Preview_stitch_face [4]uint8
+	Preview_stitch_edge [4]uint8
+	Preview_stitch_vert [4]uint8
+	Preview_stitch_stitchable [4]uint8
+	Preview_stitch_unstitchable [4]uint8
+	Preview_stitch_active [4]uint8
+	Uv_shadow [4]uint8
+	Match [4]uint8
+	Selected_highlight [4]uint8
+	Selected_object [4]uint8
+	Active_object [4]uint8
+	Edited_object [4]uint8
+	Row_alternate [4]uint8
+	Skin_root [4]uint8
+	Anim_active [4]uint8
+	Anim_non_active [4]uint8
+	Anim_preview_range [4]uint8
+	Nla_tweaking [4]uint8
+	Nla_tweakdupli [4]uint8
+	Nla_track [4]uint8
+	Nla_transition [4]uint8
+	Nla_transition_sel [4]uint8
+	Nla_meta [4]uint8
+	Nla_meta_sel [4]uint8
+	Nla_sound [4]uint8
+	Nla_sound_sel [4]uint8
+	Info_selected [4]uint8
+	Info_selected_text [4]uint8
+	Info_error [4]uint8
+	Info_error_text [4]uint8
+	Info_warning [4]uint8
+	Info_warning_text [4]uint8
+	Info_info [4]uint8
+	Info_info_text [4]uint8
+	Info_debug [4]uint8
+	Info_debug_text [4]uint8
+	Info_property [4]uint8
+	Info_property_text [4]uint8
+	Info_operator [4]uint8
+	Info_operator_text [4]uint8
+	Paint_curve_pivot [4]uint8
+	Paint_curve_handle [4]uint8
+	Metadatabg [4]uint8
+	Metadatatext [4]uint8
 }
 
 // SDNA index: 743
 type ThemeWireColor struct {
-	Solid [4]int8
-	Select [4]int8
-	Active [4]int8
+	Solid [4]uint8
+	Select [4]uint8
+	Active [4]uint8
 	Flag int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 744
 type ThemeCollectionColor struct {
-	Color [4]int8
+	Color [4]uint8
 }
 
 // SDNA index: 745
 type ThemeStripColor struct {
-	Color [4]int8
+	Color [4]uint8
 }
 
 // SDNA index: 746
 type BTheme struct {
 	Next BlockPointer[*BTheme]
 	Prev BlockPointer[*BTheme]
-	Name [32]int8
+	Name [32]uint8
 	Tui ThemeUI
 	Tbuts ThemeSpace
 	Tv3d ThemeSpace
@@ -10941,7 +10941,7 @@ type BTheme struct {
 type BAddon struct {
 	Next BlockPointer[*BAddon]
 	Prev BlockPointer[*BAddon]
-	Module [64]int8
+	Module [64]uint8
 	Prop BlockPointer[*IDProperty]
 }
 
@@ -10949,18 +10949,18 @@ type BAddon struct {
 type BPathCompare struct {
 	Next BlockPointer[*BPathCompare]
 	Prev BlockPointer[*BPathCompare]
-	Path [768]int8
-	Flag int8
-	X_pad0 [7]int8
+	Path [768]uint8
+	Flag uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 749
 type BUserMenu struct {
 	Next BlockPointer[*BUserMenu]
 	Prev BlockPointer[*BUserMenu]
-	Space_type int8
-	X_pad0 [7]int8
-	Context [64]int8
+	Space_type uint8
+	X_pad0 [7]uint8
+	Context [64]uint8
 	Items ListBase
 }
 
@@ -10968,43 +10968,43 @@ type BUserMenu struct {
 type BUserMenuItem struct {
 	Next BlockPointer[*BUserMenuItem]
 	Prev BlockPointer[*BUserMenuItem]
-	Ui_name [64]int8
-	Type int8
-	X_pad0 [7]int8
+	Ui_name [64]uint8
+	Type uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 751
 type BUserMenuItem_Op struct {
 	Item BUserMenuItem
-	Op_idname [64]int8
+	Op_idname [64]uint8
 	Prop BlockPointer[*IDProperty]
-	Opcontext int8
-	X_pad0 [7]int8
+	Opcontext uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 752
 type BUserMenuItem_Menu struct {
 	Item BUserMenuItem
-	Mt_idname [64]int8
+	Mt_idname [64]uint8
 }
 
 // SDNA index: 753
 type BUserMenuItem_Prop struct {
 	Item BUserMenuItem
-	Context_data_path [256]int8
-	Prop_id [64]int8
+	Context_data_path [256]uint8
+	Prop_id [64]uint8
 	Prop_index int32
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 }
 
 // SDNA index: 754
 type BUserAssetLibrary struct {
 	Next BlockPointer[*BUserAssetLibrary]
 	Prev BlockPointer[*BUserAssetLibrary]
-	Name [64]int8
-	Path [1024]int8
+	Name [64]uint8
+	Path [1024]uint8
 	Import_method int16
-	X_pad0 [6]int8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 755
@@ -11025,20 +11025,20 @@ type WalkNavigation struct {
 	Jump_height float32
 	Teleport_time float32
 	Flag int16
-	X_pad0 [6]int8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 757
 type UserDef_Runtime struct {
-	Is_dirty int8
-	X_pad0 [7]int8
+	Is_dirty uint8
+	X_pad0 [7]uint8
 }
 
 // SDNA index: 758
 type UserDef_SpaceData struct {
-	Section_active int8
-	Flag int8
-	X_pad0 [6]int8
+	Section_active uint8
+	Flag uint8
+	X_pad0 [6]uint8
 }
 
 // SDNA index: 759
@@ -11056,25 +11056,25 @@ type UserDef_FileSpaceData struct {
 
 // SDNA index: 760
 type UserDef_Experimental struct {
-	Use_undo_legacy int8
-	No_override_auto_resync int8
-	Use_cycles_debug int8
-	Show_asset_debug_info int8
-	No_asset_indexing int8
-	Use_viewport_debug int8
-	Use_all_linked_data_direct int8
-	SANITIZE_AFTER_HERE int8
-	Use_new_curves_tools int8
-	Use_new_point_cloud_type int8
-	Use_full_frame_compositor int8
-	Use_sculpt_tools_tilt int8
-	Use_extended_asset_browser int8
-	Use_override_templates int8
-	Enable_eevee_next int8
-	Use_sculpt_texture_paint int8
-	Enable_workbench_next int8
-	Use_new_volume_nodes int8
-	X_pad [6]int8
+	Use_undo_legacy uint8
+	No_override_auto_resync uint8
+	Use_cycles_debug uint8
+	Show_asset_debug_info uint8
+	No_asset_indexing uint8
+	Use_viewport_debug uint8
+	Use_all_linked_data_direct uint8
+	SANITIZE_AFTER_HERE uint8
+	Use_new_curves_tools uint8
+	Use_new_point_cloud_type uint8
+	Use_full_frame_compositor uint8
+	Use_sculpt_tools_tilt uint8
+	Use_extended_asset_browser uint8
+	Use_override_templates uint8
+	Enable_eevee_next uint8
+	Use_sculpt_texture_paint uint8
+	Enable_workbench_next uint8
+	Use_new_volume_nodes uint8
+	X_pad [6]uint8
 }
 
 // SDNA index: 761
@@ -11083,33 +11083,33 @@ type UserDef struct {
 	Subversionfile int32
 	Flag int32
 	Dupflag int32
-	Pref_flag int8
-	Savetime int8
-	Mouse_emulate_3_button_modifier int8
-	X_pad4 [1]int8
-	Tempdir [768]int8
-	Fontdir [768]int8
-	Renderdir [1024]int8
-	Render_cachedir [768]int8
-	Textudir [768]int8
-	Pythondir [768]int8
-	Sounddir [768]int8
-	I18ndir [768]int8
-	Image_editor [1024]int8
-	Anim_player [1024]int8
+	Pref_flag uint8
+	Savetime uint8
+	Mouse_emulate_3_button_modifier uint8
+	X_pad4 [1]uint8
+	Tempdir [768]uint8
+	Fontdir [768]uint8
+	Renderdir [1024]uint8
+	Render_cachedir [768]uint8
+	Textudir [768]uint8
+	Pythondir [768]uint8
+	Sounddir [768]uint8
+	I18ndir [768]uint8
+	Image_editor [1024]uint8
+	Anim_player [1024]uint8
 	Anim_player_preset int32
 	V2d_min_gridsize int16
 	Timecode_style int16
 	Versions int16
 	Dbl_click_time int16
-	X_pad0 [3]int8
-	Mini_axis_type int8
+	X_pad0 [3]uint8
+	Mini_axis_type uint8
 	Uiflag int32
-	Uiflag2 int8
-	Gpu_flag int8
-	X_pad8 [6]int8
-	App_flag int8
-	Viewzoom int8
+	Uiflag2 uint8
+	Gpu_flag uint8
+	X_pad8 [6]uint8
+	App_flag uint8
+	Viewzoom uint8
 	Language int16
 	Mixbufsize int32
 	Audiodevice int32
@@ -11124,12 +11124,12 @@ type UserDef struct {
 	Pixelsize float32
 	Virtual_pixel int32
 	Scrollback int32
-	Node_margin int8
-	X_pad2 [1]int8
+	Node_margin uint8
+	X_pad2 [1]uint8
 	Transopts int16
 	Menuthreshold1 int16
 	Menuthreshold2 int16
-	App_template [64]int8
+	App_template [64]uint8
 	Themes ListBase
 	Uifonts ListBase
 	Uistyles ListBase
@@ -11139,7 +11139,7 @@ type UserDef struct {
 	Autoexec_paths ListBase
 	User_menus ListBase
 	Asset_libraries ListBase
-	Keyconfigstr [64]int8
+	Keyconfigstr [64]uint8
 	Active_asset_library int16
 	Undosteps int16
 	Undomemory int32
@@ -11148,13 +11148,13 @@ type UserDef struct {
 	Gp_euclideandist int16
 	Gp_eraser int16
 	Gp_settings int16
-	X_pad13 [4]int8
+	X_pad13 [4]uint8
 	Light_param [4]SolidLight
 	Light_ambient [3]float32
-	Gizmo_flag int8
-	Gizmo_size int8
-	Gizmo_size_navigate_v3d int8
-	X_pad3 [5]int8
+	Gizmo_flag uint8
+	Gizmo_size uint8
+	Gizmo_size_navigate_v3d uint8
+	X_pad3 [5]uint8
 	Edit_studio_light int16
 	Lookdev_sphere_size int16
 	Vbotimeout int16
@@ -11164,22 +11164,22 @@ type UserDef struct {
 	Memcachelimit int32
 	Prefetchframes int32
 	Pad_rot_angle float32
-	X_pad12 [4]int8
+	X_pad12 [4]uint8
 	Rvisize int16
 	Rvibright int16
 	Recent_files int16
 	Smooth_viewtx int16
 	Glreslimit int16
 	Color_picker_type int16
-	Auto_smoothing_new int8
-	Ipo_new int8
-	Keyhandles_new int8
-	X_pad11 [4]int8
-	View_frame_type int8
+	Auto_smoothing_new uint8
+	Ipo_new uint8
+	Keyhandles_new uint8
+	X_pad11 [4]uint8
+	View_frame_type uint8
 	View_frame_keyframes int32
 	View_frame_seconds float32
 	Gpu_backend int16
-	X_pad7 [4]int8
+	X_pad7 [4]uint8
 	Widget_unit int16
 	Anisotropic_filter int16
 	Tablet_api int16
@@ -11195,19 +11195,19 @@ type UserDef struct {
 	Autokey_mode int16
 	Autokey_flag int16
 	Animation_flag int16
-	Text_render int8
-	Navigation_mode int8
+	Text_render uint8
+	Navigation_mode uint8
 	View_rotate_sensitivity_turntable float32
 	View_rotate_sensitivity_trackball float32
 	Coba_weight ColorBand
 	Sculpt_paint_overlay_col [3]float32
 	Gpencil_new_layer_col [4]float32
-	Drag_threshold_mouse int8
-	Drag_threshold_tablet int8
-	Drag_threshold int8
-	Move_threshold int8
-	Font_path_ui [1024]int8
-	Font_path_ui_mono [1024]int8
+	Drag_threshold_mouse uint8
+	Drag_threshold_tablet uint8
+	Drag_threshold uint8
+	Move_threshold uint8
+	Font_path_ui [1024]uint8
+	Font_path_ui_mono [1024]uint8
 	Compute_device_type int32
 	Fcu_inactive_alpha float32
 	Pie_tap_timeout int16
@@ -11217,20 +11217,20 @@ type UserDef struct {
 	Pie_menu_radius int16
 	Pie_menu_threshold int16
 	X_pad6 [2]int16
-	Factor_display_type int8
-	Viewport_aa int8
-	Render_display_type int8
-	Filebrowser_display_type int8
-	Sequencer_disk_cache_dir [1024]int8
+	Factor_display_type uint8
+	Viewport_aa uint8
+	Render_display_type uint8
+	Filebrowser_display_type uint8
+	Sequencer_disk_cache_dir [1024]uint8
 	Sequencer_disk_cache_compression int32
 	Sequencer_disk_cache_size_limit int32
 	Sequencer_disk_cache_flag int16
 	Sequencer_proxy_setup int16
 	Collection_instance_empty_size float32
-	Text_flag int8
-	X_pad10 [1]int8
-	File_preview_type int8
-	Statusbar_flag int8
+	Text_flag uint8
+	X_pad10 [1]uint8
+	File_preview_type uint8
+	Statusbar_flag uint8
 	Walk_navigation WalkNavigation
 	Space_data UserDef_SpaceData
 	File_space_data UserDef_FileSpaceData
@@ -11294,7 +11294,7 @@ type DualQuat struct {
 // SDNA index: 769
 type VFont struct {
 	Id ID
-	Name [1024]int8
+	Name [1024]uint8
 	Data BlockPointer[*VFontData]
 	Packedfile BlockPointer[*PackedFile]
 	Temp_pf BlockPointer[*PackedFile]
@@ -11323,9 +11323,9 @@ type View2D struct {
 	Oldwinx int16
 	Oldwiny int16
 	Around int16
-	Alpha_vert int8
-	Alpha_hor int8
-	X_pad [6]int8
+	Alpha_vert uint8
+	Alpha_hor uint8
+	X_pad [6]uint8
 	Sms BlockPointer[*SmoothView2DStore]
 	Smooth_timer BlockPointer[*WmTimer]
 }
@@ -11359,22 +11359,22 @@ type RegionView3D struct {
 	Pixsize float32
 	Ofs [3]float32
 	Camzoom float32
-	Is_persp int8
-	Persp int8
-	View int8
-	View_axis_roll int8
-	Viewlock int8
-	Runtime_viewlock int8
-	Viewlock_quad int8
-	X_pad [1]int8
+	Is_persp uint8
+	Persp uint8
+	View uint8
+	View_axis_roll uint8
+	Viewlock uint8
+	Runtime_viewlock uint8
+	Viewlock_quad uint8
+	X_pad [1]uint8
 	Ofs_lock [2]float32
 	Twdrawflag int16
 	Rflag int16
 	Lviewquat [4]float32
-	Lpersp int8
-	Lview int8
-	Lview_axis_roll int8
-	X_pad8 [1]int8
+	Lpersp uint8
+	Lview uint8
+	Lview_axis_roll uint8
+	X_pad8 [1]uint8
 	Rot_angle float32
 	Rot_axis [3]float32
 }
@@ -11387,25 +11387,25 @@ type View3DCursor struct {
 	Rotation_axis [3]float32
 	Rotation_angle float32
 	Rotation_mode int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 773
 type View3DShading struct {
-	Type int8
-	Prev_type int8
-	Prev_type_wire int8
-	Color_type int8
+	Type uint8
+	Prev_type uint8
+	Prev_type_wire uint8
+	Color_type uint8
 	Flag int16
-	Light int8
-	Background_type int8
-	Cavity_type int8
-	Wire_color_type int8
-	Use_compositor int8
-	X_pad int8
-	Studio_light [256]int8
-	Lookdev_light [256]int8
-	Matcap [256]int8
+	Light uint8
+	Background_type uint8
+	Cavity_type uint8
+	Wire_color_type uint8
+	Use_compositor uint8
+	X_pad uint8
+	Studio_light [256]uint8
+	Lookdev_light [256]uint8
+	Matcap [256]uint8
 	Shadow_intensity float32
 	Single_color [3]float32
 	Studiolight_rot_z float32
@@ -11421,7 +11421,7 @@ type View3DShading struct {
 	Curvature_ridge_factor float32
 	Curvature_valley_factor float32
 	Render_pass int32
-	Aov_name [64]int8
+	Aov_name [64]uint8
 	Prop BlockPointer[*IDProperty]
 	X_pad2 BlockPointer[*any]
 }
@@ -11443,7 +11443,7 @@ type View3DOverlay struct {
 	Viewer_attribute_opacity float32
 	Xray_alpha_bone float32
 	Bone_wire_alpha float32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Fade_alpha float32
 	Wireframe_threshold float32
 	Wireframe_opacity float32
@@ -11453,14 +11453,14 @@ type View3DOverlay struct {
 	Gpencil_vertex_paint_opacity float32
 	Handle_display int32
 	Sculpt_curves_cage_opacity float32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 775
 type View3D_Runtime struct {
 	Properties_storage BlockPointer[*any]
 	Flag int32
-	X_pad1 [4]int8
+	X_pad1 [4]uint8
 	Local_stats BlockPointer[*SceneStats]
 }
 
@@ -11469,16 +11469,16 @@ type View3D struct {
 	Next BlockPointer[*SpaceLink]
 	Prev BlockPointer[*SpaceLink]
 	Regionbase ListBase
-	Spacetype int8
-	Link_flag int8
-	X_pad0 [6]int8
+	Spacetype uint8
+	Link_flag uint8
+	X_pad0 [6]uint8
 	Viewquat [4]float32
 	Dist float32
 	Bundle_size float32
-	Bundle_drawtype int8
-	Drawtype int8
-	X_pad3 [1]int8
-	Multiview_eye int8
+	Bundle_drawtype uint8
+	Drawtype uint8
+	X_pad3 [1]uint8
+	Multiview_eye uint8
 	Object_type_exclude_viewport int32
 	Object_type_exclude_select int32
 	Persp int16
@@ -11487,9 +11487,9 @@ type View3D struct {
 	Ob_centre BlockPointer[*Object]
 	Render_border Rctf
 	Localvd BlockPointer[*View3D]
-	Ob_centre_bone [64]int8
+	Ob_centre_bone [64]uint8
 	Local_view_uuid int16
-	X_pad6 [2]int8
+	X_pad6 [2]uint8
 	Layact int32
 	Local_collections_uuid int16
 	X_pad7 [2]int16
@@ -11504,21 +11504,21 @@ type View3D struct {
 	Near float32
 	Far float32
 	Ofs [3]float32
-	X_pad [1]int8
-	Gizmo_flag int8
-	Gizmo_show_object int8
-	Gizmo_show_armature int8
-	Gizmo_show_empty int8
-	Gizmo_show_light int8
-	Gizmo_show_camera int8
-	Gridflag int8
+	X_pad [1]uint8
+	Gizmo_flag uint8
+	Gizmo_show_object uint8
+	Gizmo_show_armature uint8
+	Gizmo_show_empty uint8
+	Gizmo_show_light uint8
+	Gizmo_show_camera uint8
+	Gridflag uint8
 	Gridlines int16
 	Gridsubdiv int16
 	Vertex_opacity float32
 	Gpd BlockPointer[*BGPdata]
 	Stereo3d_flag int16
-	Stereo3d_camera int8
-	X_pad4 int8
+	Stereo3d_camera uint8
+	X_pad4 uint8
 	Stereo3d_convergence_factor float32
 	Stereo3d_volume_alpha float32
 	Stereo3d_convergence_alpha float32
@@ -11533,7 +11533,7 @@ type ViewerPathElem struct {
 	Next BlockPointer[*ViewerPathElem]
 	Prev BlockPointer[*ViewerPathElem]
 	Type int32
-	X_pad [4]int8
+	X_pad [4]uint8
 }
 
 // SDNA index: 778
@@ -11545,15 +11545,15 @@ type IDViewerPathElem struct {
 // SDNA index: 779
 type ModifierViewerPathElem struct {
 	Base ViewerPathElem
-	Modifier_name BlockPointer[*int8]
+	Modifier_name BlockPointer[*uint8]
 }
 
 // SDNA index: 780
 type NodeViewerPathElem struct {
 	Base ViewerPathElem
 	Node_id int32
-	X_pad1 [4]int8
-	Node_name BlockPointer[*int8]
+	X_pad1 [4]uint8
+	Node_name BlockPointer[*uint8]
 }
 
 // SDNA index: 781
@@ -11566,9 +11566,9 @@ type Volume_Runtime struct {
 	Grids BlockPointer[*VolumeGridVector]
 	Frame int32
 	Default_simplify_level int32
-	Velocity_x_grid [64]int8
-	Velocity_y_grid [64]int8
-	Velocity_z_grid [64]int8
+	Velocity_x_grid [64]uint8
+	Velocity_y_grid [64]uint8
+	Velocity_z_grid [64]uint8
 }
 
 // SDNA index: 783
@@ -11595,11 +11595,11 @@ type VolumeRender struct {
 type Volume struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
-	Filepath [1024]int8
+	Filepath [1024]uint8
 	Packedfile BlockPointer[*PackedFile]
-	Is_sequence int8
-	Sequence_mode int8
-	X_pad1 [2]int8
+	Is_sequence uint8
+	Sequence_mode uint8
+	X_pad1 [2]uint8
 	Frame_start int32
 	Frame_duration int32
 	Frame_offset int32
@@ -11610,9 +11610,9 @@ type Volume struct {
 	X_pad2 [3]int16
 	Render VolumeRender
 	Display VolumeDisplay
-	Velocity_grid [64]int8
-	X_pad3 [3]int8
-	Velocity_unit int8
+	Velocity_grid [64]uint8
+	X_pad3 [3]uint8
+	Velocity_unit uint8
 	Velocity_scale float32
 	Batch_cache BlockPointer[*any]
 	Runtime Volume_Runtime
@@ -11624,7 +11624,7 @@ type ReportList struct {
 	Printlevel int32
 	Storelevel int32
 	Flag int32
-	X_pad [4]int8
+	X_pad [4]uint8
 	Reporttimer BlockPointer[*WmTimer]
 }
 
@@ -11658,8 +11658,8 @@ type WmWindowManager struct {
 	Timers ListBase
 	Autosavetimer BlockPointer[*WmTimer]
 	Undo_stack BlockPointer[*UndoStack]
-	Is_interface_locked int8
-	X_pad [7]int8
+	Is_interface_locked uint8
+	X_pad [7]uint8
 	Message_bus BlockPointer[*WmMsgBus]
 	Xr WmXrData
 }
@@ -11673,7 +11673,7 @@ type WmWindow struct {
 	Parent BlockPointer[*WmWindow]
 	Scene BlockPointer[*Scene]
 	New_scene BlockPointer[*Scene]
-	View_layer_name [64]int8
+	View_layer_name [64]uint8
 	Unpinned_scene BlockPointer[*Scene]
 	Workspace_hook BlockPointer[*WorkSpaceInstanceHook]
 	Global_area_map ScrAreaMap
@@ -11683,20 +11683,20 @@ type WmWindow struct {
 	Posy int16
 	Sizex int16
 	Sizey int16
-	Windowstate int8
-	Active int8
+	Windowstate uint8
+	Active uint8
 	Cursor int16
 	Lastcursor int16
 	Modalcursor int16
 	Grabcursor int16
 	Pie_event_type_lock int16
 	Pie_event_type_last int16
-	Addmousemove int8
-	Tag_cursor_refresh int8
-	Event_queue_check_click int8
-	Event_queue_check_drag int8
-	Event_queue_check_drag_handled int8
-	Event_queue_consecutive_gesture_type int8
+	Addmousemove uint8
+	Tag_cursor_refresh uint8
+	Event_queue_check_click uint8
+	Event_queue_check_drag uint8
+	Event_queue_check_drag_handled uint8
+	Event_queue_consecutive_gesture_type uint8
 	Event_queue_consecutive_gesture_xy [2]int32
 	Event_queue_consecutive_gesture_data BlockPointer[*WmEvent_ConsecutiveData]
 	Eventstate BlockPointer[*WmEvent]
@@ -11715,9 +11715,9 @@ type WmWindow struct {
 type WmKeyMapItem struct {
 	Next BlockPointer[*WmKeyMapItem]
 	Prev BlockPointer[*WmKeyMapItem]
-	Idname [64]int8
+	Idname [64]uint8
 	Properties BlockPointer[*IDProperty]
-	Propvalue_str [64]int8
+	Propvalue_str [64]uint8
 	Propvalue int16
 	Type int16
 	Val Int8_t
@@ -11730,7 +11730,7 @@ type WmKeyMapItem struct {
 	Flag int16
 	Maptype int16
 	Id int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Ptr BlockPointer[*PointerRNA]
 }
 
@@ -11748,10 +11748,10 @@ type WmKeyMap struct {
 	Prev BlockPointer[*WmKeyMap]
 	Items ListBase
 	Diff_items ListBase
-	Idname [64]int8
+	Idname [64]uint8
 	Spaceid int16
 	Regionid int16
-	Owner_id [64]int8
+	Owner_id [64]uint8
 	Flag int16
 	Kmi_id int16
 	Poll func() Bool
@@ -11763,7 +11763,7 @@ type WmKeyMap struct {
 type WmKeyConfigPref struct {
 	Next BlockPointer[*WmKeyConfigPref]
 	Prev BlockPointer[*WmKeyConfigPref]
-	Idname [64]int8
+	Idname [64]uint8
 	Prop BlockPointer[*IDProperty]
 }
 
@@ -11771,19 +11771,19 @@ type WmKeyConfigPref struct {
 type WmKeyConfig struct {
 	Next BlockPointer[*WmKeyConfig]
 	Prev BlockPointer[*WmKeyConfig]
-	Idname [64]int8
-	Basename [64]int8
+	Idname [64]uint8
+	Basename [64]uint8
 	Keymaps ListBase
 	Actkeymap int32
 	Flag int16
-	X_pad0 [2]int8
+	X_pad0 [2]uint8
 }
 
 // SDNA index: 795
 type WmOperator struct {
 	Next BlockPointer[*WmOperator]
 	Prev BlockPointer[*WmOperator]
-	Idname [64]int8
+	Idname [64]uint8
 	Properties BlockPointer[*IDProperty]
 	Type BlockPointer[*WmOperatorType]
 	Customdata BlockPointer[*any]
@@ -11794,15 +11794,15 @@ type WmOperator struct {
 	Opm BlockPointer[*WmOperator]
 	Layout BlockPointer[*UiLayout]
 	Flag int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 // SDNA index: 796
 type BToolRef struct {
 	Next BlockPointer[*BToolRef]
 	Prev BlockPointer[*BToolRef]
-	Idname [64]int8
-	Idname_fallback [64]int8
+	Idname [64]uint8
+	Idname_fallback [64]uint8
 	Tag int16
 	Space_type int16
 	Mode int32
@@ -11815,14 +11815,14 @@ type WorkSpaceLayout struct {
 	Next BlockPointer[*WorkSpaceLayout]
 	Prev BlockPointer[*WorkSpaceLayout]
 	Screen BlockPointer[*BScreen]
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 798
 type WmOwnerID struct {
 	Next BlockPointer[*WmOwnerID]
 	Prev BlockPointer[*WmOwnerID]
-	Name [64]int8
+	Name [64]uint8
 }
 
 // SDNA index: 799
@@ -11833,11 +11833,11 @@ type WorkSpace struct {
 	Owner_ids ListBase
 	Tools ListBase
 	Pin_scene BlockPointer[*Scene]
-	X_pad [4]int8
+	X_pad [4]uint8
 	Object_mode int32
 	Flags int32
 	Order int32
-	Status_text BlockPointer[*int8]
+	Status_text BlockPointer[*uint8]
 	Asset_library_ref AssetLibraryReference
 	Viewer_path ViewerPath
 }
@@ -11849,7 +11849,7 @@ type WorkSpaceDataRelation struct {
 	Parent BlockPointer[*any]
 	Value BlockPointer[*any]
 	Parentid int32
-	X_pad_0 [4]int8
+	X_pad_0 [4]uint8
 }
 
 // SDNA index: 801
@@ -11865,7 +11865,7 @@ type World struct {
 	Id ID
 	Adt BlockPointer[*AnimData]
 	Drawdata DrawDataList
-	X_pad0 [4]int8
+	X_pad0 [4]uint8
 	Texact int16
 	Mistype int16
 	Horr float32
@@ -11875,7 +11875,7 @@ type World struct {
 	Exp float32
 	Range float32
 	Mode int16
-	X_pad2 [6]int8
+	X_pad2 [6]uint8
 	Misi float32
 	Miststa float32
 	Mistdist float32
@@ -11883,11 +11883,11 @@ type World struct {
 	Aodist float32
 	Aoenergy float32
 	Flag int16
-	X_pad3 [6]int8
+	X_pad3 [6]uint8
 	Ipo BlockPointer[*Ipo]
 	Pr_texture int16
 	Use_nodes int16
-	X_pad [4]int8
+	X_pad [4]uint8
 	Preview BlockPointer[*PreviewImage]
 	Nodetree BlockPointer[*BNodeTree]
 	Lightgroup BlockPointer[*LightgroupMembership]
@@ -11898,14 +11898,14 @@ type World struct {
 type XrSessionSettings struct {
 	Shading View3DShading
 	Base_scale float32
-	X_pad [3]int8
-	Base_pose_type int8
+	X_pad [3]uint8
+	Base_pose_type uint8
 	Base_pose_object BlockPointer[*Object]
 	Base_pose_location [3]float32
 	Base_pose_angle float32
-	Draw_flags int8
-	Controller_draw_style int8
-	X_pad2 [2]int8
+	Draw_flags uint8
+	Controller_draw_style uint8
+	X_pad2 [2]uint8
 	Clip_start float32
 	Clip_end float32
 	Flag int32
@@ -11917,19 +11917,19 @@ type XrSessionSettings struct {
 type XrComponentPath struct {
 	Next BlockPointer[*XrComponentPath]
 	Prev BlockPointer[*XrComponentPath]
-	Path [192]int8
+	Path [192]uint8
 }
 
 // SDNA index: 805
 type XrActionMapBinding struct {
 	Next BlockPointer[*XrActionMapBinding]
 	Prev BlockPointer[*XrActionMapBinding]
-	Name [64]int8
-	Profile [256]int8
+	Name [64]uint8
+	Profile [256]uint8
 	Component_paths ListBase
 	Float_threshold float32
 	Axis_flag int16
-	X_pad [2]int8
+	X_pad [2]uint8
 	Pose_location [3]float32
 	Pose_rotation [3]float32
 }
@@ -11938,30 +11938,30 @@ type XrActionMapBinding struct {
 type XrUserPath struct {
 	Next BlockPointer[*XrUserPath]
 	Prev BlockPointer[*XrUserPath]
-	Path [64]int8
+	Path [64]uint8
 }
 
 // SDNA index: 807
 type XrActionMapItem struct {
 	Next BlockPointer[*XrActionMapItem]
 	Prev BlockPointer[*XrActionMapItem]
-	Name [64]int8
-	Type int8
-	X_pad [7]int8
+	Name [64]uint8
+	Type uint8
+	X_pad [7]uint8
 	User_paths ListBase
-	Op [64]int8
+	Op [64]uint8
 	Op_properties BlockPointer[*IDProperty]
 	Op_properties_ptr BlockPointer[*PointerRNA]
 	Op_flag int16
 	Action_flag int16
 	Haptic_flag int16
 	Pose_flag int16
-	Haptic_name [64]int8
+	Haptic_name [64]uint8
 	Haptic_duration float32
 	Haptic_frequency float32
 	Haptic_amplitude float32
 	Selbinding int16
-	X_pad3 [2]int8
+	X_pad3 [2]uint8
 	Bindings ListBase
 }
 
@@ -11969,10 +11969,10 @@ type XrActionMapItem struct {
 type XrActionMap struct {
 	Next BlockPointer[*XrActionMap]
 	Prev BlockPointer[*XrActionMap]
-	Name [64]int8
+	Name [64]uint8
 	Items ListBase
 	Selitem int16
-	X_pad [6]int8
+	X_pad [6]uint8
 }
 
 type Int8_t struct{}

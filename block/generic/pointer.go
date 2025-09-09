@@ -9,3 +9,7 @@ func (p BlockPointer[T]) Data() T {
 	var t T
 	return t
 }
+
+func (p BlockPointer[T]) Valid() bool {
+	return p.Addr != 0
+}

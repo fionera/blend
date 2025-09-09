@@ -76,6 +76,11 @@ func main() {
 				continue
 			}
 
+			if !body.Packedfile.Valid() {
+				log.Println(path)
+			}
+
+			//log.Printf("%+v", body.Source)
 			if body.Packedfile.Addr != 0 {
 				data := b.OldAddr[body.Packedfile.Addr]
 				if err := data.ParseBody(dna); err != nil {
@@ -89,10 +94,10 @@ func main() {
 					log.Fatal(err)
 				}
 
-				log.Printf("pfData: %T; Size: %d; Seek: %d", pfData.Body, pf.Size, pf.Seek)
+				//log.Printf("pfData: %T; Size: %d; Seek: %d", pfData.Body, pf.Size, pf.Seek)
 			}
 
-			log.Println(path, body.Packedfile)
+			//log.Println(path, body.Packedfile)
 		default:
 			log.Printf("unhandled: %T", body)
 		}

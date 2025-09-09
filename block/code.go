@@ -83,6 +83,8 @@ func parseCode(code []byte) Code {
 		return CodeID
 	case CodeCU:
 		return CodeCU
+	case CodeKE:
+		return CodeKE
 	default:
 		log.Printf("block code not implemented:  %q", code)
 	}
@@ -124,4 +126,5 @@ const (
 	CodeLI   = "LI\x00\x00"
 	CodeID   = "ID\x00\x00"
 	CodeCU   = "CU\x00\x00"
+	CodeKE   = "KE\x00\x00"
 )
